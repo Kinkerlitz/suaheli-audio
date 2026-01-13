@@ -1,0 +1,2 @@
+Nr,Quelle,Deutsch,Suaheli
+10,C1.1-Vok,bin nicht   ist nicht,Si

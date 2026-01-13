@@ -1,0 +1,95 @@
+Nr.,Kapitel,Deutsch,Suaheli
+1,C2.3-Vok-A,Auge,Jicho
+2,C2.3-Vok-A,Ei,Yai
+3,C2.3-Vok-A,Auto,Gari
+4,C2.3-Vok-A,Frucht,Tunda
+5,C2.3-Vok-A,Orange (Frucht),Chungwa
+1,C2.3-Vok-B,Straße,Barabara
+2,C2.3-Vok-B,Tisch,Meza
+3,C2.3-Vok-B,Alkohol,Pombe
+4,C2.3-Vok-B,Gemüse,Mboga
+1,C2.3-Vok-C,Lang,-refu ; ndefu
+2,C2.3-Vok-C,Teuer,Ghali
+3,C2.3-Vok-C,Alt;Abgenutzt,Kikuukuu
+4,C2.3-Vok-C,In Ordnung,Sawa
+1,C2.3-Vok-D,Sehen,Kuona
+2,C2.3-Vok-D,Spielen,Kucheza
+3,C2.3-Vok-D,Auf ; Bei,Kwenye
+4,C2.3-Vok-D,Dort (Richtung),Kule
+5,C2.3-Vok-D,Stühle (Plural zu Kiti),Viti
+1,C2.3-1a,Ein Auge.,Jicho.
+2,C2.3-1a,Augen.,Macho.
+3,C2.3-1a,Wasser.,Maji.
+4,C2.3-1a,Eier.,Mayai.
+1,C2.3-1b,Ein großes Auge.,Jicho kubwa.
+2,C2.3-1b,Große Augen.,Macho makubwa.
+3,C2.3-1b,Eine große Orange.,Chungwa kubwa.
+4,C2.3-1b,Große Orangen.,Machungwa makubwa.
+5,C2.3-1b,Ein kleines Ei.,Yai dogo.
+6,C2.3-1b,Kleine Eier.,Mayai madogo.
+1,C2.3-1c,Das Wasser ist kalt.,Maji ni baridi.
+2,C2.3-1c,Das Ei ist gut.,Yai ni zuri.
+3,C2.3-1c,Die Augen sind schön.,Macho ni mazuri.
+4,C2.3-1c,Das Essen ist heiß.,Chakula ni moto.
+1,C2.3-2,Die Straße ist lang.,Barabara ni ndefu.
+2,C2.3-2,Die Straßen sind lang.,Barabara ni ndefu.
+3,C2.3-2,Der Tisch ist klein.,Meza ni ndogo.
+4,C2.3-2,Die Tische sind klein.,Meza ni ndogo.
+5,C2.3-2,Die Kaffeebohnen sind teuer.,Kahawa ni ghali.
+6,C2.3-2,Dein Haus ist alt.,Nyumba yako ni zamani.
+1,C2.3-3a,Das Wasser ist hier.,Maji yapo hapa.
+2,C2.3-3a,Die Eier sind dort.,Mayai yapo pale.
+3,C2.3-3a,Wo ist das Ei?,Yai lipo wapi.
+4,C2.3-3a,Das Auto ist hier.,Gari lipo hapa.
+1,C2.3-3b,Die Autos sind dort.,Magari yapo pale.
+2,C2.3-3b,Sie sind nicht hier; sie sind draußen.,Hawapo hapa; wapo nje.
+3,C2.3-3b,Wir wollen dorthin gehen.,Tunataka kwenda kule.
+1,C2.3-4a,Wir essen Eier.,Tunakula mayai.
+2,C2.3-4a,Wir essen Gemüse.,Tunakula mboga.
+3,C2.3-4a,Er will Wasser trinken.,Anataka kunywa maji.
+4,C2.3-4a,Sie sehen meine Augen.,Wanaona macho yangu.
+5,C2.3-4a,Ich sehe seine Augen.,Ninaona macho yake.
+1,C2.3-4b,Sie nehmen das kalte Wasser.,Wanachukua maji baridi.
+2,C2.3-4b,Wir kaufen ein neues Auto.,Tunanunua gari jipya.
+3,C2.3-4b,Ihr arbeitet an den Tischen.,Mnafanya kazi kwenye meza.
+1,C2.3-5a,Wir essen das Essen; das gut ist.,Tunakula chakula kizuri.
+2,C2.3-5a,Sie kaufen schöne Tische.,Wananunua meza nzuri.
+3,C2.3-5a,Ihr gebt mir die Eier.,Mnanipa mimi mayai.
+4,C2.3-5a,Ich will meine Augen sehen.,Ninataka kuona macho yangu.
+5,C2.3-5a,Die Lehrer gehen jetzt.,Walimu wanakwenda sasa.
+6,C2.3-5a,Die Kinder spielen.,Watoto wanacheza.
+1,C2.3-5b,Kannst du das sehen?,Unaweza kuona hicho?
+2,C2.3-5b,Wir verkaufen keine Eier.,Hatuuzi mayai.
+3,C2.3-5b,Sie trinken keinen Alkohol.,Hawanywi pombe.
+4,C2.3-5b,Wir warten; und die Kinder essen.,Tunasubiri na watoto wanakula.
+5,C2.3-5b,Wir brauchen Geld; weil wir kaufen.,Tunahitaji pesa kwa sababu tunanunua.
+6,C2.3-5b,Es ist heiß; aber wir arbeiten.,Ni moto; lakini tunafanya kazi.
+1,C2.3-6a,Wir nehmen unsere Sachen.,Tunachukua vitu vyetu.
+2,C2.3-6a,Das Essen der Gäste ist fertig.,Chakula cha wageni kimeisha.
+3,C2.3-6a,Eure Eltern sind nicht hier.,Wazazi wenu hawapo hapa.
+4,C2.3-6a,Kannst du meine Eltern sehen?,Unaweza kuona wazazi wangu?
+5,C2.3-6a,Warum seid ihr hier?,Kwa nini mpo hapa?
+1,C2.3-6b,Wir sind hier; um zu arbeiten.,Tupo hapa kufanya kazi.
+2,C2.3-6b,Sie sagen; dass wir arbeiten sollen.,Wanasema tufanye kazi.
+3,C2.3-6b,Wo ist dein Ehemann?,Mume wako yupo wapi?
+4,C2.3-6b,Unsere Zimmer sind groß.,Vyumba vyetu ni vikubwa.
+5,C2.3-6b,Eure Tische sind neu.,Meza zenu ni mpya.
+1,C2.3-6c,Wir warten auf unser Geld.,Tunasubiri pesa yetu.
+2,C2.3-6c,Diese Kinder sind jung und gesund.,Watoto hawa ni wadogo na wazima.
+3,C2.3-6c,Jene Äpfel sind gut.,Matunda yale ni mazuri.
+4,C2.3-6c,Er denkt; dass sein Auto alt ist.,Anafikiri kwamba gari lake ni zamani.
+5,C2.3-6c,Das Haus unseres Lehrers ist groß.,Nyumba ya mwalimu wetu ni kubwa.
+6,C2.3-6c,Ich sehe deine Eltern dort.,Ninawaona wazazi wako pale.
+7,C2.3-6c,Wir geben ihm Wasser.,Tunampa maji.
+1,C2.3-7a,Der Kaffee ist heiß.,Kahawa ni moto.
+2,C2.3-7a,Der Lehrer ist hier.,Mwalimu yupo hapa.
+3,C2.3-7a,Das Auto ist hier.,Gari lipo hapa.
+4,C2.3-7a,Ich mache es für dich.,Ninafanya kwa wewe.
+5,C2.3-7a,Wir sind hier; und wir arbeiten.,Tupo hapa; na tunafanya kazi.
+1,C2.3-7b,Ich bin jung; aber ich unterrichte.,Mimi ni kijana; lakini ninafundisha.
+2,C2.3-7b,Das ist klein; aber es ist gut.,Hiki ni kidogo; lakini ni kizuri.
+1,C2.3-7c,Der Lehrer ist alt.,Mwalimu ni mzee.
+2,C2.3-7c,Das Auto ist alt.,Gari ni la zamani.
+3,C2.3-7c,Ich bin neu;fremd hier.,Mimi ni mgeni hapa.
+4,C2.3-7c,Das Buch ist neu.,Kitabu ni kipya.
+5,C2.3-7c,Der Stuhl ist alt;kaputt.,Kiti ni kikuukuu.

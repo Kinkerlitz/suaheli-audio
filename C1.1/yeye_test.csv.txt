@@ -1,0 +1,9 @@
+Track,Context,German,Swahili
+1,Test,Yeye (A-Orus - Original),Yeye
+2,Test,Yeye (B-Pulcherrima - Original),Yeye
+3,Test,Yeye mit Punkt (A-Orus),Yeye.
+4,Test,Yeye mit Punkt (B-Pulcherrima),Yeye.
+5,Test,Si (A-Orus - Original),Si
+6,Test,Si (B-Pulcherrima - Original),Si
+7,Test,Si mit Punkt (A-Orus),Si.
+8,Test,Si mit Punkt (B-Pulcherrima),Si.

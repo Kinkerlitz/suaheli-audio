@@ -1,0 +1,8 @@
+a,b,c,d
+10,C1.1-Vok,bin nicht   ist nicht,Si
+1,C1.3-8a,"Hallo, ich will jetzt Brot kaufen.","Hujambo, ninataka kununua mkate sasa."
+2,C1.3-8a,"Du bist nicht krank, du bist gesund.","Wewe si mgonjwa, wewe ni mzima."
+3,C1.3-8a,Er isst schnell und trinkt schnell.,Anakula haraka na anakunywa haraka.
+4,C1.3-8a,"Ich frage, weil ich wissen will.",Ninauliza kwa sababu ninataka kujua.
+5,C1.3-8b,"Ich warte nicht, ich gehe jetzt.","Sisubiri, ninakwenda sasa."
+6,C1.3-8b,"Er sagt, dass er jetzt arbeiten kann.",Anasema kwamba anaweza kufanya kazi sasa.

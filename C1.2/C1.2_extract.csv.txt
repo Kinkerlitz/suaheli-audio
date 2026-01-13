@@ -1,0 +1,84 @@
+Nr.,Kapitel,Deutsch,Suaheli
+1,C1.2-Vok-A,Machen ; Tun,Kufanya
+2,C1.2-Vok-A,Essen,Kula
+3,C1.2-Vok-A,Trinken,Kunywa
+4,C1.2-Vok-A,Gehen,Kwenda
+5,C1.2-Vok-A,Kaufen,Kununua
+6,C1.2-Vok-A,Verkaufen,Kuuza
+7,C1.2-Vok-A,Reden,Kuongea
+8,C1.2-Vok-A,Fragen,Kuuliza
+9,C1.2-Vok-A,Antworten,Kujibu
+10,C1.2-Vok-A,Warten,Kusubiri
+11,C1.2-Vok-A,Ankommen,Kufika
+1,C1.2-Vok-B,Laden,Duka
+2,C1.2-Vok-B,Markt,Soko
+3,C1.2-Vok-B,Haus,Nyumba
+4,C1.2-Vok-B,Schule,Shule
+1,C1.2-Vok-C,Brot,Mkate
+2,C1.2-Vok-C,Wasser,Maji
+3,C1.2-Vok-C,Milch,Maziwa
+4,C1.2-Vok-C,Kaffee,Kahawa
+5,C1.2-Vok-C,Fisch,Samaki
+6,C1.2-Vok-C,Geld,Pesa
+1,C1.2-Vok-D,Jetzt (Gegenwart),-na-
+1,C1.2-Vok-E,Lehrer,Mwalimu
+1,C1.2-2a,Ich mache.,Ninafanya.
+2,C1.2-2a,Du machst.,Unafanya.
+3,C1.2-2a,Er;Sie macht.,Anafanya.
+4,C1.2-2a,Ich gehe (jetzt).,Ninakwenda.
+5,C1.2-2a,Du gehst (jetzt).,Unakwenda.
+6,C1.2-2a,Er geht (jetzt).,Anakwenda.
+1,C1.2-2b,Ich arbeite.,Ninafanya kazi.
+2,C1.2-2b,Du arbeitest.,Unafanya kazi.
+3,C1.2-2b,Er arbeitet.,Anafanya kazi.
+4,C1.2-2b,Ich esse.,Ninakula.
+5,C1.2-2b,Du trinkst.,Unakunywa.
+6,C1.2-2b,Ich trinke Milch.,Ninakunywa maziwa.
+7,C1.2-2b,Ich komme an.,Ninafika.
+1,C1.2-3a,Ich kaufe.,Ninanunua.
+2,C1.2-3a,Du kaufst Brot.,Unanunua mkate.
+3,C1.2-3a,Er kauft Fisch.,Ananunua samaki.
+4,C1.2-3a,Ich verkaufe.,Ninauza.
+5,C1.2-3a,Er verkauft Kaffee.,Anauza kahawa.
+6,C1.2-3a,Du verkaufst Milch.,Unauza maziwa.
+1,C1.2-3b,Ich kaufe im Laden.,Ninanunua dukani.
+2,C1.2-3b,Er verkauft auf dem Markt.,Anauza sokoni.
+3,C1.2-3b,Was kaufst du?,Unanunua nini?
+4,C1.2-3b,Was verkauft er?,Anauza nini?
+1,C1.2-4a,Ich rede.,Ninaongea.
+2,C1.2-4a,Du redest mit dem Lehrer.,Unaongea na mwalimu.
+3,C1.2-4a,Ich gebe.,Ninatoa.
+4,C1.2-4a,Er gibt das Geld.,Anatoa pesa.
+1,C1.2-4b,Ich nehme das Buch.,Ninachukua kitabu.
+2,C1.2-4b,Ich frage.,Ninauliza.
+3,C1.2-4b,Du antwortest.,Unajibu.
+4,C1.2-4b,Ich warte.,Ninasubiri.
+5,C1.2-4b,Er wartet (jetzt).,Anasubiri.
+1,C1.2-5a,Ich weiß.,Ninajua.
+2,C1.2-5a,Du verstehst.,Unafahamu.
+3,C1.2-5a,Ich helfe.,Ninasaidia.
+4,C1.2-5a,Du denkst.,Unafikiri.
+5,C1.2-5a,Ich kann.,Ninaweza.
+6,C1.2-5a,Er kann es machen.,Anaweza kufanya.
+1,C1.2-5b,Ich will.,Ninataka.
+2,C1.2-5b,Er will Kaffee.,Anataka kahawa.
+3,C1.2-5b,Ich will Wasser.,Ninataka maji.
+4,C1.2-5b,Du willst Milch.,Unataka maziwa.
+5,C1.2-5b,Ich will gehen.,Ninataka kwenda.
+1,C1.2-6,Ich sage; dass ich gehe.,Ninasema kwamba ninakwenda.
+2,C1.2-6,Er denkt; dass du kaufst.,Anafikiri kwamba unanunua.
+3,C1.2-6,Das ist wie Wasser.,Hiki ni kama maji.
+4,C1.2-6,Er macht es für Geld.,Anafanya kwa pesa.
+5,C1.2-6,Ich will essen und trinken.,Ninataka kula na kunywa.
+6,C1.2-6,Du bist hungrig; aber du arbeitest.,Una njaa; lakini unafanya kazi.
+1,C1.2-7,Ich arbeite nicht.,Sifanyi kazi.
+2,C1.2-7,Er kauft nicht.,Hanunui.
+3,C1.2-7,Wir wissen es nicht.,Hatujui.
+4,C1.2-7,Er ist nicht im Laden.,Hayupo dukani.
+5,C1.2-7,Ich weiß nicht.,Sijui.
+6,C1.2-7,Ich will nicht.,Sitaki.
+1,C1.2-8,Ich gehe zum Laden.,Ninakwenda dukani.
+2,C1.2-8,Wir sind im Haus.,Tupo nyumbani.
+3,C1.2-8,Er ist in der Schule.,Yupo shuleni.
+4,C1.2-8,Gehst du zum Markt?,Unakwenda sokoni?
+5,C1.2-8,Ich gehe nach Hause.,Ninakwenda nyumbani.

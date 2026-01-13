@@ -1,0 +1,103 @@
+Nr.,Kapitel,Deutsch,Suaheli
+1,C2.1-Vok-A,Wir,Sisi
+2,C2.1-Vok-A,Ihr (Plural),Ninyi
+3,C2.1-Vok-A,Sie (Plural),Wao
+4,C2.1-Vok-A,Wir...,Tu-
+5,C2.1-Vok-A,Ihr...,M-
+6,C2.1-Vok-A,Sie...,Wa-
+1,C2.1-Vok-B,Helfen,Kusaidia
+2,C2.1-Vok-B,Lesen ; Lernen,Kusoma
+3,C2.1-Vok-B,Schreiben,Kuandika
+4,C2.1-Vok-B,Spielen,Kucheza
+5,C2.1-Vok-B,Ausruhen,Kupumzika
+6,C2.1-Vok-B,Schnell,Haraka
+7,C2.1-Vok-B,Langsam,Polepole
+1,C2.1-Vok-C,Gut,Nzuri
+2,C2.1-Vok-C,Schlecht,Mbaya
+3,C2.1-Vok-C,Neu (Dinge),-pya
+4,C2.1-Vok-C,Sauber,Safi
+5,C2.1-Vok-C,Schmutzig,Chafu
+6,C2.1-Vok-C,Neu ; Fremd (Mensch),Mgeni
+1,C2.1-Vok-D,Groß,Mkubwa
+2,C2.1-Vok-D,Klein,Mdogo
+3,C2.1-Vok-D,Alt ; Älter,Mzee
+4,C2.1-Vok-D,Jung ; Jugendlicher,Kijana
+5,C2.1-Vok-D,Krank,Mgonjwa
+6,C2.1-Vok-D,Gesund,Mzima
+7,C2.1-Vok-D,Arm,Maskini
+1,C2.1-2a,Wir machen.,Tunafanya.
+2,C2.1-2a,Wir gehen.,Tunakwenda.
+3,C2.1-2a,Wir arbeiten.,Tunafanya kazi.
+4,C2.1-2a,Wir fragen.,Tunauliza.
+5,C2.1-2a,Wir helfen.,Tunasaidia.
+6,C2.1-2a,Wir lesen ; lernen.,Tunasoma.
+7,C2.1-2a,Wir wissen.,Tunajua.
+1,C2.1-2b,Ihr macht.,Mnafanya.
+2,C2.1-2b,Ihr esst.,Mnakula.
+3,C2.1-2b,Ihr kauft.,Mnanunua.
+4,C2.1-2b,Ihr antwortet.,Mnajibu.
+5,C2.1-2b,Ihr schreibt.,Mnaandika.
+6,C2.1-2b,Ihr könnt.,Mnaweza.
+7,C2.1-2b,Ihr versteht.,Mnafahamu.
+1,C2.1-2c,Sie machen.,Wanafanya.
+2,C2.1-2c,Sie trinken.,Wanakunywa.
+3,C2.1-2c,Sie verkaufen.,Wanauza.
+4,C2.1-2c,Sie warten.,Wanasubiri.
+5,C2.1-2c,Sie wollen.,Wanataka.
+6,C2.1-2c,Sie reden.,Wanaongea.
+1,C2.1-3a,Wir essen Brot.,Tunakula mkate.
+2,C2.1-3a,Wir essen Reis.,Tunakula wali.
+3,C2.1-3a,Ihr kauft Fisch.,Mnanunua samaki.
+4,C2.1-3a,Sie verkaufen Kaffee.,Wanauza kahawa.
+5,C2.1-3a,Wir geben Geld.,Tunatoa pesa.
+6,C2.1-3a,Sie nehmen Wasser.,Wanachukua maji.
+1,C2.1-3b,Ihr arbeitet schnell.,Mnafanya kazi haraka.
+2,C2.1-3b,Wir gehen langsam.,Tunakwenda polepole.
+3,C2.1-3b,Sie verstehen jetzt.,Wanafahamu sasa.
+4,C2.1-3b,Wir reden über die Arbeit.,Tunaongea kuhusu kazi.
+5,C2.1-3b,Ihr kauft im Laden.,Mnanunua dukani.
+6,C2.1-3b,Sie warten im Zimmer.,Wanasubiri chumbani.
+1,C2.1-4a,Was macht ihr?,Mnafanya nini?
+2,C2.1-4a,Wer fragt?,Nani anauliza?
+3,C2.1-4a,Gehen sie jetzt?,Wanakwenda sasa?
+4,C2.1-4a,Wollt ihr reden? Nein.,Mnataka kuongea? Hapana.
+1,C2.1-4b,Wir machen nicht.,Hatufanyi.
+2,C2.1-4b,Ihr kauft nicht.,Hamnunui.
+3,C2.1-4b,Sie reden nicht.,Hawaongei.
+4,C2.1-4b,Wir wissen nicht.,Hatujui.
+5,C2.1-4b,Sie wollen nicht gehen.,Hawataki kwenda.
+6,C2.1-4b,Ihr könnt nicht helfen.,Hamwezi kusaidia.
+7,C2.1-4b,Sie verkaufen das nicht.,Hawauzi hilo.
+1,C2.1-5a,Wir gehen und wir kaufen.,Tunakwenda na tunanunua.
+2,C2.1-5a,Ihr arbeitet; aber sie warten.,Mnafanya kazi; lakini wanasubiri.
+3,C2.1-5a,Wir machen es für sie.,Tunafanya kwa wao.
+4,C2.1-5a,Sie wissen; dass wir hier sind.,Wanajua kwamba tupo hapa.
+1,C2.1-5b,Ihr seid wie Kinder.,Ninyi ni kama watoto.
+2,C2.1-5b,Entschuldigung; wir sind neu.,Samahani; sisi ni wageni.
+3,C2.1-5b,Sie sind stark.,Wao ni wenye nguvu.
+4,C2.1-5b,Wir sind gesund.,Sisi ni wazima.
+5,C2.1-5b,Das Brot ist hart; wir essen nicht.,Mkate ni mgumu; hatukuli.
+6,C2.1-5b,Ihr seid jung; aber stark.,Ninyi ni vijana; lakini mna nguvu.
+7,C2.1-5b,Sie sind alt und müde.,Wao ni wazee na wamechoka.
+1,C2.1-5c,Wir müssen jetzt gehen!,Tunahitaji kwenda sasa!
+2,C2.1-5c,Sind wir fertig?,Tumemaliza?
+3,C2.1-5c,Nein; wir sind noch nicht fertig.,Hapana; hatujamaliza bado.
+4,C2.1-5c,Sie gehen in das Zimmer.,Wanakwenda ndani ya chumba.
+5,C2.1-5c,Ihr seid draußen.,Mpo nje.
+6,C2.1-5c,Wir sind hier und arbeiten.,Tupo hapa na tunafanya kazi.
+7,C2.1-5c,Wir nehmen das Auto und gehen.,Tunachukua gari na tunakwenda.
+8,C2.1-5c,Sie sehen alles.,Wanaona yote.
+1,C2.1-6,Der Tisch ist klein.,Meza ni ndogo.
+2,C2.1-6,Ich bin müde.,Mimi nimechoka.
+3,C2.1-6,Bist du hier?,Wewe upo hapa?
+4,C2.1-6,Er ist nicht dort.,Yeye hayupo pale.
+5,C2.1-6,Ich mache es jetzt.,Ninafanya sasa.
+6,C2.1-6,Er arbeitet nicht.,Hafanyi kazi.
+7,C2.1-6,Er redet; weil er weiß.,Anaongea kwa sababu anajua.
+8,C2.1-6,Ich bin reich; aber ich arbeite.,Mimi ni tajiri; lakini ninafanya kazi.
+9,C2.1-6,Der Laden ist hier; aber ich kaufe nicht.,Duka lipo hapa; lakini sinunui.
+1,C2.1-7,Wir wollen Brot essen.,Tunataka kula mkate.
+2,C2.1-7,Ihr braucht dieses Geld.,Mnahitaji pesa hizi.
+3,C2.1-7,Sie lieben es; hier zu warten.,Wanapenda kusubiri hapa.
+4,C2.1-7,Wir wollen dich.,Tunakutaka.
+5,C2.1-7,Sie brauchen uns nicht.,Hawatuhitaji.

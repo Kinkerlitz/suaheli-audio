@@ -1,0 +1,106 @@
+Nr.,Kapitel,Deutsch,Suaheli
+1,C4.1-Vok,schon / bereit,tayari
+2,C4.1-Vok,noch nicht,bado
+3,C4.1-Vok,entscheiden,kuamua
+4,C4.1-Vok,lösen (ein Problem),kutatua
+5,C4.1-Vok,hören,kusikia
+6,C4.1-Vok,kaputt gehen / sein,kuharibika
+7,C4.1-Vok,krank werden,kuugua
+8,C4.1-Vok,rennen / weglaufen,kukimbia
+9,C4.1-Vok,stellen / legen,kuweka
+10,C4.1-Vok,deshalb / also,kwa hivyo
+11,C4.1-Vok,Junge,mvulana
+1,C4.1-1a,Ich habe gearbeitet (bin fertig).,Nimefanya kazi.
+2,C4.1-1a,Du hast getrunken.,Umekunywa.
+3,C4.1-1a,Er hat gekauft.,Amenunua.
+4,C4.1-1a,Wir sind angekommen.,Tumefika.
+5,C4.1-1a,Ihr habt geholfen.,Mmesaidia.
+6,C4.1-1a,Sie sind gegangen.,Wamekwenda.
+1,C4.1-1b,Das Auto ist kaputt (fertig).,Gari limeharibika.
+2,C4.1-1b,Der Reis ist gekocht.,Wali umepikwa.
+3,C4.1-1b,Ich bin müde (Resultat der Aktion).,Nimechoka.
+4,C4.1-1b,Sie ist krank geworden.,Ameugua.
+5,C4.1-1b,Habt ihr gegessen?,Mmekula?
+6,C4.1-1b,Sind wir fertig?,Tumemaliza?
+1,C4.1-1c,Ich habe seinen Bruder gesehen.,Nimemwona kaka yake.
+2,C4.1-1c,Wir haben zwei Tische gekauft.,Tumenunua meza mbili.
+3,C4.1-1c,Sie sind zum Haus gegangen.,Wamekwenda nyumbani.
+4,C4.1-1c,Der Lehrer ist angekommen.,Mwalimu amefika.
+5,C4.1-1c,Du hast die großen Augen gesehen.,Umeona macho makubwa.
+6,C4.1-1c,Er hat das Wasser getrunken.,Amekunywa maji.
+1,C4.1-2a,Ich habe noch nicht gearbeitet.,Sijafanya kazi.
+2,C4.1-2a,Du bist noch nicht gegangen.,Hujaenda.
+3,C4.1-2a,Er hat noch nicht gekauft.,Hajanunua.
+4,C4.1-2a,Wir sind noch nicht angekommen.,Hatujafika.
+5,C4.1-2a,Ihr habt noch nicht geholfen.,Hamjasaidia.
+6,C4.1-2a,Sie haben noch nicht geredet.,Hawajaongea.
+1,C4.1-2b,Das Essen ist noch nicht fertig.,Chakula hakijaisha.
+2,C4.1-2b,Die Augen haben noch nicht gesehen.,Macho hayajaona.
+3,C4.1-2b,Bist du schon müde?,Umechoka tayari?
+4,C4.1-2b,Nein; ich bin noch nicht müde.,Hapana; sijachoka.
+5,C4.1-2b,Wir haben nur zwei gekauft.,Tumenunua mbili tu.
+6,C4.1-2b,Sie haben meinen Bruder noch nicht gesehen.,Hawajamwona kaka yangu.
+1,C4.1-2c,Er hat das Geld noch nicht gegeben.,Hajatoa pesa.
+2,C4.1-2c,Wir sind noch nicht in seinem Auto.,Hatujawa ndani ya gari lake.
+3,C4.1-2c,Er ist krank geworden; deshalb ist er gegangen.,Ameugua; kwa hivyo amekwenda.
+4,C4.1-2c,Ich habe noch nicht entschieden; was ich tun werde.,Sijaamua; nitafanya nini.
+1,C4.1-3a,Ich habe gekauft; ich kaufte; ich werde kaufen.,Nimenunua; nilinunua; nitanunua.
+2,C4.1-3a,Wir haben noch nicht gearbeitet; aber wir werden es tun.,Hatujafanya kazi; lakini tutafanya.
+3,C4.1-3a,Er kaufte; jetzt hat er.,Alinunua; sasa ana.
+4,C4.1-3a,Sie haben noch nicht gegessen; also warten sie.,Hawajala; kwa hivyo wanasubiri.
+5,C4.1-3a,Ich bin müde; ich kann nicht arbeiten.,Nimechoka; siwezi kufanya kazi.
+6,C4.1-3a,Er ist angekommen und er redet.,Amefika na anaongea.
+1,C4.1-3b,Gestern haben wir es fertiggestellt.,Jana tumekimaliza.
+2,C4.1-3b,Wir sind vier.,Sisi ni wanne.
+3,C4.1-3b,Zwei sind gekommen; zwei noch nicht.,Wawili wamekuja; wawili hawajaja.
+4,C4.1-3b,Ich habe noch nicht gegessen; aber ich bin nicht hungrig.,Sijala; lakini sina njaa.
+5,C4.1-3b,Sie sind gegangen; aber ihre Arbeit ist nicht fertig.,Wamekwenda; lakini kazi yao haijaisha.
+6,C4.1-3b,Ich habe dir das Geld gegeben.,Nimekupa pesa.
+1,C4.1-3c,Das Wasser ist noch nicht warm geworden.,Maji hayajapata moto.
+2,C4.1-3c,Er hat seinen großen Tisch verkauft.,Ameuza meza yake kubwa.
+3,C4.1-3c,Sie haben die Probleme gelöst.,Wametatua shida.
+4,C4.1-3c,Wir haben drei Autos gekauft.,Tumenunua magari matatu.
+5,C4.1-3c,Sie haben uns noch nicht geantwortet.,Hawajatujibu.
+6,C4.1-3c,Der Laden hat geschlossen.,Duka limefungwa.
+1,C4.1-3d,Ich habe gesehen; wie du das machst.,Nimeona unafanya hilo.
+2,C4.1-3d,Er ist zur Schule gegangen; und er ist noch nicht zurück.,Amekwenda shuleni; na hajarudi bado.
+3,C4.1-3d,Ihr habt das Problem noch nicht gelöst.,Hamjatatua shida.
+4,C4.1-3d,Das sind alle Eier; die wir haben.,Hayo ni mayai yote; ambayo tunayo.
+5,C4.1-3d,Der Junge ist weggelaufen.,Mvulana amekimbia.
+6,C4.1-3d,Wir haben fünf Tische in das Haus gestellt.,Tumeweka meza tano ndani ya nyumba.
+1,C4.1-3e,Er hat unsere kleinen Augen gesehen.,Ameona macho yetu madogo.
+2,C4.1-3e,Er ist krank geworden; er hat noch nicht gearbeitet.,Ameugua; hajafanya kazi.
+3,C4.1-3e,Wir haben drei Eier gegessen.,Tumekula mayai matatu.
+4,C4.1-3e,Das Geld ist nicht genug.,Pesa haitoshi.
+5,C4.1-3e,Wir haben noch nichts von ihm gehört.,Hatujasikia kitu kutoka kwake.
+6,C4.1-3e,Er hat uns gefragt; warum wir hier sind.,Ametuuliza kwa nini tupo hapa.
+1,C4.1-3f,Die vielen Menschen sind gekommen.,Watu wengi wamekuja.
+2,C4.1-3f,Ich habe mein kleines Auto verkauft.,Nimeuza gari langu dogo.
+3,C4.1-3f,Sie haben entschieden; morgen zu gehen.,Wameamua kwenda kesho.
+4,C4.1-3f,Ich habe noch nicht geschrieben.,Sijaandika.
+5,C4.1-3f,Er hat uns nicht geholfen.,Hajatusaidia.
+6,C4.1-3f,Ich bin fertig; aber ich werde morgen wieder arbeiten.,Nimemaliza; lakini nitafanya kazi tena kesho.
+1,C4.1-4a,Wir fragten den Lehrer.,Tuliuliza mwalimu.
+2,C4.1-4a,Ihr werdet essen.,Mtakula.
+3,C4.1-4a,Sie gehen nicht (jetzt).,Hawaendi.
+4,C4.1-4a,Ich sah es gestern nicht.,Sikukiona jana.
+5,C4.1-4a,Wir sind hier.,Tupo hapa.
+6,C4.1-4a,Er war dort.,Alikuwapo pale.
+1,C4.1-4b,Werdet ihr hier bleiben?,Mtakaa hapa?
+2,C4.1-4b,Die Straße ist lang.,Barabara ni ndefu.
+3,C4.1-4b,Das kleine Ei ist gut.,Yai dogo ni zuri.
+4,C4.1-4b,Die großen Augen sehen.,Macho makubwa yanaona.
+5,C4.1-4b,Ist das dein Bruder?,Je; ni kaka yako?
+6,C4.1-4b,Ich brauche zehn Autos.,Ninahitaji magari kumi.
+1,C4.1-4c,Sie kauften nur drei Tische.,Walinunua meza tatu tu.
+2,C4.1-4c,Das Wasser wird kalt sein.,Maji yatakuwa baridi.
+3,C4.1-4c,Ich sehe unsere Väter.,Ninawaona baba zetu.
+4,C4.1-4c,Viel Wasser ist viel Arbeit.,Maji mengi ni kazi nyingi.
+5,C4.1-4c,Ich war müde; deshalb kaufte ich nicht.,Nilikuwa nimechoka; kwa hivyo sikununua.
+6,C4.1-4c,Wir sind nicht hungrig; wir haben gegessen.,Sisi hatuna njaa; tumekula.
+1,C4.1-4d,Das ist neu; aber es ist kaputt gegangen.,Hiki ni kipya; lakini kimeharibika.
+2,C4.1-4d,Er wird alt sein; wenn er das macht.,Atakuwa mzee; akifanya hilo.
+3,C4.1-4d,Ich habe noch nicht essen wollen.,Sijataka kula.
+4,C4.1-4d,Er hat uns geholfen; weil er es gebraucht hat.,Ametusaidia kwa sababu amehitaji.
+5,C4.1-4d,Sie haben es noch nicht geliebt.,Hawajakipenda.
+6,C4.1-4d,Hast du gewollt zu gehen?,Umetaka kwenda?

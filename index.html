@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"> 
+    <title>Suaheli intensiv</title>
+    
+    <link rel="icon" type="image/png" href="cover.386x491.png">
+    
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<div class="container">
+    <header>
+        <h1>Suaheli intensiv</h1>
+        <p>Das offizielle Begleitmaterial</p>
+    </header>
+
+    <div class="content">
+        <div class="book-ad">
+            <div class="cover-container">
+                <picture>
+                    <source media="(min-width: 500px)" srcset="cover.577x738.png">
+                    <img src="cover.386x491.png" alt="Buchcover" class="responsive-cover">
+                </picture>
+            </div>
+            <h2>Lernen Sie effektiv mit Audio</h2>
+            <p>Nutzen Sie die Audio-Tabellen um Ihre Aussprache zu perfektionieren. Zugangscode finden Sie auf Seite 3 im Buch.</p>
+            
+            <button onclick="window.location.href='https://amazon.de/dein-buch-link'">Buch jetzt kaufen</button>
+        </div>
+
+        <hr>
+
+        <div class="login-box">
+            <h3>Login für Buchbesitzer</h3>
+            <p>Bitte geben Sie das Passwort aus dem Buch ein:</p>
+            <input type="password" id="passwordInput" placeholder="Passwort eingeben">
+            <button onclick="checkLogin()">Zugang freischalten</button>
+            <p id="errorMsg" style="color:red; display:none; margin-top:10px;">Falsches Passwort!</p>
+        </div>
+    </div>
+</div>
+
+<script>
+    function checkLogin() {
+        const input = document.getElementById('passwordInput').value;
+        const errorMsg = document.getElementById('errorMsg');
+        
+        // Passwort Prüfung
+        if(input === "Start2025") {
+            window.location.href = "kurs_x9s2_audio_inhalt.html";
+        } else {
+            errorMsg.style.display = "block";
+        }
+    }
+</script>
+
+</body>
+</html>

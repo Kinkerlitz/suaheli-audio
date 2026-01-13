@@ -1,0 +1,12 @@
+,Quelle,Deutsch,Suaheli
+1,C1.1-Vok,Er   Sie,Yeye
+2,C1.1-Vok,bin nicht   ist nicht,Si
+3,C1.1-2a,Er Sie.,Yeye.
+4,C1.1-5,Wo bist du?,Wewe upo wapi?
+5,C1.1-5,Er ist nicht hier.,Yeye hayupo hapa.
+6,C1.1-Vok,Er   Sie,Yeye
+7,C1.1-Vok,bin nicht   ist nicht,Si
+8,C1.1-2a,Er Sie.,Yeye.
+9,C1.1-3f,Er ist nicht der Lehrer.,Yeye si mwalimu.
+10,C1.1-5,Wo bist du?,Wewe upo wapi?
+11,C1.1-5,Er ist nicht hier.,Yeye hayupo hapa.

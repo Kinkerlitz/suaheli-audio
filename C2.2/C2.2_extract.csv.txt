@@ -1,0 +1,69 @@
+Nr.,Kapitel,Deutsch,Suaheli
+1,C2.2-Vok-A,Kind,Mtoto
+2,C2.2-Vok-A,Mutter,Mama
+3,C2.2-Vok-A,Bruder,Kaka
+4,C2.2-Vok-A,Schwester,Dada
+5,C2.2-Vok-A,Eltern,Wazazi
+6,C2.2-Vok-A,Freund,Rafiki
+7,C2.2-Vok-A,Name,Jina
+1,C2.2-Vok-B,Mein,-angu
+2,C2.2-Vok-B,Dein,-ako
+3,C2.2-Vok-B,Sein ; Ihr,-ake
+4,C2.2-Vok-B,Unser,-etu
+5,C2.2-Vok-B,Euer,-enu
+6,C2.2-Vok-B,Ihr (Deren),-ao
+1,C2.2-2,Mein Vater.,Baba wangu.
+2,C2.2-2,Dein Bruder.,Kaka wako.
+3,C2.2-2,Sein Haus.,Nyumba yake.
+4,C2.2-2,Unser Lehrer.,Mwalimu wetu.
+5,C2.2-2,Euer Auto.,Gari lenu.
+6,C2.2-2,Ihr Essen.,Chakula chao.
+7,C2.2-2,Mein Vater ist alt.,Baba wangu ni mzee.
+8,C2.2-2,Mein Name.,Jina langu.
+9,C2.2-2,Unser Lehrer ist gut.,Mwalimu wetu ni mzuri.
+1,C2.2-3,Wo ist dein Haus?,Nyumba yako ipo wapi?
+2,C2.2-3,Mein Haus ist hier.,Nyumba yangu ipo hapa.
+3,C2.2-3,Haben sie unser Auto?,Wana gari letu?
+4,C2.2-3,Nein; sie haben unser Auto nicht.,Hapana; hawana gari letu.
+5,C2.2-3,Wo sind eure Väter?,Baba zenu wapo wapi?
+6,C2.2-3,Sie sind im Haus.,Wapo ndani ya nyumba.
+7,C2.2-3,Ist unser Geld genug?,Pesa zetu zinatosha?
+8,C2.2-3,Wo ist unser Geld?,Pesa zetu zipo wapi?
+1,C2.2-4,Wir sind deine Kinder.,Sisi ni watoto wako.
+2,C2.2-4,Ihr seid meine Freunde.,Nyinyi ni rafiki zangu.
+3,C2.2-4,Sie sind unsere Gäste.,Wao ni wageni wetu.
+4,C2.2-4,Dieser Mann ist jung.,Mtu huyu ni kijana.
+5,C2.2-4,Diese Männer sind jung.,Watu hawa ni vijana.
+6,C2.2-4,Jene Frauen sind alt.,Wanawake wale ni wazee.
+7,C2.2-4,Wer sind diese hier?,Hawa ni nani?
+8,C2.2-4,Sie sind meine Eltern.,Wao ni wazazi wangu.
+1,C2.2-5,Unsere Freunde kaufen Kaffee.,Rafiki zetu wananunua kahawa.
+2,C2.2-5,Eure Väter arbeiten.,Baba zenu wanafanya kazi.
+3,C2.2-5,Sie warten auf deinen Bruder.,Wanasubiri kaka wako.
+4,C2.2-5,Diese Kinder gehen jetzt.,Watoto hawa wanakwenda sasa.
+5,C2.2-5,Jene Gäste essen.,Wageni wale wanakula.
+6,C2.2-5,Wir kaufen Brot für unsere Mutter.,Tunanunua mkate kwa mama yetu.
+7,C2.2-5,Wir warten auf unsere Lehrer.,Tunasubiri walimu wetu.
+8,C2.2-5,Du lernst mit deinen Freunden.,Unasoma na rafiki zako.
+1,C2.2-6,Kannst du jenen Mann sehen?,Unaweza kumwona mtu yule?
+2,C2.2-6,Wir sind hier; und unsere Kinder essen.,Tupo hapa na watoto wetu wanakula.
+3,C2.2-6,Sie sagen; dass ihre Arbeit gut ist.,Wanasema kwamba kazi yao ni nzuri.
+4,C2.2-6,Wir können ihm nicht helfen.,Hatuwezi kumsaidia.
+5,C2.2-6,Ich sehe deine Schwester.,Ninamwona dada yako.
+6,C2.2-6,Ich sehe deine Eltern dort.,Ninawaona wazazi wako pale.
+7,C2.2-6,Wir geben ihm Wasser.,Tunampa maji.
+1,C2.2-7,Ihr seid groß; aber eure Autos sind klein.,Ninyi ni wakubwa; lakini magari yenu ni madogo.
+2,C2.2-7,Seine Frau ist jung und gesund.,Mke wake ni kijana na mzima.
+3,C2.2-7,Wollt ihr reden oder gehen?,Mnataka kuongea au kwenda.
+4,C2.2-7,Eure Eltern sind nicht hier.,Wazazi wenu hawapo hapa.
+5,C2.2-7,Warum seid ihr hier?,Kwa nini mpo hapa?
+6,C2.2-7,Wir sind hier; um zu arbeiten.,Tupo hapa kufanya kazi.
+7,C2.2-7,Sie ist hier; sie kocht.,Yupo hapa; anapika.
+8,C2.2-7,Warum arbeitet ihr nicht?,Kwa nini hamfanyi kazi?
+9,C2.2-7,Wir helfen; weil wir können.,Tunasaidia kwa sababu tunaweza.
+10,C2.2-7,Ist das dein Bruder oder dein Cousin?,Yeye ni kaka yako au binamu yako?
+1,C2.2-8,Ich will dein Buch.,Ninataka kitabu chako.
+2,C2.2-8,Wir brauchen ihr Haus.,Tunahitaji nyumba yao.
+3,C2.2-8,Er liebt seine Arbeit.,Anapenda kazi yake.
+4,C2.2-8,Ich will deinen Vater sehen.,Ninataka kumwona baba yako.
+5,C2.2-8,Sie lieben nicht meinen Bruder.,Hawampendi kaka yangu.

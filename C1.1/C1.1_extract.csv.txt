@@ -1,0 +1,76 @@
+Nr.,Kapitel,Deutsch,Suaheli
+1,C1.1-Vok-A,Ich,Mimi
+2,C1.1-Vok-A,Du,Wewe
+3,C1.1-Vok-A,Er ; Sie,Yeye
+4,C1.1-Vok-A,Mann,Mwanamume
+5,C1.1-Vok-A,Frau,Mwanamke
+6,C1.1-Vok-A,Ehemann,Mume
+7,C1.1-Vok-A,Ehefrau,Mke
+8,C1.1-Vok-A,Vater,Baba
+9,C1.1-Vok-A,bin ; bist ; ist,Ni
+10,C1.1-Vok-A,bin nicht ; ist nicht,Si
+1,C1.1-Vok-B,Hallo,Hujambo ; Jambo
+2,C1.1-Vok-B,Mir geht's gut,Sijambo
+3,C1.1-Vok-B,Wie geht's?,Habari?
+4,C1.1-Vok-B,Entschuldigung,Samahani
+5,C1.1-Vok-B,Danke,Asante
+1,C1.1-Vok-C,Gut,Nzuri
+2,C1.1-Vok-C,Schlecht,Mbaya
+3,C1.1-Vok-C,Neu (Dinge),-pya
+4,C1.1-Vok-C,Sauber,Safi
+5,C1.1-Vok-C,Schmutzig,Chafu
+6,C1.1-Vok-C,Neu ; Fremd (Mensch),Mgeni
+1,C1.1-Vok-D,Groß,Mkubwa
+2,C1.1-Vok-D,Klein,Mdogo
+3,C1.1-Vok-D,Alt ; Älter,Mzee
+4,C1.1-Vok-D,Jung ; Jugendlicher,Kijana
+5,C1.1-Vok-D,Krank,Mgonjwa
+6,C1.1-Vok-D,Gesund,Mzima
+7,C1.1-Vok-D,Arm,Maskini
+1,C1.1-Vok-E,Buch,Kitabu
+1,C1.1-2a,Ich.,Mimi.
+2,C1.1-2a,Du.,Wewe.
+3,C1.1-2a,Er;Sie.,Yeye.
+1,C1.1-2b,Hallo.,Hujambo? Jambo
+2,C1.1-2b,Mir geht's gut.,Sijambo.
+3,C1.1-2b,Wie geht's?,Habari?
+4,C1.1-2b,Entschuldigung.,Samahani.
+5,C1.1-2b,Danke.,Asante.
+1,C1.1-2c,Gut.,Nzuri.
+2,C1.1-2c,Schlecht.,Mbaya.
+3,C1.1-2c,Ja.,Ndiyo ; Naam.
+4,C1.1-2c,Nein.,Hapana.
+1,C1.1-3a,Ich bin gut.,Mimi ni mzuri.
+2,C1.1-3a,Du bist gut.,Wewe ni mzuri.
+3,C1.1-3a,Er;Sie ist gut.,Yeye ni mzuri.
+4,C1.1-3a,Ich bin neu.,Mimi ni mgeni.
+5,C1.1-3a,Du bist neu.,Wewe ni mgeni.
+1,C1.1-3b,Er;Sie ist neu.,Yeye ni mgeni.
+2,C1.1-3b,Ich bin schlecht.,Mimi ni mbaya.
+3,C1.1-3b,Du bist schlecht.,Wewe ni mbaya.
+4,C1.1-3b,Er;Sie ist schlecht.,Yeye ni mbaya.
+1,C1.1-3c,Ich bin groß.,Mimi ni mkubwa.
+2,C1.1-3c,Du bist klein.,Wewe ni mdogo.
+3,C1.1-3c,Er ist alt.,Yeye ni mzee.
+4,C1.1-3c,Sie ist jung.,Yeye ni kijana.
+1,C1.1-3d,Ich bin krank.,Mimi ni mgonjwa.
+2,C1.1-3d,Du bist gesund.,Wewe ni mzima.
+3,C1.1-3d,Er ist arm.,Yeye ni maskini.
+1,C1.1-3e,Wer ist dieser Mann?,Mwanamume huyu ni nani?
+2,C1.1-3e,Wer ist diese Frau?,Mwanamke huyu ni nani?
+3,C1.1-3e,Das ist mein Ehemann.,Huyu ni mume wangu.
+4,C1.1-3e,Das ist meine Ehefrau.,Huyu ni mke wangu.
+1,C1.1-3f,Ich bin nicht schlecht.,Mimi si mbaya.
+2,C1.1-3f,Du bist nicht fremd.,Wewe si mgeni.
+3,C1.1-3f,Er ist nicht der Lehrer.,Yeye si mwalimu.
+4,C1.1-3f,Sie ist nicht klein.,Yeye si mdogo.
+1,C1.1-4,Wer bist du?,Wewe ni nani?
+2,C1.1-4,Ich bin der Vater.,Mimi ni baba.
+3,C1.1-4,Was ist das?,Ni nini?
+4,C1.1-4,Das ist ein Buch.,Ni kitabu.
+5,C1.1-4,Das Buch ist neu.,Kitabu ni kipya.
+1,C1.1-5,Hier ist es sauber.,Hapa ni safi.
+2,C1.1-5,Dort ist es schmutzig.,Pale ni chafu.
+3,C1.1-5,Er ist hier.,Yeye yupo hapa.
+4,C1.1-5,Wo bist du?,Wewe upo wapi?
+5,C1.1-5,Er ist nicht hier.,Yeye hayupo hapa.

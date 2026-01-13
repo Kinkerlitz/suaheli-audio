@@ -1,0 +1,89 @@
+,Quelle,Deutsch,Suaheli
+1,C1.3-Vok,Zimmer,Chumba
+2,C1.3-Vok,Feuer   Heiß,Moto
+3,C1.3-Vok,Vergangenheit   Alt,Zamani
+4,C1.3-Vok,Drinnen,Ndani
+5,C1.3-Vok,Draußen,Nje
+6,C1.3-Vok,Jetzt,Sasa
+7,C1.3-Vok,Arzt,Daktari
+8,C1.3-Vok,Tochter,Binti
+9,C1.3-Vok,Reich,Tajiri
+10,C1.3-Vok,Aber,Lakini
+11,C1.3-Vok,Und   Mit,Na
+12,C1.3-Vok,Brauchen,Kuhitaji
+13,C1.3-Vok,Lieben   Mögen,Kupenda
+1,C1.3-2a,Ich arbeite hier.,Ninafanya kazi hapa.
+2,C1.3-2a,Du kaufst dort.,Unanunua pale.
+3,C1.3-2a,Er isst im Laden.,Anakula dukani.
+4,C1.3-2a,Ich warte hier.,Ninasubiri hapa.
+5,C1.3-2a,"Das Zimmer ist sauber, aber er geht.","Chumba ni safi, lakini anakwenda."
+6,C1.3-2b,Das Geld ist hier.,Pesa ipo hapa.
+7,C1.3-2b,Ist der Kaffee dort?,Kahawa ipo pale?
+8,C1.3-2b,Wer kauft Brot hier?,Nani ananunua mkate hapa?
+9,C1.3-2b,Ich kaufe kein Brot hier.,Sinunui mkate hapa.
+10,C1.3-2b,Wo ist das Geschäft?,Duka lipo wapi?
+1,C1.3-3a,Ich mache es für dich.,Ninafanya kwa wewe.
+2,C1.3-3a,Er will Geld haben.,Anataka kuwa na pesa.
+3,C1.3-3a,Der Lehrer ist wie ein Vater.,Mwalimu ni kama baba.
+4,C1.3-3a,Das Wasser ist wie Feuer.,Maji ni kama moto.
+5,C1.3-3b,Der neue Fisch ist gut.,Samaki mpya ni nzuri.
+6,C1.3-3b,Das alte Zimmer ist klein.,Chumba cha zamani ni kidogo.
+7,C1.3-3b,Das ist sehr gut.,Hiki ni kizuri sana.
+8,C1.3-3b,Wir haben Arbeit.,Tuna kazi.
+9,C1.3-3b,Kannst du es machen?,Unaweza kufanya?
+10,C1.3-3b,Ich kann das nicht machen.,Siwezi kufanya.
+1,C1.3-4a,"Ich esse Brot, aber du trinkst Wasser.","Ninakula mkate, lakini unakunywa maji."
+2,C1.3-4a,"Er will essen, aber er arbeitet.","Anataka kula, lakini anafanya kazi."
+3,C1.3-4a,"Ich frage, und du antwortest.",Ninauliza na unajibu.
+4,C1.3-4a,"Ich gebe Geld, er nimmt Kaffee.","Ninatoa pesa, anachukua kahawa."
+5,C1.3-4a,Das Brot ist hart.,Mkate ni mgumu.
+6,C1.3-4b,"Er ist arm, aber gesund.","Yeye ni maskini, lakini mzima."
+7,C1.3-4b,"Willst du wissen, wer ich bin?",Unataka kujua mimi ni nani?
+8,C1.3-4b,Was macht er?,Anafanya nini?
+9,C1.3-4b,"Er geht in den Laden, um Brot zu kaufen.",Anakwenda dukani kununua mkate.
+10,C1.3-4b,"Ich warte, weil ich es brauche.",Ninasubiri kwa sababu ninahitaji.
+1,C1.3-5a,Ich esse jetzt.,Ninakula sasa.
+2,C1.3-5a,Du kaufst jetzt das Buch.,Unanunua kitabu sasa.
+3,C1.3-5a,Er geht jetzt schnell.,Anakwenda haraka sasa.
+4,C1.3-5a,Ich gebe dir jetzt das Geld.,Ninakupa pesa sasa.
+5,C1.3-5a,Ich kann jetzt helfen.,Ninaweza kusaidia sasa.
+6,C1.3-5b,Ist der Vater jetzt hier?,Baba yupo hapa sasa?
+7,C1.3-5b,"Nein, er arbeitet jetzt.","Hapana, anafanya kazi sasa."
+8,C1.3-5b,Ich will jetzt reden.,Ninataka kuongea sasa.
+9,C1.3-5b,Er versteht jetzt.,Anafahamu sasa.
+10,C1.3-5b,Wir warten jetzt langsam.,Tunasubiri polepole sasa.
+1,C1.3-6a,"Hallo, wie geht es dir?",Hujambo? Ukoje?
+2,C1.3-6a,"Mir geht's gut, danke.","Sijambo, asante."
+3,C1.3-6a,"Entschuldigung, ich bin neu hier.","Samahani, mimi ni mgeni hapa."
+4,C1.3-6a,"Entschuldigung, ich weiß es nicht.","Samahani, sijui."
+5,C1.3-6a,Was sagst du?,Unasema nini?
+6,C1.3-6b,"Ich sage, dass das gut ist.",Ninasema kwamba hiki ni kizuri.
+7,C1.3-6b,Willst du jetzt etwas kaufen?,Unataka kununua kitu sasa?
+8,C1.3-6b,"Ja, ich will Brot.","Ndiyo, ninataka mkate."
+9,C1.3-6b,Ist das Wasser heiß oder kalt?,Maji ni moto au baridi?
+10,C1.3-6b,Das Wasser ist kalt.,Maji ni baridi.
+1,C1.3-7a,Wer ist dieser alte Mann?,"Yeye ni nani, mzee huyu?"
+2,C1.3-7a,Ich bin seine Tochter.,Mimi ni binti yake.
+3,C1.3-7a,Bist du der Arzt?,Wewe ni daktari?
+4,C1.3-7a,Das ist draußen.,Hiki kipo nje.
+5,C1.3-7a,Ich gehe nach drinnen.,Ninakwenda ndani.
+6,C1.3-7a,Ich kann helfen.,Ninaweza kusaidia.
+7,C1.3-7b,Er muss gehen.,Anahitaji kwenda.
+8,C1.3-7b,Dieses Auto ist sehr alt.,Gari hili ni la zamani sana.
+9,C1.3-7b,"Ich will, aber ich kann nicht.","Ninataka, lakini siwezi."
+10,C1.3-7b,Sind sie drinnen?,Wapo ndani?
+11,C1.3-7b,"Nein, sie sind draußen.","Hapana, wapo nje."
+12,C1.3-7b,"Sie wissen, dass ich hier bin.",Wanajua kwamba nipo hapa.
+13,C1.3-7b,Der Tag ist gut.,Siku ni nzuri.
+1,C1.3-8a,"Hallo, ich will jetzt Brot kaufen.","Hujambo, ninataka kununua mkate sasa."
+2,C1.3-8a,"Du bist nicht krank, du bist gesund.","Wewe si mgonjwa, wewe ni mzima."
+3,C1.3-8a,Er isst schnell und trinkt schnell.,Anakula haraka na anakunywa haraka.
+4,C1.3-8a,"Ich frage, weil ich wissen will.",Ninauliza kwa sababu ninataka kujua.
+5,C1.3-8b,"Ich warte nicht, ich gehe jetzt.","Sisubiri, ninakwenda sasa."
+6,C1.3-8b,"Er sagt, dass er jetzt arbeiten kann.",Anasema kwamba anaweza kufanya kazi sasa.
+7,C1.3-8b,"Ich bin reich, aber ich arbeite.","Mimi ni tajiri, lakini ninafanya kazi."
+1,C1.3-Integ,Ich will jetzt kaufen.,Ninataka kununua sasa.
+2,C1.3-Integ,Wir brauchen zu essen.,Tunahitaji kula.
+3,C1.3-Integ,"Sie lieben es, zu arbeiten.",Wanapenda kufanya kazi.
+4,C1.3-Integ,Er will nicht trinken.,Hataki kunywa.
+5,C1.3-Integ,Brauchst du viel Wasser?,Unahitaji maji mengi?
