@@ -142,7 +142,7 @@
         let isLoopActive = false;
         let currentSpeed = 1.0;
         
-        // Speichert das aktuell laufende Einzel-Audio
+        // Neu: Speichert das aktuell laufende Einzel-Audio
         let currentSingleAudio = null;
 
         const speedOptions = [0.75, 1.0, 1.25, 1.5]; 
@@ -319,3 +319,105 @@
             }
 
             currentTrackIndex = 0;
+            isPlaylistPlaying = true;
+            playNext();
+        };
+
+        window.stopPlayback = function() {
+            isPlaylistPlaying = false;
+            playlistPlayer.pause();
+            
+            // Auch Einzel-Audio stoppen, falls aktiv
+            if (currentSingleAudio) {
+                currentSingleAudio.pause();
+                currentSingleAudio = null;
+            }
+
+            statusText.textContent = "Gestoppt.";
+            removeHighlights();
+            const btnNormal = document.getElementById('btn-normal');
+            const btnShuffle = document.getElementById('btn-shuffle');
+            if(btnNormal) btnNormal.classList.remove('active-play');
+            if(btnShuffle) btnShuffle.classList.remove('active-play');
+        };
+
+        // Interne Helfer
+        function convertPathToId(path) {
+            return path.replace(/[^a-zA-Z0-9]/g, '_');
+        }
+
+        function playNext() {
+            if (!isPlaylistPlaying) return;
+
+            if (currentTrackIndex >= playlist.length) {
+                if (isLoopActive) {
+                    if (playbackMode === 'shuffle') {
+                        shuffleArray(playlist);
+                    }
+                    currentTrackIndex = 0;
+                } else {
+                    window.stopPlayback();
+                    statusText.textContent = "Wiedergabe beendet.";
+                    return;
+                }
+            }
+
+            const track = playlist[currentTrackIndex];
+
+            highlightRow(track.domId);
+            statusText.textContent = track.label;
+
+            playlistPlayer.src = track.path;
+            playlistPlayer.playbackRate = currentSpeed;
+            
+            playlistPlayer.play().catch(e => console.log("Fehler:", e));
+
+            playlistPlayer.onended = () => {
+                currentTrackIndex++;
+                playNext();
+            };
+        }
+
+        function highlightRow(domId) {
+            removeHighlights();
+            const row = document.getElementById(domId);
+            if (row) {
+                row.classList.add('playing-row');
+                row.scrollIntoView({ behavior: 'smooth', block: 'center' });
+            }
+        }
+
+        function removeHighlights() {
+            document.querySelectorAll('.playing-row').forEach(el => el.classList.remove('playing-row'));
+        }
+
+        function updatePlayButtonStyles(activeMode) {
+            const btnNormal = document.getElementById('btn-normal');
+            const btnShuffle = document.getElementById('btn-shuffle');
+            if(btnNormal) btnNormal.classList.remove('active-play');
+            if(btnShuffle) btnShuffle.classList.remove('active-play');
+
+            if (activeMode === 'normal' && btnNormal) btnNormal.classList.add('active-play');
+            if (activeMode === 'shuffle' && btnShuffle) btnShuffle.classList.add('active-play');
+        }
+
+        function shuffleArray(array) {
+            for (let i = array.length - 1; i > 0; i--) {
+                const j = Math.floor(Math.random() * (i + 1));
+                [array[i], array[j]] = [array[j], array[i]];
+            }
+        }
+
+        if(typeof audioData !== 'undefined') {
+            renderAudioContent();
+        } else {
+            container.innerHTML = '<p style="color:red; text-align:center;">Datenbank fehlt.</p>';
+        }
+
+    } catch (e) {
+        console.error(e);
+    }
+</script>
+
+</body>
+</html>
