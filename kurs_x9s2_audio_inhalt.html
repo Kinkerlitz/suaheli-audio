@@ -3,46 +3,83 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Suaheli intensiv</title>
-    <link rel="icon" type="image/png" href="cover.386x491.png">
-    <link rel="stylesheet" href="style.css">
     
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/jsmediatags/3.9.5/jsmediatags.min.js"></script>
-
+    <title>Suaheli intensiv</title>
+    
+    <link rel="icon" type="image/png" href="cover.386x491.png">
+    
+    <link rel="stylesheet" href="style.css">
     <style>
+        /* --- Styles für den Trainer-Modus --- */
         body { padding-bottom: 160px; }
-        input[type="checkbox"] { transform: scale(1.5); margin-right: 10px; cursor: pointer; }
+
+        input[type="checkbox"] {
+            transform: scale(1.5);
+            margin-right: 10px;
+            cursor: pointer;
+        }
+
         .control-bar {
-            position: fixed; bottom: 0; left: 0; width: 100%;
-            background: #2c3e50; color: white; padding: 10px 5px;
+            position: fixed;
+            bottom: 0;
+            left: 0;
+            width: 100%;
+            background: #2c3e50;
+            color: white;
+            padding: 10px 5px;
             box-shadow: 0 -2px 10px rgba(0,0,0,0.3);
-            display: flex; flex-direction: column; gap: 5px; z-index: 1000;
+            display: flex;
+            flex-direction: column;
+            gap: 5px;
+            z-index: 1000;
         }
+
         .control-buttons {
-            display: grid; grid-template-columns: 1fr 1fr 1fr; gap: 5px;
-            max-width: 600px; margin: 0 auto; width: 100%;
+            display: grid;
+            grid-template-columns: 1fr 1fr 1fr;
+            gap: 5px;
+            max-width: 600px;
+            margin: 0 auto;
+            width: 100%;
         }
+
         .control-btn {
-            background: #34495e; border: 1px solid #7f8c8d; color: white;
-            padding: 8px 2px; border-radius: 4px; font-size: 0.75rem;
-            cursor: pointer; display: flex; flex-direction: column;
-            align-items: center; justify-content: center; min-width: 0;
+            background: #34495e;
+            border: 1px solid #7f8c8d;
+            color: white;
+            padding: 8px 2px;
+            border-radius: 4px;
+            font-size: 0.75rem;
+            cursor: pointer;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            min-width: 0;
             transition: background 0.2s;
         }
+
         .control-btn:active { background: #1abc9c; }
         .control-btn.active-play { background: #16a085; border-color: #1abc9c; font-weight: bold; }
         .control-btn.loop-on { background: #d35400; border-color: #e67e22; font-weight: bold; }
         .control-btn span { font-size: 1.1rem; display: block; margin-bottom: 2px; }
-        
+
         .status-bar {
-            text-align: center; font-size: 0.9rem; color: #ecf0f1;
-            padding: 2px 10px; margin-bottom: 5px;
-            white-space: normal; line-height: 1.2; min-height: 1.2em;
+            text-align: center;
+            font-size: 0.9rem;
+            color: #ecf0f1;
+            white-space: nowrap;
+            overflow: hidden;
+            text-overflow: ellipsis;
+            padding: 0 10px;
+            margin-bottom: 5px;
         }
-        /* Style für den Interpreten (kleiner) */
-        .meta-artist { font-size: 0.75rem; color: #bdc3c7; display: block; margin-top: 2px; }
-        
-        .playing-row { background-color: #d5f5e3 !important; border-left: 5px solid #2ecc71; }
+
+        .playing-row {
+            background-color: #d5f5e3 !important;
+            border-left: 5px solid #2ecc71;
+        }
+
         summary { display: flex; align-items: center; }
         summary input { margin-right: 15px; }
     </style>
@@ -54,6 +91,7 @@
         <h1>Suaheli intensiv</h1>
         <p><a href="index.html" style="color:white;">&larr; Zurück</a></p>
     </header>
+
     <div class="content" id="audioContainer">
         <div style="text-align:center; padding:20px;">Lade Daten...</div>
     </div>
@@ -62,235 +100,222 @@
 <div class="control-bar">
     <div class="status-bar" id="statusText">Bitte Auswahl treffen...</div>
     <div class="control-buttons">
-        <button class="control-btn" id="btn-normal" onclick="startPlaylist('normal')"><span>▶</span> Start</button>
-        <button class="control-btn" id="btn-loop" onclick="toggleLoop()"><span>🔁</span> Loop</button>
-        <button class="control-btn" id="btn-shuffle" onclick="startPlaylist('shuffle')"><span>🔀</span> Zufall</button>
-        <button class="control-btn" onclick="changeSpeed()"><span id="speed-icon">1.0x</span> Tempo</button>
-        <button class="control-btn" onclick="stopPlayback()" style="background:#c0392b; border-color:#a93226;"><span>⏹</span> Stop</button>
-        <button class="control-btn" onclick="resetCheckboxes()" style="background:#7f8c8d;"><span>☒</span> Reset</button>
+        <button class="control-btn" id="btn-normal" onclick="startPlaylist('normal')">
+            <span>▶</span> Start
+        </button>
+        
+        <button class="control-btn" id="btn-loop" onclick="toggleLoop()">
+            <span>🔁</span> Loop
+        </button>
+
+        <button class="control-btn" id="btn-shuffle" onclick="startPlaylist('shuffle')">
+            <span>🔀</span> Zufall
+        </button>
+
+        <button class="control-btn" onclick="changeSpeed()">
+            <span id="speed-icon">1.0x</span> Tempo
+        </button>
+
+        <button class="control-btn" onclick="stopPlayback()" style="background:#c0392b; border-color:#a93226;">
+            <span>⏹</span> Stop
+        </button>
+        
+        <button class="control-btn" onclick="resetCheckboxes()" style="background:#7f8c8d;">
+            <span>☒</span> Reset
+        </button>
     </div>
 </div>
 
 <script src="audio_data.js"></script>
 
 <script>
-try {
-    const container = document.getElementById('audioContainer');
-    const statusText = document.getElementById('statusText');
-    const playlistPlayer = new Audio();
-    
-    let playlist = [];       
-    let currentTrackIndex = 0;
-    let playbackMode = 'normal'; 
-    let isPlaylistPlaying = false;
-    let isLoopActive = false;
-    let currentSpeed = 1.0;
-    let currentSingleAudio = null;
-    const speedOptions = [0.75, 1.0, 1.25, 1.5]; 
+    try {
+        const container = document.getElementById('audioContainer');
+        const statusText = document.getElementById('statusText');
+        const playlistPlayer = new Audio();
+        
+        // Globale Variablen
+        let playlist = [];       
+        let currentTrackIndex = 0;
+        let playbackMode = 'normal'; 
+        let isPlaylistPlaying = false;
+        let isLoopActive = false;
+        let currentSpeed = 1.0;
+        
+        // Speichert das aktuell laufende Einzel-Audio
+        let currentSingleAudio = null;
 
-    function renderAudioContent() {
-        container.innerHTML = ''; 
-        const chapters = Object.keys(audioData).sort((a, b) => a.localeCompare(b, undefined, { numeric: true, sensitivity: 'base' }));
+        const speedOptions = [0.75, 1.0, 1.25, 1.5]; 
 
-        chapters.forEach(chapterKey => {
-            const chapterDetails = document.createElement('details');
-            const chapterSummary = document.createElement('summary');
-            const chapCheckbox = document.createElement('input');
-            chapCheckbox.type = "checkbox"; chapCheckbox.className = "chap-cb";
-            chapCheckbox.onclick = (e) => toggleChildren(e, chapterDetails);
-            chapterSummary.appendChild(chapCheckbox);
-            chapterSummary.appendChild(document.createTextNode("Kapitel " + chapterKey));
-            chapterDetails.appendChild(chapterSummary);
+        // 1. RENDER LOGIK
+        function renderAudioContent() {
+            container.innerHTML = ''; 
 
-            const tables = Object.keys(audioData[chapterKey]).sort((a, b) => {
-                const isVokA = a.includes('Vok'); const isVokB = b.includes('Vok');
-                if (isVokA && !isVokB) return -1; if (!isVokA && isVokB) return 1;
-                return a.localeCompare(b, undefined, { numeric: true, sensitivity: 'base' });
-            });
+            const chapters = Object.keys(audioData).sort((a, b) => 
+                a.localeCompare(b, undefined, { numeric: true, sensitivity: 'base' })
+            );
 
-            tables.forEach(tableKey => {
-                const tableDetails = document.createElement('details');
-                const tableSummary = document.createElement('summary');
-                const tableCheckbox = document.createElement('input');
-                tableCheckbox.type = "checkbox"; tableCheckbox.className = "table-cb";
-                tableCheckbox.onclick = (e) => toggleChildren(e, tableDetails);
+            chapters.forEach(chapterKey => {
+                const chapterDetails = document.createElement('details');
+                const chapterSummary = document.createElement('summary');
                 
-                let displayName = tableKey.includes('Vok') && tableKey.split('-').length > 1 ? "Vokabeln " + tableKey.split('-')[1] : (tableKey.includes('Vok') ? "Vokabeln" : "Tabelle " + tableKey);
-                if(tableKey.includes('Vok')) tableSummary.style.color = "#d35400"; 
+                const chapCheckbox = document.createElement('input');
+                chapCheckbox.type = "checkbox";
+                chapCheckbox.className = "chap-cb";
+                chapCheckbox.onclick = (e) => toggleChildren(e, chapterDetails);
                 
-                tableSummary.appendChild(tableCheckbox);
-                tableSummary.appendChild(document.createTextNode(displayName));
-                tableDetails.appendChild(tableSummary);
+                chapterSummary.appendChild(chapCheckbox);
+                chapterSummary.appendChild(document.createTextNode("Kapitel " + chapterKey));
+                chapterDetails.appendChild(chapterSummary);
 
-                const listDiv = document.createElement('div');
-                listDiv.style.padding = "10px"; listDiv.style.backgroundColor = "#f9f9f9";
-
-                audioData[chapterKey][tableKey].forEach(track => {
-                    const row = document.createElement('div');
-                    row.className = 'audio-row'; row.id = 'row-' + convertPathToId(track.path);
-
-                    const trackCheckbox = document.createElement('input');
-                    trackCheckbox.type = "checkbox"; trackCheckbox.className = "track-cb";
-                    trackCheckbox.value = track.path;
-                    
-                    trackCheckbox.dataset.label = displayName + " - " + track.index; 
-
-                    const label = document.createElement('span');
-                    label.className = 'audio-label'; label.textContent = track.index + ".";
-
-                    const audio = document.createElement('audio');
-                    audio.controls = true; audio.src = track.path; 
-                    audio.controlsList = "nodownload"; audio.preload = "none";
-                    
-                    audio.onplay = () => { 
-                        window.stopPlayback(); 
-                        if (currentSingleAudio && currentSingleAudio !== audio) { currentSingleAudio.pause(); }
-                        currentSingleAudio = audio;
-                        readTagsAndDisplay(track.path, displayName + " - " + track.index);
-                    };
-
-                    row.appendChild(trackCheckbox); row.appendChild(label); row.appendChild(audio);
-                    listDiv.appendChild(row);
+                const tables = Object.keys(audioData[chapterKey]).sort((a, b) => {
+                    const isVokA = a.includes('Vok');
+                    const isVokB = b.includes('Vok');
+                    if (isVokA && !isVokB) return -1;
+                    if (!isVokA && isVokB) return 1;
+                    return a.localeCompare(b, undefined, { numeric: true, sensitivity: 'base' });
                 });
-                tableDetails.appendChild(listDiv); chapterDetails.appendChild(tableDetails);
+
+                tables.forEach(tableKey => {
+                    const tableDetails = document.createElement('details');
+                    const tableSummary = document.createElement('summary');
+
+                    const tableCheckbox = document.createElement('input');
+                    tableCheckbox.type = "checkbox";
+                    tableCheckbox.className = "table-cb";
+                    tableCheckbox.onclick = (e) => toggleChildren(e, tableDetails);
+
+                    let displayName = tableKey;
+                    if (tableKey.includes('Vok')) {
+                        const parts = tableKey.split('-');
+                        displayName = parts.length > 1 ? "Vokabeln " + parts[1] : "Vokabeln";
+                        tableSummary.style.color = "#d35400"; 
+                    } else {
+                        displayName = "Tabelle " + tableKey;
+                    }
+
+                    tableSummary.appendChild(tableCheckbox);
+                    tableSummary.appendChild(document.createTextNode(displayName));
+                    tableDetails.appendChild(tableSummary);
+
+                    const listDiv = document.createElement('div');
+                    listDiv.style.padding = "10px";
+                    listDiv.style.backgroundColor = "#f9f9f9";
+
+                    const tracks = audioData[chapterKey][tableKey];
+                    tracks.forEach(track => {
+                        const row = document.createElement('div');
+                        row.className = 'audio-row';
+                        row.id = 'row-' + convertPathToId(track.path);
+
+                        const trackCheckbox = document.createElement('input');
+                        trackCheckbox.type = "checkbox";
+                        trackCheckbox.className = "track-cb";
+                        trackCheckbox.value = track.path;
+                        trackCheckbox.dataset.label = displayName + " - " + track.index; 
+
+                        const label = document.createElement('span');
+                        label.className = 'audio-label';
+                        label.textContent = track.index + ".";
+
+                        const audio = document.createElement('audio');
+                        audio.controls = true;
+                        audio.src = track.path; 
+                        audio.controlsList = "nodownload";
+                        audio.preload = "none";
+                        
+                        // WICHTIG: Logik für manuelles Abspielen
+                        audio.onplay = () => { 
+                            // 1. Playlist stoppen
+                            window.stopPlayback(); 
+                            // 2. Anderes Einzel-Audio stoppen, falls eines läuft
+                            if (currentSingleAudio && currentSingleAudio !== audio) {
+                                currentSingleAudio.pause();
+                            }
+                            currentSingleAudio = audio;
+                        };
+
+                        row.appendChild(trackCheckbox);
+                        row.appendChild(label);
+                        row.appendChild(audio);
+                        listDiv.appendChild(row);
+                    });
+
+                    tableDetails.appendChild(listDiv);
+                    chapterDetails.appendChild(tableDetails);
+                });
+
+                container.appendChild(chapterDetails);
             });
-            container.appendChild(chapterDetails);
-        });
-    }
+        }
 
-    function toggleChildren(e, parentElement) {
-        e.stopPropagation(); 
-        const isChecked = e.target.checked;
-        parentElement.querySelectorAll('input[type="checkbox"]').forEach(cb => cb.checked = isChecked);
-    }
+        function toggleChildren(e, parentElement) {
+            e.stopPropagation(); 
+            const isChecked = e.target.checked;
+            parentElement.querySelectorAll('input[type="checkbox"]').forEach(cb => cb.checked = isChecked);
+        }
 
-    // --- NEU: Tags LIVE aus der Datei lesen ---
-    function readTagsAndDisplay(fileUrl, fallbackText) {
-        statusText.textContent = "Lade Info..."; 
-        
-        new jsmediatags.Reader(fileUrl)
-        .setTagsToRead(["title", "artist"])
-        .read({
-            onSuccess: function(tag) {
-                const title = tag.tags.title;
-                const artist = tag.tags.artist;
-                
-                if (title) {
-                    let html = `<strong>${title}</strong>`;
-                    if (artist) html += `<span class=\"meta-artist\">${artist}</span>`;
-                    statusText.innerHTML = html;
-                } else {
-                    statusText.textContent = fallbackText;
-                }
-            },
-            onError: function(error) {
-                // Falls Lesen fehlschlägt (z.B. keine Tags), Fallback anzeigen
-                statusText.textContent = fallbackText;
+        // --- GLOBAL FUNKTIONEN ---
+
+        window.resetCheckboxes = function() {
+            document.querySelectorAll('input[type="checkbox"]').forEach(cb => cb.checked = false);
+            statusText.textContent = "Auswahl aufgehoben.";
+            window.stopPlayback();
+        };
+
+        window.changeSpeed = function() {
+            let index = speedOptions.indexOf(currentSpeed);
+            index = (index + 1) % speedOptions.length;
+            currentSpeed = speedOptions[index];
+
+            const icon = document.getElementById('speed-icon');
+            if(icon) icon.textContent = currentSpeed + "x";
+
+            // Geschwindigkeit an Playlist Player anwenden
+            if (playlistPlayer) {
+                playlistPlayer.playbackRate = currentSpeed;
             }
-        });
-    }
+            // Geschwindigkeit auch an aktuelles Einzel-Audio anwenden (optional)
+            if (currentSingleAudio) {
+                currentSingleAudio.playbackRate = currentSpeed;
+            }
+        };
 
-    window.resetCheckboxes = function() {
-        document.querySelectorAll('input[type="checkbox"]').forEach(cb => cb.checked = false);
-        statusText.textContent = "Auswahl aufgehoben.";
-        window.stopPlayback();
-    };
-
-    window.changeSpeed = function() {
-        let index = speedOptions.indexOf(currentSpeed);
-        index = (index + 1) % speedOptions.length;
-        currentSpeed = speedOptions[index];
-        const icon = document.getElementById('speed-icon');
-        if(icon) icon.textContent = currentSpeed + "x";
-        if (playlistPlayer) playlistPlayer.playbackRate = currentSpeed;
-        if (currentSingleAudio) currentSingleAudio.playbackRate = currentSpeed;
-    };
-
-    window.toggleLoop = function() {
-        isLoopActive = !isLoopActive;
-        const btnLoop = document.getElementById('btn-loop');
-        if (isLoopActive) btnLoop.classList.add('loop-on'); else btnLoop.classList.remove('loop-on');
-    };
-
-    window.startPlaylist = function(mode) {
-        const selectedCheckboxes = Array.from(document.querySelectorAll('.track-cb:checked'));
-        if (selectedCheckboxes.length === 0) { alert("Bitte wählen Sie zuerst Audio-Dateien aus."); return; }
-        
-        if (currentSingleAudio) { currentSingleAudio.pause(); currentSingleAudio = null; }
-
-        playlist = selectedCheckboxes.map(cb => ({
-            path: cb.value,
-            label: cb.dataset.label,
-            domId: 'row-' + convertPathToId(cb.value)
-        }));
-
-        playbackMode = mode;
-        updatePlayButtonStyles(mode);
-        if (mode === 'shuffle') shuffleArray(playlist);
-
-        currentTrackIndex = 0;
-        isPlaylistPlaying = true;
-        playNext();
-    };
-
-    window.stopPlayback = function() {
-        isPlaylistPlaying = false;
-        playlistPlayer.pause();
-        if (currentSingleAudio) { currentSingleAudio.pause(); currentSingleAudio = null; }
-        statusText.textContent = "Gestoppt.";
-        removeHighlights();
-        updatePlayButtonStyles('none');
-    };
-
-    function convertPathToId(path) { return path.replace(/[^a-zA-Z0-9]/g, '_'); }
-
-    function playNext() {
-        if (!isPlaylistPlaying) return;
-        if (currentTrackIndex >= playlist.length) {
+        window.toggleLoop = function() {
+            isLoopActive = !isLoopActive;
+            const btnLoop = document.getElementById('btn-loop');
             if (isLoopActive) {
-                if (playbackMode === 'shuffle') shuffleArray(playlist);
-                currentTrackIndex = 0;
+                btnLoop.classList.add('loop-on');
             } else {
-                window.stopPlayback();
-                statusText.textContent = "Wiedergabe beendet.";
+                btnLoop.classList.remove('loop-on');
+            }
+        };
+
+        window.startPlaylist = function(mode) {
+            const selectedCheckboxes = Array.from(document.querySelectorAll('.track-cb:checked'));
+
+            if (selectedCheckboxes.length === 0) {
+                alert("Bitte wählen Sie zuerst Audio-Dateien aus.");
                 return;
             }
-        }
-        const track = playlist[currentTrackIndex];
-        highlightRow(track.domId);
-        
-        // Tags Live lesen
-        readTagsAndDisplay(track.path, track.label);
+            
+            // Falls ein Einzel-Audio läuft: stoppen
+            if (currentSingleAudio) {
+                currentSingleAudio.pause();
+                currentSingleAudio = null;
+            }
 
-        playlistPlayer.src = track.path;
-        playlistPlayer.playbackRate = currentSpeed;
-        playlistPlayer.play().catch(e => console.log("Fehler:", e));
-        playlistPlayer.onended = () => { currentTrackIndex++; playNext(); };
-    }
+            playlist = selectedCheckboxes.map(cb => ({
+                path: cb.value,
+                label: cb.dataset.label,
+                domId: 'row-' + convertPathToId(cb.value)
+            }));
 
-    function highlightRow(domId) {
-        removeHighlights();
-        const row = document.getElementById(domId);
-        if (row) { row.classList.add('playing-row'); row.scrollIntoView({ behavior: 'smooth', block: 'center' }); }
-    }
-    function removeHighlights() { document.querySelectorAll('.playing-row').forEach(el => el.classList.remove('playing-row')); }
-    function updatePlayButtonStyles(activeMode) {
-        const btnNormal = document.getElementById('btn-normal');
-        const btnShuffle = document.getElementById('btn-shuffle');
-        if(btnNormal) btnNormal.classList.remove('active-play');
-        if(btnShuffle) btnShuffle.classList.remove('active-play');
-        if (activeMode === 'normal' && btnNormal) btnNormal.classList.add('active-play');
-        if (activeMode === 'shuffle' && btnShuffle) btnShuffle.classList.add('active-play');
-    }
-    function shuffleArray(array) {
-        for (let i = array.length - 1; i > 0; i--) {
-            const j = Math.floor(Math.random() * (i + 1));
-            [array[i], array[j]] = [array[j], array[i]];
-        }
-    }
-    if(typeof audioData !== 'undefined') renderAudioContent();
-    else container.innerHTML = '<p style="color:red; text-align:center;">Datenbank fehlt.</p>';
-} catch (e) { console.error(e); }
-</script>
-</body>
-</html>
+            playbackMode = mode;
+            updatePlayButtonStyles(mode);
+            
+            if (mode === 'shuffle') {
+                shuffleArray(playlist);
+            }
+
+            currentTrackIndex = 0;
