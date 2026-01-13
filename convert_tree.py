@@ -1,24 +1,20 @@
 import re
 import json
+import os
 
 input_filename = 'tree_tts.txt'
 output_filename = 'audio_data.js'
 
 data_structure = {}
 
-# KORRIGIERTES Regex
-# ([A-Z]\d+_\d+) -> Erlaubt C1_1, D1_1, E1_1 etc. (Jeder Großbuchstabe am Anfang)
-# -              -> Trennstrich
-# (.+)           -> Tabellen-Name (bis zum letzten Unterstrich)
-# _              -> Trenner
-# (\d+)          -> Index
+# Das bewährte Suchmuster (findet C1_1, D1_1 etc.)
 pattern = re.compile(r'([A-Z]\d+_\d+)-(.+)_(\d+)\.m4a')
 
 def get_clean_chapter_name(raw_chap):
-    # Macht aus "C1_1" -> "C1.1" und "D1_1" -> "D1.1"
     return raw_chap.replace('_', '.')
 
 try:
+    # Datei einlesen
     with open(input_filename, 'r', encoding='utf-8') as f:
         lines = f.readlines()
 
@@ -27,19 +23,21 @@ try:
         line = line.strip()
         match = pattern.search(line)
         if match:
-            raw_chapter = match.group(1) # z.B. D1_1
-            table = match.group(2)       # z.B. 10a
+            raw_chapter = match.group(1) # z.B. C1_1
+            table = match.group(2)       # z.B. 2a
             index = match.group(3)       # z.B. 1
-            filename = match.group(0)
+            filename = match.group(0)    # ganzer Dateiname
             
-            chapter_name = get_clean_chapter_name(raw_chapter) # D1.1
+            chapter_name = get_clean_chapter_name(raw_chapter) # C1.1
             
+            # Struktur sicherstellen
             if chapter_name not in data_structure:
                 data_structure[chapter_name] = {}
             
             if table not in data_structure[chapter_name]:
                 data_structure[chapter_name][table] = []
             
+            # Sauberen Eintrag hinzufügen (OHNE Title/Artist Tags)
             data_structure[chapter_name][table].append({
                 'index': int(index),
                 'file': filename,
@@ -47,17 +45,19 @@ try:
             })
             count += 1
 
-    # Sortieren
+    # Sortieren: Erst Kapitel, dann Tabellen, dann Index
     for chap in data_structure:
         for tab in data_structure[chap]:
             data_structure[chap][tab].sort(key=lambda x: x['index'])
 
+    # JS Datei schreiben
     js_content = f"const audioData = {json.dumps(data_structure, indent=4)};"
     
     with open(output_filename, 'w', encoding='utf-8') as f:
         f.write(js_content)
         
-    print(f"Erfolg! {count} Dateien verarbeitet. D1.1 sollte jetzt dabei sein.")
+    print(f"✅ ERFOLG! {count} Dateien verarbeitet.")
+    print(f"Die Datei '{output_filename}' wurde neu und sauber erstellt.")
 
 except FileNotFoundError:
-    print(f"Fehler: Datei '{input_filename}' nicht gefunden.")
+    print(f"❌ FEHLER: Die Datei '{input_filename}' wurde nicht gefunden.")
