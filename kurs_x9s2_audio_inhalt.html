@@ -134,12 +134,17 @@
         const statusText = document.getElementById('statusText');
         const playlistPlayer = new Audio();
         
+        // Globale Variablen
         let playlist = [];       
         let currentTrackIndex = 0;
         let playbackMode = 'normal'; 
         let isPlaylistPlaying = false;
         let isLoopActive = false;
         let currentSpeed = 1.0;
+        
+        // Neu: Speichert das aktuell laufende Einzel-Audio
+        let currentSingleAudio = null;
+
         const speedOptions = [0.75, 1.0, 1.25, 1.5]; 
 
         // 1. RENDER LOGIK
@@ -219,7 +224,16 @@
                         audio.controlsList = "nodownload";
                         audio.preload = "none";
                         
-                        audio.onplay = () => { window.stopPlayback(); };
+                        // WICHTIG: Logik für manuelles Abspielen
+                        audio.onplay = () => { 
+                            // 1. Playlist stoppen
+                            window.stopPlayback(); 
+                            // 2. Anderes Einzel-Audio stoppen, falls eines läuft
+                            if (currentSingleAudio && currentSingleAudio !== audio) {
+                                currentSingleAudio.pause();
+                            }
+                            currentSingleAudio = audio;
+                        };
 
                         row.appendChild(trackCheckbox);
                         row.appendChild(label);
@@ -241,7 +255,7 @@
             parentElement.querySelectorAll('input[type="checkbox"]').forEach(cb => cb.checked = isChecked);
         }
 
-        // --- GLOBAL FUNKTIONEN FÜR BUTTONS (WICHTIG!) ---
+        // --- GLOBAL FUNKTIONEN ---
 
         window.resetCheckboxes = function() {
             document.querySelectorAll('input[type="checkbox"]').forEach(cb => cb.checked = false);
@@ -257,8 +271,13 @@
             const icon = document.getElementById('speed-icon');
             if(icon) icon.textContent = currentSpeed + "x";
 
+            // Geschwindigkeit an Playlist Player anwenden
             if (playlistPlayer) {
                 playlistPlayer.playbackRate = currentSpeed;
+            }
+            // Geschwindigkeit auch an aktuelles Einzel-Audio anwenden (optional)
+            if (currentSingleAudio) {
+                currentSingleAudio.playbackRate = currentSpeed;
             }
         };
 
@@ -278,6 +297,12 @@
             if (selectedCheckboxes.length === 0) {
                 alert("Bitte wählen Sie zuerst Audio-Dateien aus.");
                 return;
+            }
+            
+            // Falls ein Einzel-Audio läuft: stoppen
+            if (currentSingleAudio) {
+                currentSingleAudio.pause();
+                currentSingleAudio = null;
             }
 
             playlist = selectedCheckboxes.map(cb => ({
@@ -301,6 +326,13 @@
         window.stopPlayback = function() {
             isPlaylistPlaying = false;
             playlistPlayer.pause();
+            
+            // Auch Einzel-Audio stoppen, falls aktiv
+            if (currentSingleAudio) {
+                currentSingleAudio.pause();
+                currentSingleAudio = null;
+            }
+
             statusText.textContent = "Gestoppt.";
             removeHighlights();
             const btnNormal = document.getElementById('btn-normal');
