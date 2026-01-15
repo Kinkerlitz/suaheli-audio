@@ -127,7 +127,7 @@
 </head>
 <body oncontextmenu="return false;">
 
-<div id="version-display">v1.6</div>
+<div id="version-display">v1.7</div>
 
 <div class="container">
     <header>
@@ -143,14 +143,6 @@
 <div class="control-bar">
     <div class="status-bar" id="statusText">Bitte Auswahl treffen...</div>
     <div class="control-buttons">
-        <button class="control-btn" id="btn-play-pause" onclick="togglePlayPause()">
-            <span>▶</span> Play
-        </button>
-        
-        <button class="control-btn" id="btn-skip" onclick="skipTrack()">
-            <span>⏭</span> Weiter
-        </button>
-
         <button class="control-btn" id="btn-loop" onclick="toggleLoop()">
             <span>🔁</span> Loop
         </button>
@@ -169,6 +161,14 @@
         
         <button class="control-btn" onclick="resetCheckboxes()" style="background:#7f8c8d; border-color:#95a5a6;">
             <span>☒</span> Reset
+        </button>
+
+        <button class="control-btn" id="btn-play-pause" onclick="togglePlayPause()">
+            <span>▶</span> Play
+        </button>
+        
+        <button class="control-btn" id="btn-skip" onclick="skipTrack()">
+            <span>⏭</span> Weiter
         </button>
     </div>
 </div>
