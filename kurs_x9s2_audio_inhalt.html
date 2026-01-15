@@ -127,7 +127,7 @@
 </head>
 <body oncontextmenu="return false;">
 
-<div id="version-display">v1.8</div>
+<div id="version-display">v1.9</div>
 
 <div class="container">
     <header>
@@ -143,18 +143,6 @@
 <div class="control-bar">
     <div class="status-bar" id="statusText">Bitte Auswahl treffen...</div>
     <div class="control-buttons">
-        <button class="control-btn" id="btn-loop" onclick="toggleLoop()">
-            <span>🔁</span> Loop
-        </button>
-
-        <button class="control-btn" id="btn-shuffle" onclick="toggleShuffle()">
-            <span>🔀</span> Zufall
-        </button>
-
-        <button class="control-btn" onclick="changeSpeed()">
-            <span id="speed-icon">1.0x</span> Tempo
-        </button>
-
         <button class="control-btn" onclick="stopPlayback()" style="background:#c0392b; border-color:#a93226;">
             <span>⏹</span> Stop
         </button>
@@ -163,12 +151,24 @@
             <span>☒</span> Reset
         </button>
 
-        <button class="control-btn" id="btn-play-pause" onclick="togglePlayPause()">
+        <button class="control-btn" id="btn-loop" onclick="toggleLoop()">
+            <span>🔁</span> Loop
+        </button>
+
+        <button class="control-btn" id="btn-shuffle" onclick="toggleShuffle()">
+            <span>🔀</span> Zufall
+        </button>
+
+        <button class="control-btn" id="btn-play-pause" onclick="togglePlayPause()" style="grid-column: span 2;">
             <span>▶</span> Play
         </button>
         
         <button class="control-btn" id="btn-skip" onclick="skipTrack()">
             <span>⏭</span> Weiter
+        </button>
+
+        <button class="control-btn" onclick="changeSpeed()">
+            <span id="speed-icon">1.0x</span> Tempo
         </button>
     </div>
 </div>
