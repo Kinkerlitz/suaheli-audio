@@ -127,7 +127,7 @@
 </head>
 <body oncontextmenu="return false;">
 
-<div id="version-display">v1.7</div>
+<div id="version-display">v1.8</div>
 
 <div class="container">
     <header>
@@ -356,6 +356,7 @@
             isPlaylistPlaying = true;
             isPaused = false;
             playNext();
+            updatePlayPauseButton(true); // Button sofort aktualisieren
         }
 
         window.togglePlayPause = function() {
@@ -366,16 +367,15 @@
             }
 
             // Wenn die Playlist läuft, pausiere oder setze sie fort.
+            isPaused = !isPaused; // Zustand umkehren
             if (isPaused) {
-                playlistPlayer.play();
-                isPaused = false;
-                statusText.textContent = playlist[currentTrackIndex].label;
-                updatePlayPauseButton(true);
-            } else {
                 playlistPlayer.pause();
-                isPaused = true;
                 statusText.textContent = "Pausiert";
                 updatePlayPauseButton(false);
+            } else {
+                playlistPlayer.play();
+                statusText.textContent = playlist[currentTrackIndex].label;
+                updatePlayPauseButton(true);
             }
         };
 
