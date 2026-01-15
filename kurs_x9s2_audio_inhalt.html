@@ -128,6 +128,7 @@
 <body oncontextmenu="return false;">
 
 <div id="version-display">v1.4</div>
+<div id="version-display">v1.5</div>
 
 <div class="container">
     <header>
@@ -330,7 +331,7 @@
                 return false;
             }
             // Nur Playlist neu erstellen, wenn sie noch nicht existiert oder der Modus wechselt
-            if (playlist.length > 0 && playbackMode === mode) return true;
+            if (isPlaylistPlaying && !isPaused && playbackMode === mode) return true;
 
             window.stopPlayback();
             
@@ -347,7 +348,7 @@
         }
 
         window.startPlaylist = function(mode) {
-            if (!setupPlaylist(mode)) return;
+            if (!setupPlaylist(mode)) return; // Bricht ab, wenn keine Tracks ausgewählt sind
             isPlaylistPlaying = true;
             isPaused = false;
             playNext();
@@ -356,7 +357,7 @@
         window.togglePlayPause = function() {
             // Wenn nichts ausgewählt ist oder keine Playlist läuft, starte sie.
             if (!isPlaylistPlaying) {
-                startPlaylist(playbackMode);
+                startPlaylist(document.getElementById('btn-shuffle').classList.contains('active-play') ? 'shuffle' : 'normal');
                 return;
             }
 
@@ -411,12 +412,10 @@
             playlistPlayer.src = track.path;
             playlistPlayer.playbackRate = currentSpeed;
             playlistPlayer.play().catch(e => console.log("Fehler:", e));
-            playlistPlayer.play()
-                .then(() => {
-                    updatePlayPauseButton(true);
-                })
-                .catch(e => console.log("Fehler:", e));
-
+            
+            // Update button state immediately
+            updatePlayPauseButton(true);
+            
             playlistPlayer.onended = () => {
                 currentTrackIndex++;
                 playNext();
@@ -438,11 +437,12 @@
 
         function updatePlayButtonStyles(activeMode) {
             const btnNormal = document.getElementById('btn-normal');
-            // Den Play-Button nicht mehr als "aktiv" markieren, da er jetzt ein eigener Zustand ist
             const btnShuffle = document.getElementById('btn-shuffle');
             if(btnNormal) btnNormal.classList.remove('active-play');
             if(btnShuffle) btnShuffle.classList.remove('active-play');
             if (activeMode === 'normal' && btnNormal) btnNormal.classList.add('active-play');
+            if (!btnShuffle) return;
+            btnShuffle.classList.remove('active-play');
             if (activeMode === 'shuffle' && btnShuffle) btnShuffle.classList.add('active-play');
         }
 
