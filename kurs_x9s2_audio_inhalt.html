@@ -328,6 +328,15 @@
             isShuffleActive = !isShuffleActive;
             const btnShuffle = document.getElementById('btn-shuffle');
             if (btnShuffle) btnShuffle.classList.toggle('active-play', isShuffleActive);
+
+            // Wenn eine Playlist läuft und Shuffle aktiviert wird, mische die verbleibenden Tracks
+            if (isPlaylistPlaying && isShuffleActive && playlist.length > 0) {
+                const remainingTracks = playlist.slice(currentTrackIndex + 1);
+                shuffleArray(remainingTracks);
+                // Baue die Playlist neu zusammen: Aktueller Track + gemischter Rest
+                playlist = playlist.slice(0, currentTrackIndex + 1).concat(remainingTracks);
+                statusText.textContent = "Zufall an: Nächster Track ist zufällig.";
+            }
         };
 
         function setupPlaylist(mode) {
