@@ -32,8 +32,6 @@
             font-size: 1rem; /* Etwas kleineres Symbol */
             padding: 0; /* Wichtig für die Zentrierung */
             cursor: pointer;
-            line-height: 31px; /* Vertikal anpassen wegen des Randes */
-            text-align: center;
             display: flex; /* Flexbox für Zentrierung nutzen */
             align-items: center; /* Vertikal zentrieren */
             justify-content: center; /* Horizontal zentrieren */
@@ -67,20 +65,12 @@
         }
 
         .control-buttons {
-        .control-buttons-main, .control-buttons-secondary {
             display: grid;
             grid-template-columns: 1fr 1fr 1fr;
             gap: 5px;
             max-width: 600px;
             margin: 0 auto;
             width: 100%;
-        }
-        .control-buttons-main {
-            grid-template-columns: 1fr 1.5fr 1fr; /* Play button is wider */
-        }
-        .control-buttons-secondary {
-            grid-template-columns: 1fr 1fr 1fr 1fr;
-            margin-bottom: 5px;
         }
 
         .control-btn {
@@ -97,11 +87,6 @@
             justify-content: center;
             min-width: 0;
             transition: background 0.2s;
-        }
-
-        .control-btn.play-pause-btn {
-            background: #27ae60;
-            border-color: #2ecc71;
         }
 
         .control-btn:active { background: #1abc9c; }
@@ -142,7 +127,6 @@
 </head>
 <body oncontextmenu="return false;">
 
-<div id="version-display">v1.2</div>
 <div id="version-display">v1.4</div>
 
 <div class="container">
@@ -161,15 +145,8 @@
     <div class="control-buttons">
         <button class="control-btn" id="btn-normal" onclick="startPlaylist('normal')">
             <span>▶</span> Start
-
-    <div class="control-buttons-secondary">
-        <button class="control-btn" onclick="resetCheckboxes()">
-            <span>☒</span> Reset
         </button>
         
-        <button class="control-btn" id="btn-shuffle" onclick="toggleShuffle()">
-            <span>🔀</span> Zufall
-        </button>
         <button class="control-btn" id="btn-loop" onclick="toggleLoop()">
             <span>🔁</span> Loop
         </button>
@@ -181,22 +158,13 @@
         <button class="control-btn" onclick="changeSpeed()">
             <span id="speed-icon">1.0x</span> Tempo
         </button>
-    </div>
 
         <button class="control-btn" onclick="stopPlayback()" style="background:#c0392b; border-color:#a93226;">
             <span>⏹</span> Stop
-    <div class="control-buttons-main">
-        <button class="control-btn" onclick="goToStart()">
-            <span>⏮</span> Anfang
         </button>
         
-        <button class="control-btn" onclick="resetCheckboxes()" style="background:#7f8c8d;">
+        <button class="control-btn" onclick="resetCheckboxes()" style="background:#7f8c8d; border-color:#95a5a6;">
             <span>☒</span> Reset
-        <button class="control-btn play-pause-btn" id="btn-play-pause" onclick="togglePlayPause()">
-            <span>▶</span> Start
-        </button>
-        <button class="control-btn" onclick="skipTrack()">
-            <span>⏭</span> Weiter
         </button>
     </div>
 </div>
@@ -213,15 +181,10 @@
         let currentTrackIndex = 0;
         let playbackMode = 'normal'; 
         let isPlaylistPlaying = false;
-        let isPaused = false;
         let isLoopActive = false;
-        let isShuffleActive = false;
         let currentSpeed = 1.0;
         let currentSingleAudio = null;
 
-        
-        // Globale Referenzen auf die Buttons
-        const btnPlayPause = document.getElementById('btn-play-pause');
         const speedOptions = [0.75, 1.0, 1.25, 1.5]; 
 
         function renderAudioContent() {
@@ -346,7 +309,6 @@
             const icon = document.getElementById('speed-icon');
             if(icon) icon.textContent = currentSpeed + "x";
             if (playlistPlayer) playlistPlayer.playbackRate = currentSpeed;
-            if (currentSingleAudio) currentSingleAudio.playbackRate = currentSpeed;
             playlistPlayer.playbackRate = currentSpeed;
         };
 
@@ -357,13 +319,6 @@
         };
 
         window.startPlaylist = function(mode) {
-        window.toggleShuffle = function() {
-            isShuffleActive = !isShuffleActive;
-            const btnShuffle = document.getElementById('btn-shuffle');
-            if (btnShuffle) btnShuffle.classList.toggle('active-play', isShuffleActive);
-        };
-
-        function startPlaylist() {
             const selectedCheckboxes = Array.from(document.querySelectorAll('.track-cb:checked'));
             if (selectedCheckboxes.length === 0) {
                 alert("Bitte wählen Sie zuerst Audio-Dateien aus.");
@@ -379,54 +334,21 @@
             playbackMode = mode;
             updatePlayButtonStyles(mode);
             if (mode === 'shuffle') shuffleArray(playlist);
-
-            if (isShuffleActive) shuffleArray(playlist);
             currentTrackIndex = 0;
             isPlaylistPlaying = true;
-            isPaused = false;
             playNext();
-        }
-
-        window.togglePlayPause = function() {
-            if (!isPlaylistPlaying) {
-                startPlaylist();
-            } else {
-                if (isPaused) {
-                    playlistPlayer.play();
-                    isPaused = false;
-                    updatePlayPauseButton(true);
-                    statusText.textContent = playlist[currentTrackIndex].label;
-                } else {
-                    playlistPlayer.pause();
-                    isPaused = true;
-                    updatePlayPauseButton(false);
-                    statusText.textContent = "Pausiert";
-                }
-            }
-        };
-
-        window.skipTrack = function() {
-            if (isPlaylistPlaying) {
-                currentTrackIndex++;
-                playNext();
-            }
-        };
-
-        window.goToStart = function() {
-            if (isPlaylistPlaying) {
-                currentTrackIndex = 0;
-                playNext();
-            }
         };
 
         window.stopPlayback = function() {
             isPlaylistPlaying = false;
-            isPaused = false;
             playlistPlayer.pause();
+            if (currentSingleAudio) {
+                currentSingleAudio.pause();
+                currentSingleAudio = null;
+            }
             statusText.textContent = "Gestoppt.";
             removeHighlights();
             updatePlayButtonStyles(null);
-            updatePlayPauseButton(false);
         };
 
         function convertPathToId(path) {
@@ -434,12 +356,9 @@
         }
 
         function playNext() {
-        async function playNext() {
             if (!isPlaylistPlaying) return;
             if (currentTrackIndex >= playlist.length) {
                 if (isLoopActive) {
-                    if (playbackMode === 'shuffle') shuffleArray(playlist);
-                    if (isShuffleActive) shuffleArray(playlist);
                     currentTrackIndex = 0;
                 } else {
                     window.stopPlayback();
@@ -453,13 +372,6 @@
             playlistPlayer.src = track.path;
             playlistPlayer.playbackRate = currentSpeed;
             playlistPlayer.play().catch(e => console.log("Fehler:", e));
-            try {
-                await playlistPlayer.play();
-                updatePlayPauseButton(true);
-            } catch (e) {
-                console.log("Fehler beim Abspielen:", e);
-                stopPlayback();
-            }
             playlistPlayer.onended = () => {
                 currentTrackIndex++;
                 playNext();
@@ -487,13 +399,6 @@
             if (activeMode === 'normal' && btnNormal) btnNormal.classList.add('active-play');
             if (activeMode === 'shuffle' && btnShuffle) btnShuffle.classList.add('active-play');
         }
-        function updatePlayPauseButton(isPlaying) {
-            if (isPlaying) {
-                btnPlayPause.innerHTML = '<span>❚❚</span> Pause';
-            } else {
-                btnPlayPause.innerHTML = '<span>▶</span> Start';
-            }
-        } 
 
         function shuffleArray(array) {
             for (let i = array.length - 1; i > 0; i--) {
