@@ -11,6 +11,19 @@
     <link rel="stylesheet" href="style.css">
     <style>
         /* --- Styles für den Trainer-Modus --- */
+        .play-btn {
+            background: #3498db;
+            color: white;
+            border: none;
+            border-radius: 50%;
+            width: 35px;
+            height: 35px;
+            font-size: 1.2rem;
+            cursor: pointer;
+            line-height: 35px;
+            text-align: center;
+        }
+        .play-btn:hover { background: #2980b9; }
         body { padding-bottom: 160px; }
 
         input[type="checkbox"] {
@@ -230,23 +243,21 @@
                         label.className = 'audio-label';
                         label.textContent = track.index + ".";
 
-                        const audio = document.createElement('audio');
-                        audio.controls = true;
-                        audio.src = track.path; 
-                        audio.controlsList = "nodownload";
-                        audio.preload = "none";
-                        
-                        audio.onplay = () => { 
-                            window.stopPlayback(); 
-                            if (currentSingleAudio && currentSingleAudio !== audio) {
-                                currentSingleAudio.pause();
-                            }
-                            currentSingleAudio = audio;
+                        const playButton = document.createElement('button');
+                        playButton.className = 'play-btn';
+                        playButton.innerHTML = '&#9654;'; // Play symbol
+                        playButton.onclick = () => {
+                            window.stopPlayback();
+                            playlistPlayer.src = track.path;
+                            playlistPlayer.playbackRate = currentSpeed;
+                            playlistPlayer.play();
+                            statusText.textContent = track.label;
+                            highlightRow(row.id);
                         };
 
                         row.appendChild(trackCheckbox);
                         row.appendChild(label);
-                        row.appendChild(audio);
+                        row.appendChild(playButton);
                         tableContent.appendChild(row);
                     });
 
@@ -293,10 +304,7 @@
                 alert("Bitte wählen Sie zuerst Audio-Dateien aus.");
                 return;
             }
-            if (currentSingleAudio) {
-                currentSingleAudio.pause();
-                currentSingleAudio = null;
-            }
+            window.stopPlayback();
             playlist = selectedCheckboxes.map(cb => ({
                 path: cb.value,
                 label: cb.dataset.label,
@@ -313,10 +321,6 @@
         window.stopPlayback = function() {
             isPlaylistPlaying = false;
             playlistPlayer.pause();
-            if (currentSingleAudio) {
-                currentSingleAudio.pause();
-                currentSingleAudio = null;
-            }
             statusText.textContent = "Gestoppt.";
             removeHighlights();
             updatePlayButtonStyles(null);
