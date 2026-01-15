@@ -30,9 +30,13 @@
             width: 35px;
             height: 35px;
             font-size: 1rem; /* Etwas kleineres Symbol */
+            padding: 0; /* Wichtig für die Zentrierung */
             cursor: pointer;
             line-height: 31px; /* Vertikal anpassen wegen des Randes */
             text-align: center;
+            display: flex; /* Flexbox für Zentrierung nutzen */
+            align-items: center; /* Vertikal zentrieren */
+            justify-content: center; /* Horizontal zentrieren */
             transition: all 0.2s ease; /* Sanfter Übergang */
         }
         .play-btn:hover { 
@@ -125,7 +129,7 @@
 </head>
 <body oncontextmenu="return false;">
 
-<div id="version-display">v1.2</div>
+<div id="version-display">v1.3</div>
 
 <div class="container">
     <header>
