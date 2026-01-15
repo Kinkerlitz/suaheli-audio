@@ -331,7 +331,7 @@
                 return false;
             }
             // Nur Playlist neu erstellen, wenn sie noch nicht existiert oder der Modus wechselt
-            if (isPlaylistPlaying && !isPaused && playbackMode === mode) return true;
+            if (playlist.length > 0 && playbackMode === mode) return true;
 
             window.stopPlayback();
             
@@ -348,7 +348,7 @@
         }
 
         window.startPlaylist = function(mode) {
-            if (!setupPlaylist(mode)) return; // Bricht ab, wenn keine Tracks ausgewählt sind
+            if (!setupPlaylist(mode)) return;
             isPlaylistPlaying = true;
             isPaused = false;
             playNext();
@@ -412,10 +412,8 @@
             playlistPlayer.src = track.path;
             playlistPlayer.playbackRate = currentSpeed;
             playlistPlayer.play().catch(e => console.log("Fehler:", e));
-            
             // Update button state immediately
             updatePlayPauseButton(true);
-            
             playlistPlayer.onended = () => {
                 currentTrackIndex++;
                 playNext();
