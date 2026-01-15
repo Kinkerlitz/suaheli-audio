@@ -145,6 +145,8 @@
     <div class="control-buttons">
         <button class="control-btn" id="btn-normal" onclick="startPlaylist('normal')">
             <span>▶</span> Start
+        <button class="control-btn" id="btn-play-pause" onclick="togglePlayPause()">
+            <span>▶</span> Play
         </button>
         
         <button class="control-btn" id="btn-loop" onclick="toggleLoop()">
@@ -181,6 +183,7 @@
         let currentTrackIndex = 0;
         let playbackMode = 'normal'; 
         let isPlaylistPlaying = false;
+        let isPaused = false;
         let isLoopActive = false;
         let currentSpeed = 1.0;
         let currentSingleAudio = null;
@@ -319,11 +322,16 @@
         };
 
         window.startPlaylist = function(mode) {
+        function setupPlaylist(mode) {
             const selectedCheckboxes = Array.from(document.querySelectorAll('.track-cb:checked'));
             if (selectedCheckboxes.length === 0) {
                 alert("Bitte wählen Sie zuerst Audio-Dateien aus.");
                 return;
+                return false;
             }
+            // Nur Playlist neu erstellen, wenn sie noch nicht existiert oder der Modus wechselt
+            if (playlist.length > 0 && playbackMode === mode) return true;
+
             window.stopPlayback();
             
             playlist = selectedCheckboxes.map(cb => ({
@@ -335,12 +343,42 @@
             updatePlayButtonStyles(mode);
             if (mode === 'shuffle') shuffleArray(playlist);
             currentTrackIndex = 0;
+            return true;
+        }
+
+        window.startPlaylist = function(mode) {
+            if (!setupPlaylist(mode)) return;
             isPlaylistPlaying = true;
+            isPaused = false;
             playNext();
+        };
+
+        window.togglePlayPause = function() {
+            // Wenn nichts ausgewählt ist oder keine Playlist läuft, starte sie.
+            if (!isPlaylistPlaying) {
+                startPlaylist(playbackMode);
+                return;
+            }
+
+            // Wenn die Playlist läuft, pausiere oder setze sie fort.
+            if (isPaused) {
+                playlistPlayer.play();
+                isPaused = false;
+                statusText.textContent = playlist[currentTrackIndex].label;
+                updatePlayPauseButton(true);
+            } else {
+                playlistPlayer.pause();
+                isPaused = true;
+                statusText.textContent = "Pausiert";
+                updatePlayPauseButton(false);
+            }
         };
 
         window.stopPlayback = function() {
             isPlaylistPlaying = false;
+            isPaused = false;
+            // Reset playlist to allow re-shuffling etc.
+            playlist = []; 
             playlistPlayer.pause();
             if (currentSingleAudio) {
                 currentSingleAudio.pause();
@@ -348,6 +386,7 @@
             }
             statusText.textContent = "Gestoppt.";
             removeHighlights();
+            updatePlayPauseButton(false);
             updatePlayButtonStyles(null);
         };
 
@@ -372,6 +411,12 @@
             playlistPlayer.src = track.path;
             playlistPlayer.playbackRate = currentSpeed;
             playlistPlayer.play().catch(e => console.log("Fehler:", e));
+            playlistPlayer.play()
+                .then(() => {
+                    updatePlayPauseButton(true);
+                })
+                .catch(e => console.log("Fehler:", e));
+
             playlistPlayer.onended = () => {
                 currentTrackIndex++;
                 playNext();
@@ -393,11 +438,24 @@
 
         function updatePlayButtonStyles(activeMode) {
             const btnNormal = document.getElementById('btn-normal');
+            // Den Play-Button nicht mehr als "aktiv" markieren, da er jetzt ein eigener Zustand ist
             const btnShuffle = document.getElementById('btn-shuffle');
             if(btnNormal) btnNormal.classList.remove('active-play');
             if(btnShuffle) btnShuffle.classList.remove('active-play');
             if (activeMode === 'normal' && btnNormal) btnNormal.classList.add('active-play');
             if (activeMode === 'shuffle' && btnShuffle) btnShuffle.classList.add('active-play');
+        }
+
+        function updatePlayPauseButton(isPlaying) {
+            const btn = document.getElementById('btn-play-pause');
+            if (!btn) return;
+            if (isPlaying) {
+                btn.innerHTML = '<span>❚❚</span> Pause';
+                btn.classList.add('active-play');
+            } else {
+                btn.innerHTML = '<span>▶</span> Play';
+                btn.classList.remove('active-play');
+            }
         }
 
         function shuffleArray(array) {
