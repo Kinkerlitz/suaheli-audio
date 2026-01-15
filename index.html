@@ -33,26 +33,25 @@
 
         <hr>
 
-        <div class="login-box">
+        <form class="login-box" action="kurs_x9s2_audio_inhalt.html" onsubmit="return checkLogin()">
             <h3>Login für Buchbesitzer</h3>
             <p>Bitte geben Sie das Passwort aus dem Buch ein:</p>
             <input type="password" id="passwordInput" placeholder="Passwort eingeben">
-            <button onclick="checkLogin()">Zugang freischalten</button>
+            <button type="submit">Zugang freischalten</button>
             <p id="errorMsg" style="color:red; display:none; margin-top:10px;">Falsches Passwort!</p>
-        </div>
+        </form>
     </div>
 </div>
 
 <script>
     function checkLogin() {
         const input = document.getElementById('passwordInput').value;
-        const errorMsg = document.getElementById('errorMsg');
-        
-        // Passwort Prüfung
-        if(input === "Start2025") {
-            window.location.href = "kurs_x9s2_audio_inhalt.html";
+        if (input === "Start2025") {
+            return true; // Erlaubt das Absenden des Formulars
         } else {
+            const errorMsg = document.getElementById('errorMsg');
             errorMsg.style.display = "block";
+            return false; // Verhindert das Absenden des Formulars
         }
     }
 </script>
