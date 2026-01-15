@@ -127,7 +127,7 @@
 </head>
 <body oncontextmenu="return false;">
 
-<div id="version-display">v1.9</div>
+<div id="version-display">v0.15</div>
 
 <div class="container">
     <header>
@@ -329,12 +329,17 @@
             const btnShuffle = document.getElementById('btn-shuffle');
             if (btnShuffle) btnShuffle.classList.toggle('active-play', isShuffleActive);
 
-            // Wenn eine Playlist läuft und Shuffle aktiviert wird, mische die verbleibenden Tracks
+            // Wenn eine Playlist läuft und Shuffle aktiviert/deaktiviert wird,
+            // erstelle die Playlist aus den aktuell ausgewählten Checkboxen neu.
             if (isPlaylistPlaying && isShuffleActive && playlist.length > 0) {
-                const remainingTracks = playlist.slice(currentTrackIndex + 1);
-                shuffleArray(remainingTracks);
-                // Baue die Playlist neu zusammen: Aktueller Track + gemischter Rest
-                playlist = playlist.slice(0, currentTrackIndex + 1).concat(remainingTracks);
+                const currentTrack = playlist[currentTrackIndex];
+                // Baue die Playlist aus den Checkboxen neu, aber ohne den aktuellen Track
+                let newPlaylist = Array.from(document.querySelectorAll('.track-cb:checked'))
+                                       .map(cb => ({ path: cb.value, label: cb.dataset.label, domId: 'row-' + convertPathToId(cb.value) }))
+                                       .filter(track => track.path !== currentTrack.path);
+                shuffleArray(newPlaylist);
+                playlist = [currentTrack, ...newPlaylist]; // Setze den aktuellen Track an den Anfang
+                currentTrackIndex = 0; // Setze den Index zurück, da der aktuelle Track jetzt bei 0 ist
                 statusText.textContent = "Zufall an: Nächster Track ist zufällig.";
             }
         };
