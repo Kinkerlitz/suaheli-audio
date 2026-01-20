@@ -10,7 +10,7 @@ body {
 
     /* Hintergrundbild-Einstellungen */
     /* Hintergrundbild aus dem Ordner 'backgrounds' */
-    background-image: url('../backgrounds/Pastell-Türkis & Kreise Ringe'); 
+    background-image: url('../backgrounds/PastellTuerkis.jpg'); 
     background-size: cover; /* Stellt sicher, dass das Bild den gesamten Bereich abdeckt */
     background-position: center; /* Zentriert das Bild */
     background-attachment: fixed; /* Fixiert das Bild beim Scrollen */
