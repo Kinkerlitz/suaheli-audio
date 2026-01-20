@@ -31,12 +31,11 @@
             <button onclick="window.location.href='https://amazon.de/dein-buch-link'">Buch jetzt kaufen</button>
         </div>
 
-        <hr>
-
-        <form class="login-box" action="kurs_x9s2_audio_inhalt.html" onsubmit="return checkLogin()">
+        <form class="login-box login-seperator" action="kurs_x9s2_audio_inhalt.html" onsubmit="return checkLogin()">
             <h3>Login für Buchbesitzer</h3>
             <p>Bitte geben Sie das Passwort aus dem Buch ein:</p>
-            <input type="password" id="passwordInput" placeholder="Passwort eingeben">
+            <label for="passwordInput" style="display:none;">Passwort</label>
+            <input type="password" id="passwordInput" placeholder="Passwort eingeben" aria-describedby="errorMsg">
             <button type="submit">Zugang freischalten</button>
             <p id="errorMsg" style="color:red; display:none; margin-top:10px;">Falsches Passwort!</p>
         </form>
