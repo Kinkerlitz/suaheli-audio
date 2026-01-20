@@ -7,6 +7,14 @@ body {
     color: #333;
     line-height: 1.6;
     padding-bottom: 160px; /* Platz für die fixe Control-Bar */
+
+    /* Hintergrundbild-Einstellungen */
+    /* Hintergrundbild aus dem Ordner 'backgrounds' */
+    background-image: url('../backgrounds/Pastell-Türkis & Kreise Ringe'); 
+    background-size: cover; /* Stellt sicher, dass das Bild den gesamten Bereich abdeckt */
+    background-position: center; /* Zentriert das Bild */
+    background-attachment: fixed; /* Fixiert das Bild beim Scrollen */
+    background-color: #f4f4f4; /* Eine Fallback-Farbe, falls das Bild nicht geladen werden kann */
 }
 
 /* Container für Mobil-Optimierung */
