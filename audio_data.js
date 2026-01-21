@@ -252,7 +252,7 @@ const audioData = {
                 "path": "C1.1/C1_1-5_5.m4a"
             }
         ],
-        "Neue Vokabeln A,Die Personen (Wer?)": [
+        "Vok-A": [
             {
                 "index": 1,
                 "file": "C1_1-Vok-A_1.m4a",
@@ -304,7 +304,7 @@ const audioData = {
                 "path": "C1.1/C1_1-Vok-A_10.m4a"
             }
         ],
-        "Neue Vokabeln B,Soziale Interaktion (Was sagen wir?)": [
+        "Vok-B": [
             {
                 "index": 1,
                 "file": "C1_1-Vok-B_1.m4a",
@@ -331,7 +331,7 @@ const audioData = {
                 "path": "C1.1/C1_1-Vok-B_5.m4a"
             }
         ],
-        "Neue Vokabeln C,Zust\u00e4nde (Wie ist es?)": [
+        "Vok-C": [
             {
                 "index": 1,
                 "file": "C1_1-Vok-C_1.m4a",
@@ -363,7 +363,7 @@ const audioData = {
                 "path": "C1.1/C1_1-Vok-C_6.m4a"
             }
         ],
-        "Neue Vokabeln D,Eigenschaften von Menschen": [
+        "Vok-D": [
             {
                 "index": 1,
                 "file": "C1_1-Vok-D_1.m4a",
@@ -400,7 +400,7 @@ const audioData = {
                 "path": "C1.1/C1_1-Vok-D_7.m4a"
             }
         ],
-        "Neue Vokabeln E,Gegenst\u00e4nde (Was?)": [
+        "Vok-E": [
             {
                 "index": 1,
                 "file": "C1_1-Vok-E_1.m4a",
@@ -731,7 +731,7 @@ const audioData = {
                 "path": "C1.2/C1_2-8_5.m4a"
             }
         ],
-        "Neue Vokabeln A,Die Verben (Die T\u00e4tigkeit)": [
+        "Vok-A": [
             {
                 "index": 1,
                 "file": "C1_2-Vok-A_1.m4a",
@@ -788,7 +788,7 @@ const audioData = {
                 "path": "C1.2/C1_2-Vok-A_11.m4a"
             }
         ],
-        "Neue Vokabeln B,Die Orte (Das Ziel)": [
+        "Vok-B": [
             {
                 "index": 1,
                 "file": "C1_2-Vok-B_1.m4a",
@@ -810,7 +810,7 @@ const audioData = {
                 "path": "C1.2/C1_2-Vok-B_4.m4a"
             }
         ],
-        "Neue Vokabeln C,Dinge des Alltags (Das Objekt)": [
+        "Vok-C": [
             {
                 "index": 1,
                 "file": "C1_2-Vok-C_1.m4a",
@@ -842,14 +842,14 @@ const audioData = {
                 "path": "C1.2/C1_2-Vok-C_6.m4a"
             }
         ],
-        "Neue Vokabeln D,Grammatik-Bausteine": [
+        "Vok-D": [
             {
                 "index": 1,
                 "file": "C1_2-Vok-D_1.m4a",
                 "path": "C1.2/C1_2-Vok-D_1.m4a"
             }
         ],
-        "Neue Vokabeln E,Personen & Berufe (Wer?)": [
+        "Vok-E": [
             {
                 "index": 1,
                 "file": "C1_2-Vok-E_1.m4a",
@@ -1263,7 +1263,7 @@ const audioData = {
                 "path": "C1.3/C1_3-Integration_5.m4a"
             }
         ],
-        "Neue Vokabeln,Neue Vokabeln (Hapa, Pale, Wapi...)": [
+        "Vok": [
             {
                 "index": 1,
                 "file": "C1_3-Vok_1.m4a",
@@ -1756,7 +1756,7 @@ const audioData = {
                 "path": "C2.1/C2_1-7_5.m4a"
             }
         ],
-        "Neue Vokabeln A,Pronomen & Pr\u00e4fixe": [
+        "Vok-A": [
             {
                 "index": 1,
                 "file": "C2_1-Vok-A_1.m4a",
@@ -1788,7 +1788,7 @@ const audioData = {
                 "path": "C2.1/C2_1-Vok-A_6.m4a"
             }
         ],
-        "Neue Vokabeln B,Gruppen-Aktivit\u00e4ten (Verben)": [
+        "Vok-B": [
             {
                 "index": 1,
                 "file": "C2_1-Vok-B_1.m4a",
@@ -1825,7 +1825,7 @@ const audioData = {
                 "path": "C2.1/C2_1-Vok-B_7.m4a"
             }
         ],
-        "Neue Vokabeln C,Objekte (Essen)": [
+        "Vok-C": [
             {
                 "index": 1,
                 "file": "C2_1-Vok-C_1.m4a",
@@ -1857,7 +1857,7 @@ const audioData = {
                 "path": "C2.1/C2_1-Vok-C_6.m4a"
             }
         ],
-        "Neue Vokabeln D,Orte (Lokativ)": [
+        "Vok-D": [
             {
                 "index": 1,
                 "file": "C2_1-Vok-D_1.m4a",
@@ -2185,7 +2185,7 @@ const audioData = {
                 "path": "C2.2/C2_2-8_5.m4a"
             }
         ],
-        "Neue Vokabeln A,Die Familie (Personen)": [
+        "Vok-A": [
             {
                 "index": 1,
                 "file": "C2_2-Vok-A_1.m4a",
@@ -2222,7 +2222,7 @@ const audioData = {
                 "path": "C2.2/C2_2-Vok-A_7.m4a"
             }
         ],
-        "Neue Vokabeln B,Besitzanzeiger (Wem geh\u00f6rt es?)": [
+        "Vok-B": [
             {
                 "index": 1,
                 "file": "C2_2-Vok-B_1.m4a",
@@ -2668,7 +2668,7 @@ const audioData = {
                 "path": "C2.3/C2_3-7c_5.m4a"
             }
         ],
-        "Neue Vokabeln A,Ji/Ma-Klasse (Ver\u00e4nderlich)": [
+        "Vok-A": [
             {
                 "index": 1,
                 "file": "C2_3-Vok-A_1.m4a",
@@ -2695,7 +2695,7 @@ const audioData = {
                 "path": "C2.3/C2_3-Vok-A_5.m4a"
             }
         ],
-        "Neue Vokabeln B,N-Klasse (Unver\u00e4nderlich im Plural)": [
+        "Vok-B": [
             {
                 "index": 1,
                 "file": "C2_3-Vok-B_1.m4a",
@@ -2717,7 +2717,7 @@ const audioData = {
                 "path": "C2.3/C2_3-Vok-B_4.m4a"
             }
         ],
-        "Neue Vokabeln C,Adjektive & Zust\u00e4nde": [
+        "Vok-C": [
             {
                 "index": 1,
                 "file": "C2_3-Vok-C_1.m4a",
@@ -2739,7 +2739,7 @@ const audioData = {
                 "path": "C2.3/C2_3-Vok-C_4.m4a"
             }
         ],
-        "Neue Vokabeln D,Verben & Sonstiges": [
+        "Vok-D": [
             {
                 "index": 1,
                 "file": "C2_3-Vok-D_1.m4a",
@@ -5352,7 +5352,7 @@ const audioData = {
                 "path": "C5.1/C5_1-9b_5.m4a"
             }
         ],
-        "Neue Vokabeln,Neue Vokabeln (Relativ & Konjunktiv)": [
+        "Vok": [
             {
                 "index": 1,
                 "file": "C5_1-Vok_1.m4a",
@@ -5940,7 +5940,7 @@ const audioData = {
                 "path": "C5.2/C5_2-9a_2.m4a"
             }
         ],
-        "Neue Vokabeln A,Grammatik-Bausteine": [
+        "Vok-A": [
             {
                 "index": 1,
                 "file": "C5_2-Vok-A_1.m4a",
@@ -5962,7 +5962,7 @@ const audioData = {
                 "path": "C5.2/C5_2-Vok-A_4.m4a"
             }
         ],
-        "Neue Vokabeln B,Neue Verben & Adjektive": [
+        "Vok-B": [
             {
                 "index": 1,
                 "file": "C5_2-Vok-B_1.m4a",

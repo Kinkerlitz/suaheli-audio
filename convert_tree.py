@@ -23,13 +23,14 @@ try:
                 # Bereinige die ID, um sie mit den Dateinamen-Teilen abgleichen zu können
                 # "Neue Vokabeln A" -> "Vok-A"
                 # "C1.1-2a" -> "2a"
-                raw_id = row[1].replace('Neue Vokabeln', 'Vok').replace('.', '_')
+                raw_id = row[1].strip()
                 
                 # Entferne den Kapitel-Präfix (z.B. C1_1-)
-                clean_id = re.sub(r'^[A-Z]\d+_\d+-', '', raw_id)
+                # Ersetze "Vokabeln " durch "Vok-" und Leerzeichen durch Bindestriche
+                temp_id = raw_id.replace('Vokabeln ', 'Vok-').replace(' ', '-')
                 
-                # Standardisiere "Vokabeln X" zu "Vok-X" und ersetze Leerzeichen durch Bindestriche
-                clean_id = clean_id.replace('Vokabeln ', 'Vok-').replace(' ', '-')
+                # Entferne den Kapitel-Präfix nur, wenn er existiert und nicht der ganze String ist
+                clean_id = re.sub(r'^[A-Z]\d+\.\d+-', '', temp_id)
                 
                 # Kombiniere die ursprüngliche ID (row[1]) mit dem Titel (row[2])
                 combined_title = f"{row[1].strip()},{row[2].strip()}"
