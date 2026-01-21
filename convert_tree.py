@@ -21,7 +21,14 @@ try:
                 # "Neue Vokabeln A" -> "Vok-A"
                 # "C1.1-2a" -> "2a"
                 raw_id = row[1].replace('Neue Vokabeln', 'Vok').replace('.', '_')
+                
+                # Entferne den Kapitel-Präfix (z.B. C1_1-)
                 clean_id = re.sub(r'^[A-Z]\d+_\d+-', '', raw_id)
+                
+                # Standardisiere "Vokabeln X" zu "Vok-X" und ersetze Leerzeichen durch Bindestriche
+                clean_id = clean_id.replace('Vokabeln ', 'Vok-').replace(' ', '-')
+                
+                print(f"DEBUG: Mapping '{clean_id}' to '{row[2].strip()}'")
                 title_map[clean_id] = row[2].strip()
 except FileNotFoundError:
     print(f"⚠️ WARNUNG: Die Titel-Datei '{title_map_filename}' wurde nicht gefunden. Fallback auf technische Namen.")
@@ -50,6 +57,7 @@ try:
             chapter_name = get_clean_chapter_name(raw_chapter) # C1.1
             
             # Hole den beschreibenden Titel aus der Map, ansonsten nimm den technischen Namen
+            print(f"DEBUG: Looking up table '{table}' for chapter '{chapter_name}'. Result: '{title_map.get(table, table)}'")
             display_title = title_map.get(table, table)
 
             # Struktur sicherstellen

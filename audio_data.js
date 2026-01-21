@@ -1,6 +1,6 @@
 const audioData = {
     "C1.1": {
-        "2a": [
+        "Preise und Mengen": [
             {
                 "index": 1,
                 "file": "C1_1-2a_1.m4a",
@@ -17,7 +17,7 @@ const audioData = {
                 "path": "C1.1/C1_1-2a_3.m4a"
             }
         ],
-        "2b": [
+        "W\u00fcnsche und Einschr\u00e4nkungen": [
             {
                 "index": 1,
                 "file": "C1_1-2b_1.m4a",
@@ -44,7 +44,7 @@ const audioData = {
                 "path": "C1.1/C1_1-2b_5.m4a"
             }
         ],
-        "2c": [
+        "Kontext & Begr\u00fcndungen": [
             {
                 "index": 1,
                 "file": "C1_1-2c_1.m4a",
@@ -66,7 +66,7 @@ const audioData = {
                 "path": "C1.1/C1_1-2c_4.m4a"
             }
         ],
-        "3a": [
+        "Eigenschaften und Zustand": [
             {
                 "index": 1,
                 "file": "C1_1-3a_1.m4a",
@@ -93,7 +93,7 @@ const audioData = {
                 "path": "C1.1/C1_1-3a_5.m4a"
             }
         ],
-        "3b": [
+        "Wege und Richtungen": [
             {
                 "index": 1,
                 "file": "C1_1-3b_1.m4a",
@@ -115,7 +115,7 @@ const audioData = {
                 "path": "C1.1/C1_1-3b_4.m4a"
             }
         ],
-        "3c": [
+        "Objekte und Zustand": [
             {
                 "index": 1,
                 "file": "C1_1-3c_1.m4a",
@@ -137,7 +137,7 @@ const audioData = {
                 "path": "C1.1/C1_1-3c_4.m4a"
             }
         ],
-        "3d": [
+        "Handlungen & Gr\u00fcnde": [
             {
                 "index": 1,
                 "file": "C1_1-3d_1.m4a",
@@ -154,7 +154,7 @@ const audioData = {
                 "path": "C1.1/C1_1-3d_3.m4a"
             }
         ],
-        "3e": [
+        "Gemischter Kontext": [
             {
                 "index": 1,
                 "file": "C1_1-3e_1.m4a",
@@ -176,7 +176,7 @@ const audioData = {
                 "path": "C1.1/C1_1-3e_4.m4a"
             }
         ],
-        "3f": [
+        "Abschluss": [
             {
                 "index": 1,
                 "file": "C1_1-3f_1.m4a",
@@ -198,7 +198,7 @@ const audioData = {
                 "path": "C1.1/C1_1-3f_4.m4a"
             }
         ],
-        "4": [
+        "Zweck & Notwendigkeit": [
             {
                 "index": 1,
                 "file": "C1_1-4_1.m4a",
@@ -225,7 +225,7 @@ const audioData = {
                 "path": "C1.1/C1_1-4_5.m4a"
             }
         ],
-        "5": [
+        "Passiv Kontext 2": [
             {
                 "index": 1,
                 "file": "C1_1-5_1.m4a",
@@ -252,7 +252,7 @@ const audioData = {
                 "path": "C1.1/C1_1-5_5.m4a"
             }
         ],
-        "Vok-A": [
+        "Grammatik-Bausteine": [
             {
                 "index": 1,
                 "file": "C1_1-Vok-A_1.m4a",
@@ -304,7 +304,7 @@ const audioData = {
                 "path": "C1.1/C1_1-Vok-A_10.m4a"
             }
         ],
-        "Vok-B": [
+        "Neue Verben & Adjektive": [
             {
                 "index": 1,
                 "file": "C1_1-Vok-B_1.m4a",
@@ -331,7 +331,7 @@ const audioData = {
                 "path": "C1.1/C1_1-Vok-B_5.m4a"
             }
         ],
-        "Vok-C": [
+        "Adjektive & Zust\u00e4nde": [
             {
                 "index": 1,
                 "file": "C1_1-Vok-C_1.m4a",
@@ -363,7 +363,7 @@ const audioData = {
                 "path": "C1.1/C1_1-Vok-C_6.m4a"
             }
         ],
-        "Vok-D": [
+        "Verben & Sonstiges": [
             {
                 "index": 1,
                 "file": "C1_1-Vok-D_1.m4a",
@@ -400,7 +400,7 @@ const audioData = {
                 "path": "C1.1/C1_1-Vok-D_7.m4a"
             }
         ],
-        "Vok-E": [
+        "Personen & Berufe (Wer?)": [
             {
                 "index": 1,
                 "file": "C1_1-Vok-E_1.m4a",
@@ -409,7 +409,7 @@ const audioData = {
         ]
     },
     "C1.2": {
-        "2a": [
+        "Preise und Mengen": [
             {
                 "index": 1,
                 "file": "C1_2-2a_1.m4a",
@@ -441,7 +441,7 @@ const audioData = {
                 "path": "C1.2/C1_2-2a_6.m4a"
             }
         ],
-        "2b": [
+        "W\u00fcnsche und Einschr\u00e4nkungen": [
             {
                 "index": 1,
                 "file": "C1_2-2b_1.m4a",
@@ -478,7 +478,7 @@ const audioData = {
                 "path": "C1.2/C1_2-2b_7.m4a"
             }
         ],
-        "3a": [
+        "Eigenschaften und Zustand": [
             {
                 "index": 1,
                 "file": "C1_2-3a_1.m4a",
@@ -510,7 +510,7 @@ const audioData = {
                 "path": "C1.2/C1_2-3a_6.m4a"
             }
         ],
-        "3b": [
+        "Wege und Richtungen": [
             {
                 "index": 1,
                 "file": "C1_2-3b_1.m4a",
@@ -532,7 +532,7 @@ const audioData = {
                 "path": "C1.2/C1_2-3b_4.m4a"
             }
         ],
-        "4a": [
+        "Reiseplanung": [
             {
                 "index": 1,
                 "file": "C1_2-4a_1.m4a",
@@ -554,7 +554,7 @@ const audioData = {
                 "path": "C1.2/C1_2-4a_4.m4a"
             }
         ],
-        "4b": [
+        "Gruppen und Bedingungen": [
             {
                 "index": 1,
                 "file": "C1_2-4b_1.m4a",
@@ -581,7 +581,7 @@ const audioData = {
                 "path": "C1.2/C1_2-4b_5.m4a"
             }
         ],
-        "5a": [
+        "Gro\u00dfe Zahlen und Orte": [
             {
                 "index": 1,
                 "file": "C1_2-5a_1.m4a",
@@ -613,7 +613,7 @@ const audioData = {
                 "path": "C1.2/C1_2-5a_6.m4a"
             }
         ],
-        "5b": [
+        "Bedingungen und Negation": [
             {
                 "index": 1,
                 "file": "C1_2-5b_1.m4a",
@@ -640,7 +640,7 @@ const audioData = {
                 "path": "C1.2/C1_2-5b_5.m4a"
             }
         ],
-        "6": [
+        "Vergleich (Kausativ vs. Passiv)": [
             {
                 "index": 1,
                 "file": "C1_2-6_1.m4a",
@@ -672,7 +672,7 @@ const audioData = {
                 "path": "C1.2/C1_2-6_6.m4a"
             }
         ],
-        "7": [
+        "\u00dcbung \u2013 Mix & Match": [
             {
                 "index": 1,
                 "file": "C1_2-7_1.m4a",
@@ -704,7 +704,7 @@ const audioData = {
                 "path": "C1.2/C1_2-7_6.m4a"
             }
         ],
-        "8": [
+        "\u00dcbung \u2013 Fortgeschrittene W\u00fcnsche": [
             {
                 "index": 1,
                 "file": "C1_2-8_1.m4a",
@@ -731,7 +731,7 @@ const audioData = {
                 "path": "C1.2/C1_2-8_5.m4a"
             }
         ],
-        "Vok-A": [
+        "Grammatik-Bausteine": [
             {
                 "index": 1,
                 "file": "C1_2-Vok-A_1.m4a",
@@ -788,7 +788,7 @@ const audioData = {
                 "path": "C1.2/C1_2-Vok-A_11.m4a"
             }
         ],
-        "Vok-B": [
+        "Neue Verben & Adjektive": [
             {
                 "index": 1,
                 "file": "C1_2-Vok-B_1.m4a",
@@ -810,7 +810,7 @@ const audioData = {
                 "path": "C1.2/C1_2-Vok-B_4.m4a"
             }
         ],
-        "Vok-C": [
+        "Adjektive & Zust\u00e4nde": [
             {
                 "index": 1,
                 "file": "C1_2-Vok-C_1.m4a",
@@ -842,14 +842,14 @@ const audioData = {
                 "path": "C1.2/C1_2-Vok-C_6.m4a"
             }
         ],
-        "Vok-D": [
+        "Verben & Sonstiges": [
             {
                 "index": 1,
                 "file": "C1_2-Vok-D_1.m4a",
                 "path": "C1.2/C1_2-Vok-D_1.m4a"
             }
         ],
-        "Vok-E": [
+        "Personen & Berufe (Wer?)": [
             {
                 "index": 1,
                 "file": "C1_2-Vok-E_1.m4a",
@@ -858,7 +858,7 @@ const audioData = {
         ]
     },
     "C1.3": {
-        "2a": [
+        "Preise und Mengen": [
             {
                 "index": 1,
                 "file": "C1_3-2a_1.m4a",
@@ -885,7 +885,7 @@ const audioData = {
                 "path": "C1.3/C1_3-2a_5.m4a"
             }
         ],
-        "2b": [
+        "W\u00fcnsche und Einschr\u00e4nkungen": [
             {
                 "index": 1,
                 "file": "C1_3-2b_1.m4a",
@@ -912,7 +912,7 @@ const audioData = {
                 "path": "C1.3/C1_3-2b_5.m4a"
             }
         ],
-        "3a": [
+        "Eigenschaften und Zustand": [
             {
                 "index": 1,
                 "file": "C1_3-3a_1.m4a",
@@ -934,7 +934,7 @@ const audioData = {
                 "path": "C1.3/C1_3-3a_4.m4a"
             }
         ],
-        "3b": [
+        "Wege und Richtungen": [
             {
                 "index": 1,
                 "file": "C1_3-3b_1.m4a",
@@ -966,7 +966,7 @@ const audioData = {
                 "path": "C1.3/C1_3-3b_6.m4a"
             }
         ],
-        "4a": [
+        "Reiseplanung": [
             {
                 "index": 1,
                 "file": "C1_3-4a_1.m4a",
@@ -993,7 +993,7 @@ const audioData = {
                 "path": "C1.3/C1_3-4a_5.m4a"
             }
         ],
-        "4b": [
+        "Gruppen und Bedingungen": [
             {
                 "index": 1,
                 "file": "C1_3-4b_1.m4a",
@@ -1020,7 +1020,7 @@ const audioData = {
                 "path": "C1.3/C1_3-4b_5.m4a"
             }
         ],
-        "5a": [
+        "Gro\u00dfe Zahlen und Orte": [
             {
                 "index": 1,
                 "file": "C1_3-5a_1.m4a",
@@ -1047,7 +1047,7 @@ const audioData = {
                 "path": "C1.3/C1_3-5a_5.m4a"
             }
         ],
-        "5b": [
+        "Bedingungen und Negation": [
             {
                 "index": 1,
                 "file": "C1_3-5b_1.m4a",
@@ -1074,7 +1074,7 @@ const audioData = {
                 "path": "C1.3/C1_3-5b_5.m4a"
             }
         ],
-        "6a": [
+        "Lokalisierung und Relativs\u00e4tze": [
             {
                 "index": 1,
                 "file": "C1_3-6a_1.m4a",
@@ -1101,7 +1101,7 @@ const audioData = {
                 "path": "C1.3/C1_3-6a_5.m4a"
             }
         ],
-        "6b": [
+        "Kooperation und Zukunft": [
             {
                 "index": 1,
                 "file": "C1_3-6b_1.m4a",
@@ -1128,7 +1128,7 @@ const audioData = {
                 "path": "C1.3/C1_3-6b_5.m4a"
             }
         ],
-        "7a": [
+        "Befehle und Zust\u00e4nde": [
             {
                 "index": 1,
                 "file": "C1_3-7a_1.m4a",
@@ -1160,7 +1160,7 @@ const audioData = {
                 "path": "C1.3/C1_3-7a_6.m4a"
             }
         ],
-        "7b": [
+        "Verluste und W\u00fcnsche": [
             {
                 "index": 1,
                 "file": "C1_3-7b_1.m4a",
@@ -1197,7 +1197,7 @@ const audioData = {
                 "path": "C1.3/C1_3-7b_7.m4a"
             }
         ],
-        "8a": [
+        "Verneinung und Interaktion": [
             {
                 "index": 1,
                 "file": "C1_3-8a_1.m4a",
@@ -1219,7 +1219,7 @@ const audioData = {
                 "path": "C1.3/C1_3-8a_4.m4a"
             }
         ],
-        "8b": [
+        "Passiv und Charakter": [
             {
                 "index": 1,
                 "file": "C1_3-8b_1.m4a",
@@ -1236,7 +1236,7 @@ const audioData = {
                 "path": "C1.3/C1_3-8b_3.m4a"
             }
         ],
-        "Integration": [
+        "W\u00fcnsche & Bed\u00fcrfnisse": [
             {
                 "index": 1,
                 "file": "C1_3-Integration_1.m4a",
@@ -1263,7 +1263,7 @@ const audioData = {
                 "path": "C1.3/C1_3-Integration_5.m4a"
             }
         ],
-        "Vok": [
+        "Neue Vokabeln (Relativ & Konjunktiv)": [
             {
                 "index": 1,
                 "file": "C1_3-Vok_1.m4a",
@@ -1352,7 +1352,7 @@ const audioData = {
         ]
     },
     "C2.1": {
-        "2a": [
+        "Preise und Mengen": [
             {
                 "index": 1,
                 "file": "C2_1-2a_1.m4a",
@@ -1389,7 +1389,7 @@ const audioData = {
                 "path": "C2.1/C2_1-2a_7.m4a"
             }
         ],
-        "2b": [
+        "W\u00fcnsche und Einschr\u00e4nkungen": [
             {
                 "index": 1,
                 "file": "C2_1-2b_1.m4a",
@@ -1426,7 +1426,7 @@ const audioData = {
                 "path": "C2.1/C2_1-2b_7.m4a"
             }
         ],
-        "2c": [
+        "Kontext & Begr\u00fcndungen": [
             {
                 "index": 1,
                 "file": "C2_1-2c_1.m4a",
@@ -1458,7 +1458,7 @@ const audioData = {
                 "path": "C2.1/C2_1-2c_6.m4a"
             }
         ],
-        "3a": [
+        "Eigenschaften und Zustand": [
             {
                 "index": 1,
                 "file": "C2_1-3a_1.m4a",
@@ -1490,7 +1490,7 @@ const audioData = {
                 "path": "C2.1/C2_1-3a_6.m4a"
             }
         ],
-        "3b": [
+        "Wege und Richtungen": [
             {
                 "index": 1,
                 "file": "C2_1-3b_1.m4a",
@@ -1522,7 +1522,7 @@ const audioData = {
                 "path": "C2.1/C2_1-3b_6.m4a"
             }
         ],
-        "4a": [
+        "Reiseplanung": [
             {
                 "index": 1,
                 "file": "C2_1-4a_1.m4a",
@@ -1544,7 +1544,7 @@ const audioData = {
                 "path": "C2.1/C2_1-4a_4.m4a"
             }
         ],
-        "4b": [
+        "Gruppen und Bedingungen": [
             {
                 "index": 1,
                 "file": "C2_1-4b_1.m4a",
@@ -1581,7 +1581,7 @@ const audioData = {
                 "path": "C2.1/C2_1-4b_7.m4a"
             }
         ],
-        "5a": [
+        "Gro\u00dfe Zahlen und Orte": [
             {
                 "index": 1,
                 "file": "C2_1-5a_1.m4a",
@@ -1603,7 +1603,7 @@ const audioData = {
                 "path": "C2.1/C2_1-5a_4.m4a"
             }
         ],
-        "5b": [
+        "Bedingungen und Negation": [
             {
                 "index": 1,
                 "file": "C2_1-5b_1.m4a",
@@ -1640,7 +1640,7 @@ const audioData = {
                 "path": "C2.1/C2_1-5b_7.m4a"
             }
         ],
-        "5c": [
+        "Orte & Aktionen": [
             {
                 "index": 1,
                 "file": "C2_1-5c_1.m4a",
@@ -1682,7 +1682,7 @@ const audioData = {
                 "path": "C2.1/C2_1-5c_8.m4a"
             }
         ],
-        "6": [
+        "Vergleich (Kausativ vs. Passiv)": [
             {
                 "index": 1,
                 "file": "C2_1-6_1.m4a",
@@ -1729,7 +1729,7 @@ const audioData = {
                 "path": "C2.1/C2_1-6_9.m4a"
             }
         ],
-        "7": [
+        "\u00dcbung \u2013 Mix & Match": [
             {
                 "index": 1,
                 "file": "C2_1-7_1.m4a",
@@ -1756,7 +1756,7 @@ const audioData = {
                 "path": "C2.1/C2_1-7_5.m4a"
             }
         ],
-        "Vok-A": [
+        "Grammatik-Bausteine": [
             {
                 "index": 1,
                 "file": "C2_1-Vok-A_1.m4a",
@@ -1788,7 +1788,7 @@ const audioData = {
                 "path": "C2.1/C2_1-Vok-A_6.m4a"
             }
         ],
-        "Vok-B": [
+        "Neue Verben & Adjektive": [
             {
                 "index": 1,
                 "file": "C2_1-Vok-B_1.m4a",
@@ -1825,7 +1825,7 @@ const audioData = {
                 "path": "C2.1/C2_1-Vok-B_7.m4a"
             }
         ],
-        "Vok-C": [
+        "Adjektive & Zust\u00e4nde": [
             {
                 "index": 1,
                 "file": "C2_1-Vok-C_1.m4a",
@@ -1857,7 +1857,7 @@ const audioData = {
                 "path": "C2.1/C2_1-Vok-C_6.m4a"
             }
         ],
-        "Vok-D": [
+        "Verben & Sonstiges": [
             {
                 "index": 1,
                 "file": "C2_1-Vok-D_1.m4a",
@@ -1896,7 +1896,7 @@ const audioData = {
         ]
     },
     "C2.2": {
-        "2": [
+        "\u00dcbung \u2013 Z\u00e4hlen": [
             {
                 "index": 1,
                 "file": "C2_2-2_1.m4a",
@@ -1943,7 +1943,7 @@ const audioData = {
                 "path": "C2.2/C2_2-2_9.m4a"
             }
         ],
-        "3": [
+        "Passiv Grundlagen": [
             {
                 "index": 1,
                 "file": "C2_2-3_1.m4a",
@@ -1985,7 +1985,7 @@ const audioData = {
                 "path": "C2.2/C2_2-3_8.m4a"
             }
         ],
-        "4": [
+        "Zweck & Notwendigkeit": [
             {
                 "index": 1,
                 "file": "C2_2-4_1.m4a",
@@ -2027,7 +2027,7 @@ const audioData = {
                 "path": "C2.2/C2_2-4_8.m4a"
             }
         ],
-        "5": [
+        "Passiv Kontext 2": [
             {
                 "index": 1,
                 "file": "C2_2-5_1.m4a",
@@ -2069,7 +2069,7 @@ const audioData = {
                 "path": "C2.2/C2_2-5_8.m4a"
             }
         ],
-        "6": [
+        "Vergleich (Kausativ vs. Passiv)": [
             {
                 "index": 1,
                 "file": "C2_2-6_1.m4a",
@@ -2106,7 +2106,7 @@ const audioData = {
                 "path": "C2.2/C2_2-6_7.m4a"
             }
         ],
-        "7": [
+        "\u00dcbung \u2013 Mix & Match": [
             {
                 "index": 1,
                 "file": "C2_2-7_1.m4a",
@@ -2158,7 +2158,7 @@ const audioData = {
                 "path": "C2.2/C2_2-7_10.m4a"
             }
         ],
-        "8": [
+        "\u00dcbung \u2013 Fortgeschrittene W\u00fcnsche": [
             {
                 "index": 1,
                 "file": "C2_2-8_1.m4a",
@@ -2185,7 +2185,7 @@ const audioData = {
                 "path": "C2.2/C2_2-8_5.m4a"
             }
         ],
-        "Vok-A": [
+        "Grammatik-Bausteine": [
             {
                 "index": 1,
                 "file": "C2_2-Vok-A_1.m4a",
@@ -2222,7 +2222,7 @@ const audioData = {
                 "path": "C2.2/C2_2-Vok-A_7.m4a"
             }
         ],
-        "Vok-B": [
+        "Neue Verben & Adjektive": [
             {
                 "index": 1,
                 "file": "C2_2-Vok-B_1.m4a",
@@ -2256,33 +2256,21 @@ const audioData = {
         ]
     },
     "C2.3": {
-        "1a": [
+        "Konditionals\u00e4tze (Realistisch: -ki-)": [
             {
                 "index": 1,
                 "file": "C2_3-1a_1.m4a",
                 "path": "C2.3/C2_3-1a_1.m4a"
             },
             {
-                "index": 2,
-                "file": "C2_3-1a_2.m4a",
-                "path": "C2.3/C2_3-1a_2.m4a"
-            },
-            {
-                "index": 3,
-                "file": "C2_3-1a_3.m4a",
-                "path": "C2.3/C2_3-1a_3.m4a"
-            },
-            {
-                "index": 4,
-                "file": "C2_3-1a_4.m4a",
-                "path": "C2.3/C2_3-1a_4.m4a"
-            }
-        ],
-        "1b": [
-            {
                 "index": 1,
                 "file": "C2_3-1b_1.m4a",
                 "path": "C2.3/C2_3-1b_1.m4a"
+            },
+            {
+                "index": 2,
+                "file": "C2_3-1a_2.m4a",
+                "path": "C2.3/C2_3-1a_2.m4a"
             },
             {
                 "index": 2,
@@ -2291,8 +2279,18 @@ const audioData = {
             },
             {
                 "index": 3,
+                "file": "C2_3-1a_3.m4a",
+                "path": "C2.3/C2_3-1a_3.m4a"
+            },
+            {
+                "index": 3,
                 "file": "C2_3-1b_3.m4a",
                 "path": "C2.3/C2_3-1b_3.m4a"
+            },
+            {
+                "index": 4,
+                "file": "C2_3-1a_4.m4a",
+                "path": "C2.3/C2_3-1a_4.m4a"
             },
             {
                 "index": 4,
@@ -2310,7 +2308,7 @@ const audioData = {
                 "path": "C2.3/C2_3-1b_6.m4a"
             }
         ],
-        "1c": [
+        "Kontext & Objekte": [
             {
                 "index": 1,
                 "file": "C2_3-1c_1.m4a",
@@ -2332,7 +2330,7 @@ const audioData = {
                 "path": "C2.3/C2_3-1c_4.m4a"
             }
         ],
-        "2": [
+        "\u00dcbung \u2013 Z\u00e4hlen": [
             {
                 "index": 1,
                 "file": "C2_3-2_1.m4a",
@@ -2364,7 +2362,7 @@ const audioData = {
                 "path": "C2.3/C2_3-2_6.m4a"
             }
         ],
-        "3a": [
+        "Eigenschaften und Zustand": [
             {
                 "index": 1,
                 "file": "C2_3-3a_1.m4a",
@@ -2386,7 +2384,7 @@ const audioData = {
                 "path": "C2.3/C2_3-3a_4.m4a"
             }
         ],
-        "3b": [
+        "Wege und Richtungen": [
             {
                 "index": 1,
                 "file": "C2_3-3b_1.m4a",
@@ -2403,7 +2401,7 @@ const audioData = {
                 "path": "C2.3/C2_3-3b_3.m4a"
             }
         ],
-        "4a": [
+        "Reiseplanung": [
             {
                 "index": 1,
                 "file": "C2_3-4a_1.m4a",
@@ -2430,7 +2428,7 @@ const audioData = {
                 "path": "C2.3/C2_3-4a_5.m4a"
             }
         ],
-        "4b": [
+        "Gruppen und Bedingungen": [
             {
                 "index": 1,
                 "file": "C2_3-4b_1.m4a",
@@ -2447,7 +2445,7 @@ const audioData = {
                 "path": "C2.3/C2_3-4b_3.m4a"
             }
         ],
-        "5a": [
+        "Gro\u00dfe Zahlen und Orte": [
             {
                 "index": 1,
                 "file": "C2_3-5a_1.m4a",
@@ -2479,7 +2477,7 @@ const audioData = {
                 "path": "C2.3/C2_3-5a_6.m4a"
             }
         ],
-        "5b": [
+        "Bedingungen und Negation": [
             {
                 "index": 1,
                 "file": "C2_3-5b_1.m4a",
@@ -2511,7 +2509,7 @@ const audioData = {
                 "path": "C2.3/C2_3-5b_6.m4a"
             }
         ],
-        "6a": [
+        "Lokalisierung und Relativs\u00e4tze": [
             {
                 "index": 1,
                 "file": "C2_3-6a_1.m4a",
@@ -2538,7 +2536,7 @@ const audioData = {
                 "path": "C2.3/C2_3-6a_5.m4a"
             }
         ],
-        "6b": [
+        "Kooperation und Zukunft": [
             {
                 "index": 1,
                 "file": "C2_3-6b_1.m4a",
@@ -2565,7 +2563,7 @@ const audioData = {
                 "path": "C2.3/C2_3-6b_5.m4a"
             }
         ],
-        "6c": [
+        "\u00dcbung \u2013 Zeiten-Mix (Abschluss)": [
             {
                 "index": 1,
                 "file": "C2_3-6c_1.m4a",
@@ -2602,7 +2600,7 @@ const audioData = {
                 "path": "C2.3/C2_3-6c_7.m4a"
             }
         ],
-        "7a": [
+        "Befehle und Zust\u00e4nde": [
             {
                 "index": 1,
                 "file": "C2_3-7a_1.m4a",
@@ -2629,7 +2627,7 @@ const audioData = {
                 "path": "C2.3/C2_3-7a_5.m4a"
             }
         ],
-        "7b": [
+        "Verluste und W\u00fcnsche": [
             {
                 "index": 1,
                 "file": "C2_3-7b_1.m4a",
@@ -2641,7 +2639,7 @@ const audioData = {
                 "path": "C2.3/C2_3-7b_2.m4a"
             }
         ],
-        "7c": [
+        "\u00dcbung \u2013 Adjektive & Abschluss": [
             {
                 "index": 1,
                 "file": "C2_3-7c_1.m4a",
@@ -2668,7 +2666,7 @@ const audioData = {
                 "path": "C2.3/C2_3-7c_5.m4a"
             }
         ],
-        "Vok-A": [
+        "Grammatik-Bausteine": [
             {
                 "index": 1,
                 "file": "C2_3-Vok-A_1.m4a",
@@ -2695,7 +2693,7 @@ const audioData = {
                 "path": "C2.3/C2_3-Vok-A_5.m4a"
             }
         ],
-        "Vok-B": [
+        "Neue Verben & Adjektive": [
             {
                 "index": 1,
                 "file": "C2_3-Vok-B_1.m4a",
@@ -2717,7 +2715,7 @@ const audioData = {
                 "path": "C2.3/C2_3-Vok-B_4.m4a"
             }
         ],
-        "Vok-C": [
+        "Adjektive & Zust\u00e4nde": [
             {
                 "index": 1,
                 "file": "C2_3-Vok-C_1.m4a",
@@ -2739,7 +2737,7 @@ const audioData = {
                 "path": "C2.3/C2_3-Vok-C_4.m4a"
             }
         ],
-        "Vok-D": [
+        "Verben & Sonstiges": [
             {
                 "index": 1,
                 "file": "C2_3-Vok-D_1.m4a",
@@ -2768,7 +2766,7 @@ const audioData = {
         ]
     },
     "C3.1": {
-        "2a": [
+        "Preise und Mengen": [
             {
                 "index": 1,
                 "file": "C3_1-2a_1.m4a",
@@ -2800,7 +2798,7 @@ const audioData = {
                 "path": "C3.1/C3_1-2a_6.m4a"
             }
         ],
-        "2b": [
+        "W\u00fcnsche und Einschr\u00e4nkungen": [
             {
                 "index": 1,
                 "file": "C3_1-2b_1.m4a",
@@ -2822,7 +2820,7 @@ const audioData = {
                 "path": "C3.1/C3_1-2b_4.m4a"
             }
         ],
-        "3a": [
+        "Eigenschaften und Zustand": [
             {
                 "index": 1,
                 "file": "C3_1-3a_1.m4a",
@@ -2844,7 +2842,7 @@ const audioData = {
                 "path": "C3.1/C3_1-3a_4.m4a"
             }
         ],
-        "3b": [
+        "Wege und Richtungen": [
             {
                 "index": 1,
                 "file": "C3_1-3b_1.m4a",
@@ -2866,7 +2864,7 @@ const audioData = {
                 "path": "C3.1/C3_1-3b_4.m4a"
             }
         ],
-        "4a": [
+        "Reiseplanung": [
             {
                 "index": 1,
                 "file": "C3_1-4a_1.m4a",
@@ -2898,7 +2896,7 @@ const audioData = {
                 "path": "C3.1/C3_1-4a_6.m4a"
             }
         ],
-        "4b": [
+        "Gruppen und Bedingungen": [
             {
                 "index": 1,
                 "file": "C3_1-4b_1.m4a",
@@ -2920,7 +2918,7 @@ const audioData = {
                 "path": "C3.1/C3_1-4b_4.m4a"
             }
         ],
-        "5a": [
+        "Gro\u00dfe Zahlen und Orte": [
             {
                 "index": 1,
                 "file": "C3_1-5a_1.m4a",
@@ -2942,7 +2940,7 @@ const audioData = {
                 "path": "C3.1/C3_1-5a_4.m4a"
             }
         ],
-        "5b": [
+        "Bedingungen und Negation": [
             {
                 "index": 1,
                 "file": "C3_1-5b_1.m4a",
@@ -2964,7 +2962,7 @@ const audioData = {
                 "path": "C3.1/C3_1-5b_4.m4a"
             }
         ],
-        "6a": [
+        "Lokalisierung und Relativs\u00e4tze": [
             {
                 "index": 1,
                 "file": "C3_1-6a_1.m4a",
@@ -2991,7 +2989,7 @@ const audioData = {
                 "path": "C3.1/C3_1-6a_5.m4a"
             }
         ],
-        "6b": [
+        "Kooperation und Zukunft": [
             {
                 "index": 1,
                 "file": "C3_1-6b_1.m4a",
@@ -3018,7 +3016,7 @@ const audioData = {
                 "path": "C3.1/C3_1-6b_5.m4a"
             }
         ],
-        "6c": [
+        "\u00dcbung \u2013 Zeiten-Mix (Abschluss)": [
             {
                 "index": 1,
                 "file": "C3_1-6c_1.m4a",
@@ -3030,7 +3028,7 @@ const audioData = {
                 "path": "C3.1/C3_1-6c_2.m4a"
             }
         ],
-        "7a": [
+        "Befehle und Zust\u00e4nde": [
             {
                 "index": 1,
                 "file": "C3_1-7a_1.m4a",
@@ -3057,7 +3055,7 @@ const audioData = {
                 "path": "C3.1/C3_1-7a_5.m4a"
             }
         ],
-        "7b": [
+        "Verluste und W\u00fcnsche": [
             {
                 "index": 1,
                 "file": "C3_1-7b_1.m4a",
@@ -3084,7 +3082,7 @@ const audioData = {
                 "path": "C3.1/C3_1-7b_5.m4a"
             }
         ],
-        "8a": [
+        "Verneinung und Interaktion": [
             {
                 "index": 1,
                 "file": "C3_1-8a_1.m4a",
@@ -3111,7 +3109,7 @@ const audioData = {
                 "path": "C3.1/C3_1-8a_5.m4a"
             }
         ],
-        "8b": [
+        "Passiv und Charakter": [
             {
                 "index": 1,
                 "file": "C3_1-8b_1.m4a",
@@ -3209,7 +3207,7 @@ const audioData = {
         ]
     },
     "C3.2": {
-        "2": [
+        "\u00dcbung \u2013 Z\u00e4hlen": [
             {
                 "index": 1,
                 "file": "C3_2-2_1.m4a",
@@ -3241,7 +3239,7 @@ const audioData = {
                 "path": "C3.2/C3_2-2_6.m4a"
             }
         ],
-        "3a": [
+        "Eigenschaften und Zustand": [
             {
                 "index": 1,
                 "file": "C3_2-3a_1.m4a",
@@ -3268,7 +3266,7 @@ const audioData = {
                 "path": "C3.2/C3_2-3a_5.m4a"
             }
         ],
-        "3b": [
+        "Wege und Richtungen": [
             {
                 "index": 1,
                 "file": "C3_2-3b_1.m4a",
@@ -3295,7 +3293,7 @@ const audioData = {
                 "path": "C3.2/C3_2-3b_5.m4a"
             }
         ],
-        "4a": [
+        "Reiseplanung": [
             {
                 "index": 1,
                 "file": "C3_2-4a_1.m4a",
@@ -3322,7 +3320,7 @@ const audioData = {
                 "path": "C3.2/C3_2-4a_5.m4a"
             }
         ],
-        "4b": [
+        "Gruppen und Bedingungen": [
             {
                 "index": 1,
                 "file": "C3_2-4b_1.m4a",
@@ -3344,7 +3342,7 @@ const audioData = {
                 "path": "C3.2/C3_2-4b_4.m4a"
             }
         ],
-        "4c": [
+        "Integration komplexer S\u00e4tze": [
             {
                 "index": 1,
                 "file": "C3_2-4c_1.m4a",
@@ -3366,7 +3364,7 @@ const audioData = {
                 "path": "C3.2/C3_2-4c_4.m4a"
             }
         ],
-        "5": [
+        "Passiv Kontext 2": [
             {
                 "index": 1,
                 "file": "C3_2-5_1.m4a",
@@ -3388,7 +3386,7 @@ const audioData = {
                 "path": "C3.2/C3_2-5_4.m4a"
             }
         ],
-        "6a": [
+        "Lokalisierung und Relativs\u00e4tze": [
             {
                 "index": 1,
                 "file": "C3_2-6a_1.m4a",
@@ -3410,7 +3408,7 @@ const audioData = {
                 "path": "C3.2/C3_2-6a_4.m4a"
             }
         ],
-        "6b": [
+        "Kooperation und Zukunft": [
             {
                 "index": 1,
                 "file": "C3_2-6b_1.m4a",
@@ -3432,7 +3430,7 @@ const audioData = {
                 "path": "C3.2/C3_2-6b_4.m4a"
             }
         ],
-        "7a": [
+        "Befehle und Zust\u00e4nde": [
             {
                 "index": 1,
                 "file": "C3_2-7a_1.m4a",
@@ -3459,7 +3457,7 @@ const audioData = {
                 "path": "C3.2/C3_2-7a_5.m4a"
             }
         ],
-        "7b": [
+        "Verluste und W\u00fcnsche": [
             {
                 "index": 1,
                 "file": "C3_2-7b_1.m4a",
@@ -3481,7 +3479,7 @@ const audioData = {
                 "path": "C3.2/C3_2-7b_4.m4a"
             }
         ],
-        "7c": [
+        "\u00dcbung \u2013 Adjektive & Abschluss": [
             {
                 "index": 1,
                 "file": "C3_2-7c_1.m4a",
@@ -3658,43 +3656,21 @@ const audioData = {
         ]
     },
     "C4.1": {
-        "1a": [
+        "Konditionals\u00e4tze (Realistisch: -ki-)": [
             {
                 "index": 1,
                 "file": "C4_1-1a_1.m4a",
                 "path": "C4.1/C4_1-1a_1.m4a"
             },
             {
-                "index": 2,
-                "file": "C4_1-1a_2.m4a",
-                "path": "C4.1/C4_1-1a_2.m4a"
-            },
-            {
-                "index": 3,
-                "file": "C4_1-1a_3.m4a",
-                "path": "C4.1/C4_1-1a_3.m4a"
-            },
-            {
-                "index": 4,
-                "file": "C4_1-1a_4.m4a",
-                "path": "C4.1/C4_1-1a_4.m4a"
-            },
-            {
-                "index": 5,
-                "file": "C4_1-1a_5.m4a",
-                "path": "C4.1/C4_1-1a_5.m4a"
-            },
-            {
-                "index": 6,
-                "file": "C4_1-1a_6.m4a",
-                "path": "C4.1/C4_1-1a_6.m4a"
-            }
-        ],
-        "1b": [
-            {
                 "index": 1,
                 "file": "C4_1-1b_1.m4a",
                 "path": "C4.1/C4_1-1b_1.m4a"
+            },
+            {
+                "index": 2,
+                "file": "C4_1-1a_2.m4a",
+                "path": "C4.1/C4_1-1a_2.m4a"
             },
             {
                 "index": 2,
@@ -3703,8 +3679,18 @@ const audioData = {
             },
             {
                 "index": 3,
+                "file": "C4_1-1a_3.m4a",
+                "path": "C4.1/C4_1-1a_3.m4a"
+            },
+            {
+                "index": 3,
                 "file": "C4_1-1b_3.m4a",
                 "path": "C4.1/C4_1-1b_3.m4a"
+            },
+            {
+                "index": 4,
+                "file": "C4_1-1a_4.m4a",
+                "path": "C4.1/C4_1-1a_4.m4a"
             },
             {
                 "index": 4,
@@ -3713,8 +3699,18 @@ const audioData = {
             },
             {
                 "index": 5,
+                "file": "C4_1-1a_5.m4a",
+                "path": "C4.1/C4_1-1a_5.m4a"
+            },
+            {
+                "index": 5,
                 "file": "C4_1-1b_5.m4a",
                 "path": "C4.1/C4_1-1b_5.m4a"
+            },
+            {
+                "index": 6,
+                "file": "C4_1-1a_6.m4a",
+                "path": "C4.1/C4_1-1a_6.m4a"
             },
             {
                 "index": 6,
@@ -3722,7 +3718,7 @@ const audioData = {
                 "path": "C4.1/C4_1-1b_6.m4a"
             }
         ],
-        "1c": [
+        "Kontext & Objekte": [
             {
                 "index": 1,
                 "file": "C4_1-1c_1.m4a",
@@ -3754,7 +3750,7 @@ const audioData = {
                 "path": "C4.1/C4_1-1c_6.m4a"
             }
         ],
-        "2a": [
+        "Preise und Mengen": [
             {
                 "index": 1,
                 "file": "C4_1-2a_1.m4a",
@@ -3786,7 +3782,7 @@ const audioData = {
                 "path": "C4.1/C4_1-2a_6.m4a"
             }
         ],
-        "2b": [
+        "W\u00fcnsche und Einschr\u00e4nkungen": [
             {
                 "index": 1,
                 "file": "C4_1-2b_1.m4a",
@@ -3818,7 +3814,7 @@ const audioData = {
                 "path": "C4.1/C4_1-2b_6.m4a"
             }
         ],
-        "2c": [
+        "Kontext & Begr\u00fcndungen": [
             {
                 "index": 1,
                 "file": "C4_1-2c_1.m4a",
@@ -3840,7 +3836,7 @@ const audioData = {
                 "path": "C4.1/C4_1-2c_4.m4a"
             }
         ],
-        "3a": [
+        "Eigenschaften und Zustand": [
             {
                 "index": 1,
                 "file": "C4_1-3a_1.m4a",
@@ -3872,7 +3868,7 @@ const audioData = {
                 "path": "C4.1/C4_1-3a_6.m4a"
             }
         ],
-        "3b": [
+        "Wege und Richtungen": [
             {
                 "index": 1,
                 "file": "C4_1-3b_1.m4a",
@@ -3904,7 +3900,7 @@ const audioData = {
                 "path": "C4.1/C4_1-3b_6.m4a"
             }
         ],
-        "3c": [
+        "Objekte und Zustand": [
             {
                 "index": 1,
                 "file": "C4_1-3c_1.m4a",
@@ -3936,7 +3932,7 @@ const audioData = {
                 "path": "C4.1/C4_1-3c_6.m4a"
             }
         ],
-        "3d": [
+        "Handlungen & Gr\u00fcnde": [
             {
                 "index": 1,
                 "file": "C4_1-3d_1.m4a",
@@ -3968,7 +3964,7 @@ const audioData = {
                 "path": "C4.1/C4_1-3d_6.m4a"
             }
         ],
-        "3e": [
+        "Gemischter Kontext": [
             {
                 "index": 1,
                 "file": "C4_1-3e_1.m4a",
@@ -4000,7 +3996,7 @@ const audioData = {
                 "path": "C4.1/C4_1-3e_6.m4a"
             }
         ],
-        "3f": [
+        "Abschluss": [
             {
                 "index": 1,
                 "file": "C4_1-3f_1.m4a",
@@ -4032,7 +4028,7 @@ const audioData = {
                 "path": "C4.1/C4_1-3f_6.m4a"
             }
         ],
-        "4a": [
+        "Reiseplanung": [
             {
                 "index": 1,
                 "file": "C4_1-4a_1.m4a",
@@ -4064,7 +4060,7 @@ const audioData = {
                 "path": "C4.1/C4_1-4a_6.m4a"
             }
         ],
-        "4b": [
+        "Gruppen und Bedingungen": [
             {
                 "index": 1,
                 "file": "C4_1-4b_1.m4a",
@@ -4096,7 +4092,7 @@ const audioData = {
                 "path": "C4.1/C4_1-4b_6.m4a"
             }
         ],
-        "4c": [
+        "Integration komplexer S\u00e4tze": [
             {
                 "index": 1,
                 "file": "C4_1-4c_1.m4a",
@@ -4128,7 +4124,7 @@ const audioData = {
                 "path": "C4.1/C4_1-4c_6.m4a"
             }
         ],
-        "4d": [
+        "W\u00fcnsche & Bed\u00fcrfnisse (Perfekt)": [
             {
                 "index": 1,
                 "file": "C4_1-4d_1.m4a",
@@ -4160,7 +4156,7 @@ const audioData = {
                 "path": "C4.1/C4_1-4d_6.m4a"
             }
         ],
-        "Vok": [
+        "Neue Vokabeln (Relativ & Konjunktiv)": [
             {
                 "index": 1,
                 "file": "C4_1-Vok_1.m4a",
@@ -4219,7 +4215,7 @@ const audioData = {
         ]
     },
     "C4.2": {
-        "0a": [
+        "Verben der Ver\u00e4nderung & Passiv": [
             {
                 "index": 1,
                 "file": "C4_2-0a_1.m4a",
@@ -4316,7 +4312,7 @@ const audioData = {
                 "path": "C4.2/C4_2-0a_19.m4a"
             }
         ],
-        "0b": [
+        "Wichtige W\u00f6rter im Kontext": [
             {
                 "index": 1,
                 "file": "C4_2-0b_1.m4a",
@@ -4353,7 +4349,7 @@ const audioData = {
                 "path": "C4.2/C4_2-0b_7.m4a"
             }
         ],
-        "10a": [
+        "Perfekt und Verneinung (Integration: Zeiten & Strukturen)": [
             {
                 "index": 1,
                 "file": "C4_2-10a_1.m4a",
@@ -4375,7 +4371,7 @@ const audioData = {
                 "path": "C4.2/C4_2-10a_4.m4a"
             }
         ],
-        "10b": [
+        "Komplexe Satzstrukturen": [
             {
                 "index": 1,
                 "file": "C4_2-10b_1.m4a",
@@ -4397,7 +4393,7 @@ const audioData = {
                 "path": "C4.2/C4_2-10b_4.m4a"
             }
         ],
-        "11a": [
+        "Wiederholung Klassen/Zahlen (Teil A)": [
             {
                 "index": 1,
                 "file": "C4_2-11a_1.m4a",
@@ -4419,7 +4415,7 @@ const audioData = {
                 "path": "C4.2/C4_2-11a_4.m4a"
             }
         ],
-        "11b": [
+        "Wiederholung Klassen/Zahlen (Teil B)": [
             {
                 "index": 1,
                 "file": "C4_2-11b_1.m4a",
@@ -4441,7 +4437,7 @@ const audioData = {
                 "path": "C4.2/C4_2-11b_4.m4a"
             }
         ],
-        "12": [
+        "Kontrast & Abschluss": [
             {
                 "index": 1,
                 "file": "C4_2-12_1.m4a",
@@ -4463,33 +4459,21 @@ const audioData = {
                 "path": "C4.2/C4_2-12_4.m4a"
             }
         ],
-        "1a": [
+        "Konditionals\u00e4tze (Realistisch: -ki-)": [
             {
                 "index": 1,
                 "file": "C4_2-1a_1.m4a",
                 "path": "C4.2/C4_2-1a_1.m4a"
             },
             {
-                "index": 2,
-                "file": "C4_2-1a_2.m4a",
-                "path": "C4.2/C4_2-1a_2.m4a"
-            },
-            {
-                "index": 3,
-                "file": "C4_2-1a_3.m4a",
-                "path": "C4.2/C4_2-1a_3.m4a"
-            },
-            {
-                "index": 4,
-                "file": "C4_2-1a_4.m4a",
-                "path": "C4.2/C4_2-1a_4.m4a"
-            }
-        ],
-        "1b": [
-            {
                 "index": 1,
                 "file": "C4_2-1b_1.m4a",
                 "path": "C4.2/C4_2-1b_1.m4a"
+            },
+            {
+                "index": 2,
+                "file": "C4_2-1a_2.m4a",
+                "path": "C4.2/C4_2-1a_2.m4a"
             },
             {
                 "index": 2,
@@ -4498,11 +4482,21 @@ const audioData = {
             },
             {
                 "index": 3,
+                "file": "C4_2-1a_3.m4a",
+                "path": "C4.2/C4_2-1a_3.m4a"
+            },
+            {
+                "index": 3,
                 "file": "C4_2-1b_3.m4a",
                 "path": "C4.2/C4_2-1b_3.m4a"
+            },
+            {
+                "index": 4,
+                "file": "C4_2-1a_4.m4a",
+                "path": "C4.2/C4_2-1a_4.m4a"
             }
         ],
-        "2a": [
+        "Preise und Mengen": [
             {
                 "index": 1,
                 "file": "C4_2-2a_1.m4a",
@@ -4529,7 +4523,7 @@ const audioData = {
                 "path": "C4.2/C4_2-2a_5.m4a"
             }
         ],
-        "2b": [
+        "W\u00fcnsche und Einschr\u00e4nkungen": [
             {
                 "index": 1,
                 "file": "C4_2-2b_1.m4a",
@@ -4556,7 +4550,7 @@ const audioData = {
                 "path": "C4.2/C4_2-2b_5.m4a"
             }
         ],
-        "3": [
+        "Passiv Grundlagen": [
             {
                 "index": 1,
                 "file": "C4_2-3_1.m4a",
@@ -4583,7 +4577,7 @@ const audioData = {
                 "path": "C4.2/C4_2-3_5.m4a"
             }
         ],
-        "4": [
+        "Zweck & Notwendigkeit": [
             {
                 "index": 1,
                 "file": "C4_2-4_1.m4a",
@@ -4615,7 +4609,7 @@ const audioData = {
                 "path": "C4.2/C4_2-4_6.m4a"
             }
         ],
-        "5": [
+        "Passiv Kontext 2": [
             {
                 "index": 1,
                 "file": "C4_2-5_1.m4a",
@@ -4647,7 +4641,7 @@ const audioData = {
                 "path": "C4.2/C4_2-5_6.m4a"
             }
         ],
-        "6": [
+        "Vergleich (Kausativ vs. Passiv)": [
             {
                 "index": 1,
                 "file": "C4_2-6_1.m4a",
@@ -4679,7 +4673,7 @@ const audioData = {
                 "path": "C4.2/C4_2-6_6.m4a"
             }
         ],
-        "7a": [
+        "Befehle und Zust\u00e4nde": [
             {
                 "index": 1,
                 "file": "C4_2-7a_1.m4a",
@@ -4706,7 +4700,7 @@ const audioData = {
                 "path": "C4.2/C4_2-7a_5.m4a"
             }
         ],
-        "7b": [
+        "Verluste und W\u00fcnsche": [
             {
                 "index": 1,
                 "file": "C4_2-7b_1.m4a",
@@ -4733,7 +4727,7 @@ const audioData = {
                 "path": "C4.2/C4_2-7b_5.m4a"
             }
         ],
-        "8a": [
+        "Verneinung und Interaktion": [
             {
                 "index": 1,
                 "file": "C4_2-8a_1.m4a",
@@ -4760,7 +4754,7 @@ const audioData = {
                 "path": "C4.2/C4_2-8a_5.m4a"
             }
         ],
-        "8b": [
+        "Passiv und Charakter": [
             {
                 "index": 1,
                 "file": "C4_2-8b_1.m4a",
@@ -4787,7 +4781,7 @@ const audioData = {
                 "path": "C4.2/C4_2-8b_5.m4a"
             }
         ],
-        "9a": [
+        "Grundlagen (Integration: W\u00fcnsche & Bed\u00fcrfnisse)": [
             {
                 "index": 1,
                 "file": "C4_2-9a_1.m4a",
@@ -4814,7 +4808,7 @@ const audioData = {
                 "path": "C4.2/C4_2-9a_5.m4a"
             }
         ],
-        "9b": [
+        "Objektbez\u00fcge und Zeiten": [
             {
                 "index": 1,
                 "file": "C4_2-9b_1.m4a",
@@ -4843,7 +4837,7 @@ const audioData = {
         ]
     },
     "C5.1": {
-        "10a": [
+        "Perfekt und Verneinung (Integration: Zeiten & Strukturen)": [
             {
                 "index": 1,
                 "file": "C5_1-10a_1.m4a",
@@ -4865,7 +4859,7 @@ const audioData = {
                 "path": "C5.1/C5_1-10a_4.m4a"
             }
         ],
-        "10b": [
+        "Komplexe Satzstrukturen": [
             {
                 "index": 1,
                 "file": "C5_1-10b_1.m4a",
@@ -4887,7 +4881,7 @@ const audioData = {
                 "path": "C5.1/C5_1-10b_4.m4a"
             }
         ],
-        "11a": [
+        "Wiederholung Klassen/Zahlen (Teil A)": [
             {
                 "index": 1,
                 "file": "C5_1-11a_1.m4a",
@@ -4909,7 +4903,7 @@ const audioData = {
                 "path": "C5.1/C5_1-11a_4.m4a"
             }
         ],
-        "11b": [
+        "Wiederholung Klassen/Zahlen (Teil B)": [
             {
                 "index": 1,
                 "file": "C5_1-11b_1.m4a",
@@ -4931,7 +4925,7 @@ const audioData = {
                 "path": "C5.1/C5_1-11b_4.m4a"
             }
         ],
-        "12": [
+        "Kontrast & Abschluss": [
             {
                 "index": 1,
                 "file": "C5_1-12_1.m4a",
@@ -4953,33 +4947,21 @@ const audioData = {
                 "path": "C5.1/C5_1-12_4.m4a"
             }
         ],
-        "1a": [
+        "Konditionals\u00e4tze (Realistisch: -ki-)": [
             {
                 "index": 1,
                 "file": "C5_1-1a_1.m4a",
                 "path": "C5.1/C5_1-1a_1.m4a"
             },
             {
-                "index": 2,
-                "file": "C5_1-1a_2.m4a",
-                "path": "C5.1/C5_1-1a_2.m4a"
-            },
-            {
-                "index": 3,
-                "file": "C5_1-1a_3.m4a",
-                "path": "C5.1/C5_1-1a_3.m4a"
-            },
-            {
-                "index": 4,
-                "file": "C5_1-1a_4.m4a",
-                "path": "C5.1/C5_1-1a_4.m4a"
-            }
-        ],
-        "1b": [
-            {
                 "index": 1,
                 "file": "C5_1-1b_1.m4a",
                 "path": "C5.1/C5_1-1b_1.m4a"
+            },
+            {
+                "index": 2,
+                "file": "C5_1-1a_2.m4a",
+                "path": "C5.1/C5_1-1a_2.m4a"
             },
             {
                 "index": 2,
@@ -4988,8 +4970,18 @@ const audioData = {
             },
             {
                 "index": 3,
+                "file": "C5_1-1a_3.m4a",
+                "path": "C5.1/C5_1-1a_3.m4a"
+            },
+            {
+                "index": 3,
                 "file": "C5_1-1b_3.m4a",
                 "path": "C5.1/C5_1-1b_3.m4a"
+            },
+            {
+                "index": 4,
+                "file": "C5_1-1a_4.m4a",
+                "path": "C5.1/C5_1-1a_4.m4a"
             },
             {
                 "index": 4,
@@ -4997,7 +4989,7 @@ const audioData = {
                 "path": "C5.1/C5_1-1b_4.m4a"
             }
         ],
-        "2a": [
+        "Preise und Mengen": [
             {
                 "index": 1,
                 "file": "C5_1-2a_1.m4a",
@@ -5019,7 +5011,7 @@ const audioData = {
                 "path": "C5.1/C5_1-2a_4.m4a"
             }
         ],
-        "2b": [
+        "W\u00fcnsche und Einschr\u00e4nkungen": [
             {
                 "index": 1,
                 "file": "C5_1-2b_1.m4a",
@@ -5041,7 +5033,7 @@ const audioData = {
                 "path": "C5.1/C5_1-2b_4.m4a"
             }
         ],
-        "3a": [
+        "Eigenschaften und Zustand": [
             {
                 "index": 1,
                 "file": "C5_1-3a_1.m4a",
@@ -5063,7 +5055,7 @@ const audioData = {
                 "path": "C5.1/C5_1-3a_4.m4a"
             }
         ],
-        "3b": [
+        "Wege und Richtungen": [
             {
                 "index": 1,
                 "file": "C5_1-3b_1.m4a",
@@ -5085,7 +5077,7 @@ const audioData = {
                 "path": "C5.1/C5_1-3b_4.m4a"
             }
         ],
-        "4": [
+        "Zweck & Notwendigkeit": [
             {
                 "index": 1,
                 "file": "C5_1-4_1.m4a",
@@ -5117,7 +5109,7 @@ const audioData = {
                 "path": "C5.1/C5_1-4_6.m4a"
             }
         ],
-        "5a": [
+        "Gro\u00dfe Zahlen und Orte": [
             {
                 "index": 1,
                 "file": "C5_1-5a_1.m4a",
@@ -5144,7 +5136,7 @@ const audioData = {
                 "path": "C5.1/C5_1-5a_5.m4a"
             }
         ],
-        "5b": [
+        "Bedingungen und Negation": [
             {
                 "index": 1,
                 "file": "C5_1-5b_1.m4a",
@@ -5161,7 +5153,7 @@ const audioData = {
                 "path": "C5.1/C5_1-5b_3.m4a"
             }
         ],
-        "6a": [
+        "Lokalisierung und Relativs\u00e4tze": [
             {
                 "index": 1,
                 "file": "C5_1-6a_1.m4a",
@@ -5183,7 +5175,7 @@ const audioData = {
                 "path": "C5.1/C5_1-6a_4.m4a"
             }
         ],
-        "6b": [
+        "Kooperation und Zukunft": [
             {
                 "index": 1,
                 "file": "C5_1-6b_1.m4a",
@@ -5200,7 +5192,7 @@ const audioData = {
                 "path": "C5.1/C5_1-6b_3.m4a"
             }
         ],
-        "7a": [
+        "Befehle und Zust\u00e4nde": [
             {
                 "index": 1,
                 "file": "C5_1-7a_1.m4a",
@@ -5222,7 +5214,7 @@ const audioData = {
                 "path": "C5.1/C5_1-7a_4.m4a"
             }
         ],
-        "7b": [
+        "Verluste und W\u00fcnsche": [
             {
                 "index": 1,
                 "file": "C5_1-7b_1.m4a",
@@ -5244,7 +5236,7 @@ const audioData = {
                 "path": "C5.1/C5_1-7b_4.m4a"
             }
         ],
-        "8a": [
+        "Verneinung und Interaktion": [
             {
                 "index": 1,
                 "file": "C5_1-8a_1.m4a",
@@ -5271,7 +5263,7 @@ const audioData = {
                 "path": "C5.1/C5_1-8a_5.m4a"
             }
         ],
-        "8b": [
+        "Passiv und Charakter": [
             {
                 "index": 1,
                 "file": "C5_1-8b_1.m4a",
@@ -5298,7 +5290,7 @@ const audioData = {
                 "path": "C5.1/C5_1-8b_5.m4a"
             }
         ],
-        "9a": [
+        "Grundlagen (Integration: W\u00fcnsche & Bed\u00fcrfnisse)": [
             {
                 "index": 1,
                 "file": "C5_1-9a_1.m4a",
@@ -5325,7 +5317,7 @@ const audioData = {
                 "path": "C5.1/C5_1-9a_5.m4a"
             }
         ],
-        "9b": [
+        "Objektbez\u00fcge und Zeiten": [
             {
                 "index": 1,
                 "file": "C5_1-9b_1.m4a",
@@ -5352,7 +5344,7 @@ const audioData = {
                 "path": "C5.1/C5_1-9b_5.m4a"
             }
         ],
-        "Vok": [
+        "Neue Vokabeln (Relativ & Konjunktiv)": [
             {
                 "index": 1,
                 "file": "C5_1-Vok_1.m4a",
@@ -5411,7 +5403,7 @@ const audioData = {
         ]
     },
     "C5.2": {
-        "10a": [
+        "Perfekt und Verneinung (Integration: Zeiten & Strukturen)": [
             {
                 "index": 1,
                 "file": "C5_2-10a_1.m4a",
@@ -5433,7 +5425,7 @@ const audioData = {
                 "path": "C5.2/C5_2-10a_4.m4a"
             }
         ],
-        "10b": [
+        "Komplexe Satzstrukturen": [
             {
                 "index": 1,
                 "file": "C5_2-10b_1.m4a",
@@ -5455,7 +5447,7 @@ const audioData = {
                 "path": "C5.2/C5_2-10b_4.m4a"
             }
         ],
-        "11a": [
+        "Wiederholung Klassen/Zahlen (Teil A)": [
             {
                 "index": 1,
                 "file": "C5_2-11a_1.m4a",
@@ -5477,7 +5469,7 @@ const audioData = {
                 "path": "C5.2/C5_2-11a_4.m4a"
             }
         ],
-        "11b": [
+        "Wiederholung Klassen/Zahlen (Teil B)": [
             {
                 "index": 1,
                 "file": "C5_2-11b_1.m4a",
@@ -5499,7 +5491,7 @@ const audioData = {
                 "path": "C5.2/C5_2-11b_4.m4a"
             }
         ],
-        "12a": [
+        "Kontrast": [
             {
                 "index": 1,
                 "file": "C5_2-12a_1.m4a",
@@ -5521,7 +5513,7 @@ const audioData = {
                 "path": "C5.2/C5_2-12a_4.m4a"
             }
         ],
-        "13a": [
+        "Der hypothetische Konditional (-nge-) Teil A": [
             {
                 "index": 1,
                 "file": "C5_2-13a_1.m4a",
@@ -5543,7 +5535,7 @@ const audioData = {
                 "path": "C5.2/C5_2-13a_4.m4a"
             }
         ],
-        "13b": [
+        "Der hypothetische Konditional (-nge-) Teil B": [
             {
                 "index": 1,
                 "file": "C5_2-13b_1.m4a",
@@ -5560,11 +5552,16 @@ const audioData = {
                 "path": "C5.2/C5_2-13b_3.m4a"
             }
         ],
-        "1a": [
+        "Konditionals\u00e4tze (Realistisch: -ki-)": [
             {
                 "index": 1,
                 "file": "C5_2-1a_1.m4a",
                 "path": "C5.2/C5_2-1a_1.m4a"
+            },
+            {
+                "index": 1,
+                "file": "C5_2-1b_1.m4a",
+                "path": "C5.2/C5_2-1b_1.m4a"
             },
             {
                 "index": 2,
@@ -5572,14 +5569,29 @@ const audioData = {
                 "path": "C5.2/C5_2-1a_2.m4a"
             },
             {
+                "index": 2,
+                "file": "C5_2-1b_2.m4a",
+                "path": "C5.2/C5_2-1b_2.m4a"
+            },
+            {
                 "index": 3,
                 "file": "C5_2-1a_3.m4a",
                 "path": "C5.2/C5_2-1a_3.m4a"
             },
             {
+                "index": 3,
+                "file": "C5_2-1b_3.m4a",
+                "path": "C5.2/C5_2-1b_3.m4a"
+            },
+            {
                 "index": 4,
                 "file": "C5_2-1a_4.m4a",
                 "path": "C5.2/C5_2-1a_4.m4a"
+            },
+            {
+                "index": 4,
+                "file": "C5_2-1b_4.m4a",
+                "path": "C5.2/C5_2-1b_4.m4a"
             },
             {
                 "index": 5,
@@ -5592,29 +5604,7 @@ const audioData = {
                 "path": "C5.2/C5_2-1a_6.m4a"
             }
         ],
-        "1b": [
-            {
-                "index": 1,
-                "file": "C5_2-1b_1.m4a",
-                "path": "C5.2/C5_2-1b_1.m4a"
-            },
-            {
-                "index": 2,
-                "file": "C5_2-1b_2.m4a",
-                "path": "C5.2/C5_2-1b_2.m4a"
-            },
-            {
-                "index": 3,
-                "file": "C5_2-1b_3.m4a",
-                "path": "C5.2/C5_2-1b_3.m4a"
-            },
-            {
-                "index": 4,
-                "file": "C5_2-1b_4.m4a",
-                "path": "C5.2/C5_2-1b_4.m4a"
-            }
-        ],
-        "2a": [
+        "Preise und Mengen": [
             {
                 "index": 1,
                 "file": "C5_2-2a_1.m4a",
@@ -5636,7 +5626,7 @@ const audioData = {
                 "path": "C5.2/C5_2-2a_4.m4a"
             }
         ],
-        "3a": [
+        "Eigenschaften und Zustand": [
             {
                 "index": 1,
                 "file": "C5_2-3a_1.m4a",
@@ -5668,7 +5658,7 @@ const audioData = {
                 "path": "C5.2/C5_2-3a_6.m4a"
             }
         ],
-        "3b": [
+        "Wege und Richtungen": [
             {
                 "index": 1,
                 "file": "C5_2-3b_1.m4a",
@@ -5690,7 +5680,7 @@ const audioData = {
                 "path": "C5.2/C5_2-3b_4.m4a"
             }
         ],
-        "4a": [
+        "Reiseplanung": [
             {
                 "index": 1,
                 "file": "C5_2-4a_1.m4a",
@@ -5712,7 +5702,7 @@ const audioData = {
                 "path": "C5.2/C5_2-4a_4.m4a"
             }
         ],
-        "5a": [
+        "Gro\u00dfe Zahlen und Orte": [
             {
                 "index": 1,
                 "file": "C5_2-5a_1.m4a",
@@ -5739,7 +5729,7 @@ const audioData = {
                 "path": "C5.2/C5_2-5a_5.m4a"
             }
         ],
-        "5b": [
+        "Bedingungen und Negation": [
             {
                 "index": 1,
                 "file": "C5_2-5b_1.m4a",
@@ -5766,7 +5756,7 @@ const audioData = {
                 "path": "C5.2/C5_2-5b_5.m4a"
             }
         ],
-        "6a": [
+        "Lokalisierung und Relativs\u00e4tze": [
             {
                 "index": 1,
                 "file": "C5_2-6a_1.m4a",
@@ -5798,7 +5788,7 @@ const audioData = {
                 "path": "C5.2/C5_2-6a_6.m4a"
             }
         ],
-        "6b": [
+        "Kooperation und Zukunft": [
             {
                 "index": 1,
                 "file": "C5_2-6b_1.m4a",
@@ -5820,7 +5810,7 @@ const audioData = {
                 "path": "C5.2/C5_2-6b_4.m4a"
             }
         ],
-        "7a": [
+        "Befehle und Zust\u00e4nde": [
             {
                 "index": 1,
                 "file": "C5_2-7a_1.m4a",
@@ -5847,7 +5837,7 @@ const audioData = {
                 "path": "C5.2/C5_2-7a_5.m4a"
             }
         ],
-        "7b": [
+        "Verluste und W\u00fcnsche": [
             {
                 "index": 1,
                 "file": "C5_2-7b_1.m4a",
@@ -5874,7 +5864,7 @@ const audioData = {
                 "path": "C5.2/C5_2-7b_5.m4a"
             }
         ],
-        "8a": [
+        "Verneinung und Interaktion": [
             {
                 "index": 1,
                 "file": "C5_2-8a_1.m4a",
@@ -5906,7 +5896,7 @@ const audioData = {
                 "path": "C5.2/C5_2-8a_6.m4a"
             }
         ],
-        "8b": [
+        "Passiv und Charakter": [
             {
                 "index": 1,
                 "file": "C5_2-8b_1.m4a",
@@ -5928,7 +5918,7 @@ const audioData = {
                 "path": "C5.2/C5_2-8b_4.m4a"
             }
         ],
-        "9a": [
+        "Grundlagen (Integration: W\u00fcnsche & Bed\u00fcrfnisse)": [
             {
                 "index": 1,
                 "file": "C5_2-9a_1.m4a",
@@ -5940,7 +5930,7 @@ const audioData = {
                 "path": "C5.2/C5_2-9a_2.m4a"
             }
         ],
-        "Vok-A": [
+        "Grammatik-Bausteine": [
             {
                 "index": 1,
                 "file": "C5_2-Vok-A_1.m4a",
@@ -5962,7 +5952,7 @@ const audioData = {
                 "path": "C5.2/C5_2-Vok-A_4.m4a"
             }
         ],
-        "Vok-B": [
+        "Neue Verben & Adjektive": [
             {
                 "index": 1,
                 "file": "C5_2-Vok-B_1.m4a",
@@ -6006,7 +5996,7 @@ const audioData = {
         ]
     },
     "D1.1": {
-        "10a": [
+        "Perfekt und Verneinung (Integration: Zeiten & Strukturen)": [
             {
                 "index": 1,
                 "file": "D1_1-10a_1.m4a",
@@ -6033,7 +6023,7 @@ const audioData = {
                 "path": "D1.1/D1_1-10a_5.m4a"
             }
         ],
-        "10b": [
+        "Komplexe Satzstrukturen": [
             {
                 "index": 1,
                 "file": "D1_1-10b_1.m4a",
@@ -6060,7 +6050,7 @@ const audioData = {
                 "path": "D1.1/D1_1-10b_5.m4a"
             }
         ],
-        "2a": [
+        "Preise und Mengen": [
             {
                 "index": 1,
                 "file": "D1_1-2a_1.m4a",
@@ -6087,7 +6077,7 @@ const audioData = {
                 "path": "D1.1/D1_1-2a_5.m4a"
             }
         ],
-        "2b": [
+        "W\u00fcnsche und Einschr\u00e4nkungen": [
             {
                 "index": 1,
                 "file": "D1_1-2b_1.m4a",
@@ -6114,7 +6104,7 @@ const audioData = {
                 "path": "D1.1/D1_1-2b_5.m4a"
             }
         ],
-        "3a": [
+        "Eigenschaften und Zustand": [
             {
                 "index": 1,
                 "file": "D1_1-3a_1.m4a",
@@ -6141,7 +6131,7 @@ const audioData = {
                 "path": "D1.1/D1_1-3a_5.m4a"
             }
         ],
-        "3b": [
+        "Wege und Richtungen": [
             {
                 "index": 1,
                 "file": "D1_1-3b_1.m4a",
@@ -6168,7 +6158,7 @@ const audioData = {
                 "path": "D1.1/D1_1-3b_5.m4a"
             }
         ],
-        "4a": [
+        "Reiseplanung": [
             {
                 "index": 1,
                 "file": "D1_1-4a_1.m4a",
@@ -6195,7 +6185,7 @@ const audioData = {
                 "path": "D1.1/D1_1-4a_5.m4a"
             }
         ],
-        "4b": [
+        "Gruppen und Bedingungen": [
             {
                 "index": 1,
                 "file": "D1_1-4b_1.m4a",
@@ -6222,7 +6212,7 @@ const audioData = {
                 "path": "D1.1/D1_1-4b_5.m4a"
             }
         ],
-        "5a": [
+        "Gro\u00dfe Zahlen und Orte": [
             {
                 "index": 1,
                 "file": "D1_1-5a_1.m4a",
@@ -6249,7 +6239,7 @@ const audioData = {
                 "path": "D1.1/D1_1-5a_5.m4a"
             }
         ],
-        "5b": [
+        "Bedingungen und Negation": [
             {
                 "index": 1,
                 "file": "D1_1-5b_1.m4a",
@@ -6276,7 +6266,7 @@ const audioData = {
                 "path": "D1.1/D1_1-5b_5.m4a"
             }
         ],
-        "6a": [
+        "Lokalisierung und Relativs\u00e4tze": [
             {
                 "index": 1,
                 "file": "D1_1-6a_1.m4a",
@@ -6303,7 +6293,7 @@ const audioData = {
                 "path": "D1.1/D1_1-6a_5.m4a"
             }
         ],
-        "6b": [
+        "Kooperation und Zukunft": [
             {
                 "index": 1,
                 "file": "D1_1-6b_1.m4a",
@@ -6330,7 +6320,7 @@ const audioData = {
                 "path": "D1.1/D1_1-6b_5.m4a"
             }
         ],
-        "7a": [
+        "Befehle und Zust\u00e4nde": [
             {
                 "index": 1,
                 "file": "D1_1-7a_1.m4a",
@@ -6357,7 +6347,7 @@ const audioData = {
                 "path": "D1.1/D1_1-7a_5.m4a"
             }
         ],
-        "7b": [
+        "Verluste und W\u00fcnsche": [
             {
                 "index": 1,
                 "file": "D1_1-7b_1.m4a",
@@ -6384,7 +6374,7 @@ const audioData = {
                 "path": "D1.1/D1_1-7b_5.m4a"
             }
         ],
-        "8a": [
+        "Verneinung und Interaktion": [
             {
                 "index": 1,
                 "file": "D1_1-8a_1.m4a",
@@ -6411,7 +6401,7 @@ const audioData = {
                 "path": "D1.1/D1_1-8a_5.m4a"
             }
         ],
-        "8b": [
+        "Passiv und Charakter": [
             {
                 "index": 1,
                 "file": "D1_1-8b_1.m4a",
@@ -6438,7 +6428,7 @@ const audioData = {
                 "path": "D1.1/D1_1-8b_5.m4a"
             }
         ],
-        "9a": [
+        "Grundlagen (Integration: W\u00fcnsche & Bed\u00fcrfnisse)": [
             {
                 "index": 1,
                 "file": "D1_1-9a_1.m4a",
@@ -6465,7 +6455,7 @@ const audioData = {
                 "path": "D1.1/D1_1-9a_5.m4a"
             }
         ],
-        "9b": [
+        "Objektbez\u00fcge und Zeiten": [
             {
                 "index": 1,
                 "file": "D1_1-9b_1.m4a",
@@ -6492,7 +6482,7 @@ const audioData = {
                 "path": "D1.1/D1_1-9b_5.m4a"
             }
         ],
-        "Vok": [
+        "Neue Vokabeln (Relativ & Konjunktiv)": [
             {
                 "index": 1,
                 "file": "D1_1-Vok_1.m4a",
