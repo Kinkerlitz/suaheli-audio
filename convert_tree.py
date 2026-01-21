@@ -28,8 +28,10 @@ try:
                 # Standardisiere "Vokabeln X" zu "Vok-X" und ersetze Leerzeichen durch Bindestriche
                 clean_id = clean_id.replace('Vokabeln ', 'Vok-').replace(' ', '-')
                 
-                print(f"DEBUG: Mapping '{clean_id}' to '{row[2].strip()}'")
-                title_map[clean_id] = row[2].strip()
+                # Kombiniere die ursprüngliche ID (row[1]) mit dem Titel (row[2])
+                combined_title = f"{row[1].strip()},{row[2].strip()}"
+                print(f"DEBUG: Mapping '{clean_id}' to '{combined_title}'")
+                title_map[clean_id] = combined_title
 except FileNotFoundError:
     print(f"⚠️ WARNUNG: Die Titel-Datei '{title_map_filename}' wurde nicht gefunden. Fallback auf technische Namen.")
 
