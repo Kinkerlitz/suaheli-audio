@@ -87,7 +87,7 @@ details {
 }
 
 summary {
-    padding: 15px;
+    padding: 15px 40px 15px 15px; /* Mehr Platz rechts für das Icon */
     cursor: pointer;
     background-color: #f9f9f9;
     font-weight: bold;

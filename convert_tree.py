@@ -1,11 +1,30 @@
 import re
 import json
 import os
+import csv
 
 input_filename = 'tree_tts.txt'
 output_filename = 'audio_data.js'
+title_map_filename = 'Tabellenübersicht aus Dokument - Tabellenübersicht aus Dokument.csv'
 
 data_structure = {}
+title_map = {}
+
+# Lade die Titel-Übersetzungen aus der CSV
+try:
+    with open(title_map_filename, 'r', encoding='utf-8') as f:
+        reader = csv.reader(f)
+        next(reader)  # Header-Zeile überspringen
+        for row in reader:
+            if len(row) >= 3:
+                # Bereinige die ID, um sie mit den Dateinamen-Teilen abgleichen zu können
+                # "Neue Vokabeln A" -> "Vok-A"
+                # "C1.1-2a" -> "2a"
+                raw_id = row[1].replace('Neue Vokabeln', 'Vok').replace('.', '_')
+                clean_id = re.sub(r'^[A-Z]\d+_\d+-', '', raw_id)
+                title_map[clean_id] = row[2].strip()
+except FileNotFoundError:
+    print(f"⚠️ WARNUNG: Die Titel-Datei '{title_map_filename}' wurde nicht gefunden. Fallback auf technische Namen.")
 
 # Das bewährte Suchmuster (findet C1_1, D1_1 etc.)
 pattern = re.compile(r'([A-Z]\d+_\d+)-(.+)_(\d+)\.m4a')
@@ -25,21 +44,24 @@ try:
         if match:
             raw_chapter = match.group(1) # z.B. C1_1
             table = match.group(2)       # z.B. 2a
-            index = match.group(3)       # z.B. 1
+            index = int(match.group(3))  # z.B. 1
             filename = match.group(0)    # ganzer Dateiname
             
             chapter_name = get_clean_chapter_name(raw_chapter) # C1.1
             
+            # Hole den beschreibenden Titel aus der Map, ansonsten nimm den technischen Namen
+            display_title = title_map.get(table, table)
+
             # Struktur sicherstellen
             if chapter_name not in data_structure:
                 data_structure[chapter_name] = {}
             
-            if table not in data_structure[chapter_name]:
-                data_structure[chapter_name][table] = []
+            if display_title not in data_structure[chapter_name]:
+                data_structure[chapter_name][display_title] = []
             
             # Sauberen Eintrag hinzufügen (OHNE Title/Artist Tags)
-            data_structure[chapter_name][table].append({
-                'index': int(index),
+            data_structure[chapter_name][display_title].append({
+                'index': index,
                 'file': filename,
                 'path': f"{chapter_name}/{filename}"
             })
