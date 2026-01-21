@@ -16,30 +16,56 @@ try:
         reader = csv.reader(f)
         next(reader)  # Header-Zeile überspringen
         for row in reader:
-            if len(row) >= 3:
-                # Extrahiere die Kapitelnummer aus der ersten Spalte (z.B. "C1.1: ...")
-                chapter_match = re.match(r'([A-Z]\d+\.\d+)', row[0])
+            if len(row) >= 3: # Sicherstellen, dass genügend Spalten vorhanden sind
+                csv_id_with_chapter = row[1].strip() # z.B. "C1.1-Vok-A", "C1.1-2a", "D1.1-Vok"
+            if len(row) >= 3:  # Sicherstellen, dass genügend Spalten vorhanden sind
+                csv_id_raw = row[1].strip()  # z.B. "C1.1-Vok-A", "Neue Vokabeln A", "C1.1-2a", "D1.1-1", "Neue Vokabeln"
                 
-                # Bereinige die ID, um sie mit den Dateinamen-Teilen abgleichen zu können
-                # "Neue Vokabeln A" -> "Vok-A"
-                # "C1.1-2a" -> "2a"
-                raw_id = row[1].strip()
-                
-                # Entferne den Kapitel-Präfix (z.B. C1_1-)
-                # Ersetze "Vokabeln " durch "Vok-" und Leerzeichen durch Bindestriche
-                temp_id = raw_id.replace('Vokabeln ', 'Vok-').replace(' ', '-')
-                
-                # Entferne den Kapitel-Präfix nur, wenn er existiert und nicht der ganze String ist
-                clean_id = re.sub(r'^[A-Z]\d+\.\d+-', '', temp_id)
-                
-                # Kombiniere die ursprüngliche ID (row[1]) mit dem Titel (row[2])
-                combined_title = f"{row[1].strip()},{row[2].strip()}"
+                # Kapitelnamen aus der CSV-ID extrahieren (z.B. "C1.1" aus "C1.1-Vok-A")
+                chapter_in_csv_id_match = re.match(r'([A-Z]\d+\.\d+)', csv_id_with_chapter)
+                # Kapitelnamen aus row[1] extrahieren (z.B. "C1.1" aus "C1.1-Vok-A")
+                chapter_in_csv_id_match = re.match(r'([A-Z]\d+\.\d+)', csv_id_raw)
+                csv_chapter_name = chapter_in_csv_id_match.group(1) if chapter_in_csv_id_match else None
 
-                # Erstelle einen eindeutigen Schlüssel, falls die Kapitelnummer gefunden wurde
-                if chapter_match:
-                    unique_key = f"{chapter_match.group(1)}_{clean_id}"
+                # Den "table"-Teil aus der CSV-ID extrahieren (z.B. "Vok-A" aus "C1.1-Vok-A")
+                # Dieser Teil muss mit dem "table"-Teil übereinstimmen, der aus den Audio-Dateinamen extrahiert wird
+                table_part_from_csv = re.sub(r'^[A-Z]\d+\.\d+-', '', csv_id_with_chapter)
+                # Den Teil nach dem Kapitelpräfix aus row[1] extrahieren
+                table_id_from_csv_without_chapter = re.sub(r'^[A-Z]\d+\.\d+-', '', csv_id_raw)
+                
+                # "Vokabeln " zu "Vok-" standardisieren und Leerzeichen durch Bindestriche ersetzen
+                # Dies gewährleistet die Konsistenz mit der Extraktion des "table"-Teils aus Dateinamen
+                clean_table_id = table_part_from_csv.replace('Vokabeln ', 'Vok-').replace(' ', '-')
+                # Standardisiere "Neue Vokabeln X" zu "Vok-X" und "Neue Vokabeln" zu "Vok"
+                clean_table_id_for_key = table_id_from_csv_without_chapter
+                if clean_table_id_for_key.startswith('Neue Vokabeln '):
+                    clean_table_id_for_key = clean_table_id_for_key.replace('Neue Vokabeln ', 'Vok-')
+                elif clean_table_id_for_key == 'Neue Vokabeln':
+                    clean_table_id_for_key = 'Vok'
+                
+                # --- Spezifische Korrektur für bekannte Inkonsistenzen (CSV-ID ist Zahl, Audio ist Vok) ---
+                # Wenn es sich um einen Vokabel-Eintrag handelt (erkennbar an 'Vokabeln' im Titel)
+                # und die bereinigte ID eine Ziffer ist, aber die Audio-Dateien 'Vok' verwenden,
+                # dann überschreibe die ID für den Schlüssel mit 'Vok'.
+                if 'Vokabeln' in row[2] and clean_table_id_for_key.isdigit():
+                    clean_table_id_for_key = 'Vok'
+                # --- Ende spezifische Korrektur ---
+                
+                # Den ursprünglichen ID (row[1]) mit dem Titel (row[2]) kombinieren, wie vom Benutzer gewünscht
+                combined_title = f"{row[1].strip()},{row[2].strip()}"
+                combined_title = f"{row[1].strip()}, {row[2].strip()}" # Komma und Leerzeichen
+
+                if csv_chapter_name:
+                    # Einen eindeutigen Schlüssel aus Kapitelnamen und bereinigter Tabellen-ID erstellen
+                    unique_key = f"{csv_chapter_name}_{clean_table_id}"
+                    unique_key = f"{csv_chapter_name}_{clean_table_id_for_key}"
                     print(f"DEBUG: Mapping '{unique_key}' to '{combined_title}'")
                     title_map[unique_key] = combined_title
+                else:
+                    # Fallback für Einträge ohne klares Kapitelpräfix in row[1]
+                    # Dies könnte passieren, wenn row[1] nur "Vok" oder "Integration" ist
+                    print(f"DEBUG: Kein Kapitelpräfix in '{csv_id_with_chapter}' gefunden. Verwende '{clean_table_id}' als Schlüssel. Mapping zu '{combined_title}'")
+                    title_map[clean_table_id] = combined_title # Dies könnte immer noch zu Überschreibungen führen, wenn clean_table_id nicht global eindeutig ist
 
 except FileNotFoundError:
     print(f"⚠️ WARNUNG: Die Titel-Datei '{title_map_filename}' wurde nicht gefunden. Fallback auf technische Namen.")
@@ -88,6 +114,15 @@ try:
             })
             count += 1
 
+    # Die Top-Level-Kapitel sortieren (z.B. C1.1, C1.2, D1.1)
+    sorted_chapter_names = sorted(data_structure.keys())
+    sorted_data_structure = {key: data_structure[key] for key in sorted_chapter_names}
+    data_structure = sorted_data_structure
+
+    # Die Schlüssel (display_titles) innerhalb jedes Kapitels sortieren
+    for chap in data_structure:
+        sorted_display_titles = sorted(data_structure[chap].keys())
+        data_structure[chap] = {key: data_structure[chap][key] for key in sorted_display_titles}
     # Sortieren: Erst Kapitel, dann Tabellen, dann Index
     for chap in data_structure:
         for tab in data_structure[chap]:
