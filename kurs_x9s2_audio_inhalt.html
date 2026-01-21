@@ -6,10 +6,31 @@
     <title>Suaheli intensiv</title>
     <link rel="icon" type="image/png" href="cover.386x491.png">
     <link rel="stylesheet" href="style.css">
+    <style>
+        /* Zusätzliche Inline-Styles für die neue Checkbox-Positionierung */
+        summary {
+            display: flex;
+            align-items: center;
+            gap: 10px;
+        }
+        summary input[type="checkbox"] {
+            margin-right: 5px;
+            transform: scale(1.2);
+            cursor: pointer;
+        }
+        /* Verhindert, dass das Klicken auf die Checkbox das Akkordeon ungewollt schließt/öffnet, 
+           während wir stopPropagation nutzen */
+        summary label {
+            display: flex;
+            align-items: center;
+            cursor: pointer;
+            width: 100%;
+        }
+    </style>
 </head>
 <body>
 
-<small id="version-display">v0.18</small>
+<small id="version-display">v0.19</small>
 
 <div class="container">
     <header>
@@ -85,18 +106,22 @@
             chapters.forEach(chapterKey => {
                 const chapterDetails = document.createElement('details');
                 const chapterSummary = document.createElement('summary');
-                chapterSummary.textContent = "Kapitel " + chapterKey;
+                
+                // Checkbox direkt in den Chapter-Header verschoben
+                const chapCb = document.createElement('input');
+                chapCb.type = 'checkbox';
+                chapCb.className = 'chap-cb';
+                chapCb.onclick = (e) => toggleChildren(e, chapterDetails);
+                
+                const chapTitle = document.createElement('span');
+                chapTitle.textContent = "Kapitel " + chapterKey;
+
+                chapterSummary.appendChild(chapCb);
+                chapterSummary.appendChild(chapTitle);
                 chapterDetails.appendChild(chapterSummary);
 
                 const chapterContent = document.createElement('div');
                 chapterContent.style.paddingLeft = "10px";
-
-                // "Alle auswählen" für das gesamte Kapitel
-                const chapSelectAll = document.createElement('label');
-                chapSelectAll.className = 'select-all-row';
-                chapSelectAll.innerHTML = `<input type="checkbox" class="chap-cb"> Kapitel ${chapterKey} (Alle wählen)`;
-                chapSelectAll.querySelector('input').onclick = (e) => toggleChildren(e, chapterDetails);
-                chapterContent.appendChild(chapSelectAll);
 
                 const tables = Object.keys(audioData[chapterKey]).sort((a, b) => {
                     const isVokA = a.includes('Vok');
@@ -119,20 +144,22 @@
                         displayName = "Tabelle " + tableKey;
                     }
 
-                    tableSummary.textContent = displayName;
+                    // Checkbox direkt in den Tabellen-Header verschoben
+                    const tableCb = document.createElement('input');
+                    tableCb.type = 'checkbox';
+                    tableCb.className = 'table-cb';
+                    tableCb.onclick = (e) => toggleChildren(e, tableDetails);
+
+                    const tableTitle = document.createElement('span');
+                    tableTitle.textContent = displayName;
+
+                    tableSummary.appendChild(tableCb);
+                    tableSummary.appendChild(tableTitle);
                     tableDetails.appendChild(tableSummary);
 
                     const tableContent = document.createElement('div');
-                    tableContent.style.padding = "10px";
+                    tableContent.style.padding = "5px 10px";
                     tableContent.style.backgroundColor = "#f9f9f9";
-
-                    // "Alle auswählen" für diese Tabelle
-                    const tableSelectAll = document.createElement('label');
-                    tableSelectAll.className = 'select-all-row';
-                    tableSelectAll.style.background = "#e1e1e1";
-                    tableSelectAll.innerHTML = `<input type="checkbox" class="table-cb"> ${displayName} (Alle wählen)`;
-                    tableSelectAll.querySelector('input').onclick = (e) => toggleChildren(e, tableDetails);
-                    tableContent.appendChild(tableSelectAll);
 
                     const tracks = audioData[chapterKey][tableKey];
                     tracks.forEach(track => {
@@ -152,7 +179,7 @@
 
                         const playButton = document.createElement('button');
                         playButton.className = 'play-btn';
-                        playButton.innerHTML = '&#9654;'; // Play symbol
+                        playButton.innerHTML = '&#9654;'; 
                         playButton.onclick = () => {
                             window.stopPlayback();
                             playlistPlayer.src = track.path;
@@ -177,6 +204,7 @@
             });
         }
 
+        // Modifizierte Funktion: Verhindert das Aufklappen beim Checkbox-Klick
         function toggleChildren(e, parentElement) {
             e.stopPropagation(); 
             const isChecked = e.target.checked;
@@ -196,7 +224,6 @@
             currentSpeed = speedOptions[index];
             const icon = document.getElementById('speed-icon');
             if(icon) icon.textContent = currentSpeed + "x";
-            if (playlistPlayer) playlistPlayer.playbackRate = currentSpeed;
             playlistPlayer.playbackRate = currentSpeed;
         };
 
@@ -211,17 +238,14 @@
             const btnShuffle = document.getElementById('btn-shuffle');
             if (btnShuffle) btnShuffle.classList.toggle('active-play', isShuffleActive);
 
-            // Wenn eine Playlist läuft und Shuffle aktiviert/deaktiviert wird,
-            // erstelle die Playlist aus den aktuell ausgewählten Checkboxen neu.
             if (isPlaylistPlaying && isShuffleActive && playlist.length > 0) {
                 const currentTrack = playlist[currentTrackIndex];
-                // Baue die Playlist aus den Checkboxen neu, aber ohne den aktuellen Track
                 let newPlaylist = Array.from(document.querySelectorAll('.track-cb:checked'))
                                        .map(cb => ({ path: cb.value, label: cb.dataset.label, domId: 'row-' + convertPathToId(cb.value) }))
                                        .filter(track => track.path !== currentTrack.path);
                 shuffleArray(newPlaylist);
-                playlist = [currentTrack, ...newPlaylist]; // Setze den aktuellen Track an den Anfang
-                currentTrackIndex = 0; // Setze den Index zurück, da der aktuelle Track jetzt bei 0 ist
+                playlist = [currentTrack, ...newPlaylist];
+                currentTrackIndex = 0;
                 statusText.textContent = "Zufall an: Nächster Track ist zufällig.";
             }
         };
@@ -247,23 +271,21 @@
 
         function startPlaylist() {
             const mode = isShuffleActive ? 'shuffle' : 'normal';
-            if (!setupPlaylist(mode)) return; // Bricht ab, wenn keine Tracks ausgewählt sind
+            if (!setupPlaylist(mode)) return; 
 
             isPlaylistPlaying = true;
             isPaused = false;
             playNext();
-            updatePlayPauseButton(true); // Button sofort aktualisieren
+            updatePlayPauseButton(true);
         }
 
         window.togglePlayPause = function() {
-            // Wenn nichts ausgewählt ist oder keine Playlist läuft, starte sie.
             if (!isPlaylistPlaying) {
                 startPlaylist();
                 return;
             }
 
-            // Wenn die Playlist läuft, pausiere oder setze sie fort.
-            isPaused = !isPaused; // Zustand umkehren
+            isPaused = !isPaused; 
             if (isPaused) {
                 playlistPlayer.pause();
                 statusText.textContent = "Pausiert";
@@ -285,7 +307,6 @@
         window.stopPlayback = function() {
             isPlaylistPlaying = false;
             isPaused = false;
-            // Reset playlist to allow re-shuffling etc.
             playlist = []; 
             playlistPlayer.pause();
             if (currentSingleAudio) {
