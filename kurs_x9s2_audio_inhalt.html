@@ -7,30 +7,27 @@
     <link rel="icon" type="image/png" href="cover.386x491.png">
     <link rel="stylesheet" href="style.css">
     <style>
-        /* Zusätzliche Inline-Styles für die neue Checkbox-Positionierung */
+        /* Optimierte Ausrichtung für Checkboxen in den Akkordeon-Headern */
         summary {
             display: flex;
             align-items: center;
-            gap: 10px;
+            gap: 12px;
+            padding: 12px !important;
         }
         summary input[type="checkbox"] {
-            margin-right: 5px;
-            transform: scale(1.2);
+            margin: 0;
+            transform: scale(1.3);
             cursor: pointer;
         }
-        /* Verhindert, dass das Klicken auf die Checkbox das Akkordeon ungewollt schließt/öffnet, 
-           während wir stopPropagation nutzen */
-        summary label {
-            display: flex;
-            align-items: center;
+        summary span {
+            flex-grow: 1;
             cursor: pointer;
-            width: 100%;
         }
     </style>
 </head>
 <body>
 
-<small id="version-display">v0.19</small>
+<small id="version-display">v0.20</small>
 
 <div class="container">
     <header>
@@ -79,6 +76,23 @@
 <script src="audio_data.js"></script>
 
 <script>
+    // Mapping der Kapitel-IDs auf die Klarnamen gemäß CSV
+    const chapterNames = {
+        "C1.1": "C1.1 Identität und Zustände",
+        "C1.2": "C1.2 Handlungen in der Gegenwart",
+        "C1.3": "C1.3 Ort und Kontext",
+        "C2.1": "C2.1 Der Plural (Wir, Ihr, Sie)",
+        "C2.2": "C2.2 Besitz und Familie",
+        "C2.3": "C2.3 Nomenklassen und Objekte",
+        "C3.1": "C3.1 Vergangenheit und Zukunft",
+        "C3.2": "C3.2 Zahlen und Mengen",
+        "C4.1": "C4.1 Das Perfekt",
+        "C4.2": "C4.2 Verben umbauen",
+        "C5.1": "C5.1 Relativsätze und Wünsche",
+        "C5.2": "C5.2 Bedingungen und Befehle",
+        "D1.1": "D1.1 Im Alltag"
+    };
+
     try {
         const container = document.getElementById('audioContainer');
         const statusText = document.getElementById('statusText');
@@ -86,7 +100,6 @@
         
         let playlist = [];       
         let currentTrackIndex = 0;
-        let playbackMode = 'normal'; 
         let isPlaylistPlaying = false;
         let isPaused = false;
         let isLoopActive = false;
@@ -107,14 +120,15 @@
                 const chapterDetails = document.createElement('details');
                 const chapterSummary = document.createElement('summary');
                 
-                // Checkbox direkt in den Chapter-Header verschoben
+                // Checkbox für das gesamte Kapitel
                 const chapCb = document.createElement('input');
                 chapCb.type = 'checkbox';
                 chapCb.className = 'chap-cb';
                 chapCb.onclick = (e) => toggleChildren(e, chapterDetails);
                 
                 const chapTitle = document.createElement('span');
-                chapTitle.textContent = "Kapitel " + chapterKey;
+                // Nutze Mapping aus chapterNames oder Fallback auf Kapitel-ID
+                chapTitle.textContent = chapterNames[chapterKey] || "Kapitel " + chapterKey;
 
                 chapterSummary.appendChild(chapCb);
                 chapterSummary.appendChild(chapTitle);
@@ -144,7 +158,7 @@
                         displayName = "Tabelle " + tableKey;
                     }
 
-                    // Checkbox direkt in den Tabellen-Header verschoben
+                    // Checkbox für die Tabelle
                     const tableCb = document.createElement('input');
                     tableCb.type = 'checkbox';
                     tableCb.className = 'table-cb';
@@ -204,9 +218,8 @@
             });
         }
 
-        // Modifizierte Funktion: Verhindert das Aufklappen beim Checkbox-Klick
         function toggleChildren(e, parentElement) {
-            e.stopPropagation(); 
+            e.stopPropagation(); // Verhindert das Auf-/Zuklappen beim Klick auf die Checkbox
             const isChecked = e.target.checked;
             parentElement.querySelectorAll('input[type="checkbox"]').forEach(cb => cb.checked = isChecked);
         }
@@ -237,20 +250,9 @@
             isShuffleActive = !isShuffleActive;
             const btnShuffle = document.getElementById('btn-shuffle');
             if (btnShuffle) btnShuffle.classList.toggle('active-play', isShuffleActive);
-
-            if (isPlaylistPlaying && isShuffleActive && playlist.length > 0) {
-                const currentTrack = playlist[currentTrackIndex];
-                let newPlaylist = Array.from(document.querySelectorAll('.track-cb:checked'))
-                                       .map(cb => ({ path: cb.value, label: cb.dataset.label, domId: 'row-' + convertPathToId(cb.value) }))
-                                       .filter(track => track.path !== currentTrack.path);
-                shuffleArray(newPlaylist);
-                playlist = [currentTrack, ...newPlaylist];
-                currentTrackIndex = 0;
-                statusText.textContent = "Zufall an: Nächster Track ist zufällig.";
-            }
         };
 
-        function setupPlaylist(mode) {
+        function setupPlaylist() {
             const selectedCheckboxes = Array.from(document.querySelectorAll('.track-cb:checked'));
             if (selectedCheckboxes.length === 0) {
                 alert("Bitte wählen Sie zuerst Audio-Dateien aus.");
@@ -262,17 +264,14 @@
                 label: cb.dataset.label,
                 domId: 'row-' + convertPathToId(cb.value)
             }));
-            playbackMode = mode;
 
-            if (mode === 'shuffle') shuffleArray(playlist);
+            if (isShuffleActive) shuffleArray(playlist);
             currentTrackIndex = 0;
             return true;
         }
 
         function startPlaylist() {
-            const mode = isShuffleActive ? 'shuffle' : 'normal';
-            if (!setupPlaylist(mode)) return; 
-
+            if (!setupPlaylist()) return; 
             isPlaylistPlaying = true;
             isPaused = false;
             playNext();
@@ -284,7 +283,6 @@
                 startPlaylist();
                 return;
             }
-
             isPaused = !isPaused; 
             if (isPaused) {
                 playlistPlayer.pause();
@@ -298,7 +296,7 @@
         };
 
         window.skipTrack = function() {
-            if (isPlaylistPlaying && !isPaused) {
+            if (isPlaylistPlaying) {
                 currentTrackIndex++;
                 playNext();
             }
@@ -309,10 +307,6 @@
             isPaused = false;
             playlist = []; 
             playlistPlayer.pause();
-            if (currentSingleAudio) {
-                currentSingleAudio.pause();
-                currentSingleAudio = null;
-            }
             statusText.textContent = "Gestoppt.";
             removeHighlights();
             updatePlayPauseButton(false);
