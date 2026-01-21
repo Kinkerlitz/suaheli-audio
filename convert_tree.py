@@ -17,6 +17,9 @@ try:
         next(reader)  # Header-Zeile überspringen
         for row in reader:
             if len(row) >= 3:
+                # Extrahiere die Kapitelnummer aus der ersten Spalte (z.B. "C1.1: ...")
+                chapter_match = re.match(r'([A-Z]\d+\.\d+)', row[0])
+                
                 # Bereinige die ID, um sie mit den Dateinamen-Teilen abgleichen zu können
                 # "Neue Vokabeln A" -> "Vok-A"
                 # "C1.1-2a" -> "2a"
@@ -30,8 +33,13 @@ try:
                 
                 # Kombiniere die ursprüngliche ID (row[1]) mit dem Titel (row[2])
                 combined_title = f"{row[1].strip()},{row[2].strip()}"
-                print(f"DEBUG: Mapping '{clean_id}' to '{combined_title}'")
-                title_map[clean_id] = combined_title
+
+                # Erstelle einen eindeutigen Schlüssel, falls die Kapitelnummer gefunden wurde
+                if chapter_match:
+                    unique_key = f"{chapter_match.group(1)}_{clean_id}"
+                    print(f"DEBUG: Mapping '{unique_key}' to '{combined_title}'")
+                    title_map[unique_key] = combined_title
+
 except FileNotFoundError:
     print(f"⚠️ WARNUNG: Die Titel-Datei '{title_map_filename}' wurde nicht gefunden. Fallback auf technische Namen.")
 
@@ -59,8 +67,10 @@ try:
             chapter_name = get_clean_chapter_name(raw_chapter) # C1.1
             
             # Hole den beschreibenden Titel aus der Map, ansonsten nimm den technischen Namen
-            print(f"DEBUG: Looking up table '{table}' for chapter '{chapter_name}'. Result: '{title_map.get(table, table)}'")
-            display_title = title_map.get(table, table)
+            # Erstelle den gleichen eindeutigen Schlüssel wie oben
+            unique_key = f"{chapter_name}_{table}"
+            print(f"DEBUG: Looking up table with key '{unique_key}'. Result: '{title_map.get(unique_key, table)}'")
+            display_title = title_map.get(unique_key, table)
 
             # Struktur sicherstellen
             if chapter_name not in data_structure:
