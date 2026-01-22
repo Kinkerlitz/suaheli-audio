@@ -24,14 +24,24 @@
 
         /* NEU: Spezieller Stil für Kapitel-Header mit Hintergrundbild */
         summary.chapter-summary {
-            /* Das Bild wird im JS gesetzt. Hier definieren wir, wie es sich verhält.
-               'cover' sorgt dafür, dass es den Bereich füllt, ohne verzerrt zu sein.
-            */
+            /* Das Bild wird im JS gesetzt. Hier definieren wir, wie es sich verhält. */
             background-size: cover;
             background-position: center right; /* Fokus eher rechts */
             border-bottom: 1px solid rgba(0,0,0,0.1);
-            min-height: 50px; /* Mindesthöhe für gute Optik */
+            min-height: 60px; /* Etwas höher für bessere Sichtbarkeit des Bildes */
         }
+        
+        /* Das Plus/Minus Icon manuell stylen */
+        summary::after {
+            content: '+'; 
+            position: absolute;
+            right: 20px;
+            font-weight: bold;
+            font-size: 1.2rem;
+            color: #333;
+            text-shadow: 1px 1px 0px rgba(255,255,255,0.8);
+        }
+        details[open] summary::after { content: '-'; }
         
         /* NEU: Container für den zweizeiligen Text */
         .header-text {
@@ -41,6 +51,7 @@
             justify-content: center;
             flex-grow: 1;
             z-index: 2; /* Text muss über dem Hintergrund liegen */
+            padding-right: 30px; /* Damit Text nicht ins Plus-Icon läuft */
         }
 
         /* Zeile 1: Die ID (z.B. C1.1) - Fett und dunkel */
@@ -48,15 +59,15 @@
             font-weight: 800;
             font-size: 0.9rem;
             color: #2c3e50;
-            text-shadow: 1px 1px 1px rgba(255,255,255,0.8); /* Leichter Schatten für Lesbarkeit */
+            text-shadow: 1px 1px 1px rgba(255,255,255,0.9); /* Starker Schatten für Lesbarkeit */
         }
 
         /* Zeile 2: Die Beschreibung - Normal und etwas heller */
         .header-desc {
-            font-weight: 400;
+            font-weight: 500; /* Etwas dicker gemacht für bessere Lesbarkeit auf Bild */
             font-size: 0.95rem;
-            color: #444; /* Etwas dunkler gemacht für Kontrast auf Hintergrund */
-             text-shadow: 1px 1px 1px rgba(255,255,255,0.8);
+            color: #333; 
+            text-shadow: 1px 1px 1px rgba(255,255,255,0.9);
             margin-top: 2px;
         }
         
@@ -68,7 +79,7 @@
 </head>
 <body>
 
-<small id="version-display">v0.22 (Kapitel-Hintergründe)</small>
+<small id="version-display">v0.23 (Finales Design)</small>
 
 <div class="container">
     <header>
@@ -134,8 +145,7 @@
         "D1.1": "D1.1 Im Alltag"
     };
 
-    // NEU: Liste der Hintergrundbilder (alphabetisch sortiert aus Ihrem 'ls' Befehl)
-    // HINWEIS: Diese Dateien müssen im Unterordner 'backgrounds/' liegen.
+    // Liste der Hintergrundbilder (alphabetisch sortiert)
     const backgroundImages = [
         'Pastell-Beige & Organisches Netzwerk.jpg',
         'Pastell-Creme Champagner & Diamant-Strukturen.jpg',
@@ -182,22 +192,18 @@
                 const chapterDetails = document.createElement('details');
                 const chapterSummary = document.createElement('summary');
                 
-                // NEU: Klasse für CSS und Berechnung des Hintergrundbilds
+                // Klasse für CSS
                 chapterSummary.className = 'chapter-summary';
                 
-                // Wir nutzen den Modulo-Operator (%), damit die Bilder wieder von vorne beginnen,
-                // falls es mehr Kapitel als Bilder gibt.
+                // Bildauswahl (rotierend)
                 const imageIndex = index % backgroundImages.length;
                 const imageName = backgroundImages[imageIndex];
                 
-                // NEU: Setzen des Hintergrunds.
-                // Trick: Wir legen einen halbtransparenten weißen Verlauf (linear-gradient) ÜBER das Bild.
-                // Das macht den schwarzen Text viel besser lesbar.
+                // Angepasster Farbverlauf (weniger Weiß, mehr Transparenz)
                 chapterSummary.style.backgroundImage = `
                     linear-gradient(to right, rgba(255,255,255,0.5) 0%, rgba(255,255,255,0.4) 70%, rgba(255,255,255,0.1) 100%),
                     url('backgrounds/${imageName}')
                 `;
-
                 
                 // 1. Checkbox für Kapitel
                 const chapCb = document.createElement('input');
