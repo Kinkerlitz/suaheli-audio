@@ -13,11 +13,24 @@
             align-items: center;
             gap: 12px;
             padding: 12px !important;
+            position: relative; /* Wichtig für Hintergründe */
         }
         summary input[type="checkbox"] {
             margin: 0;
             transform: scale(1.3);
             cursor: pointer;
+            z-index: 2; /* Checkbox muss über dem Hintergrund liegen */
+        }
+
+        /* NEU: Spezieller Stil für Kapitel-Header mit Hintergrundbild */
+        summary.chapter-summary {
+            /* Das Bild wird im JS gesetzt. Hier definieren wir, wie es sich verhält.
+               'cover' sorgt dafür, dass es den Bereich füllt, ohne verzerrt zu sein.
+            */
+            background-size: cover;
+            background-position: center right; /* Fokus eher rechts */
+            border-bottom: 1px solid rgba(0,0,0,0.1);
+            min-height: 50px; /* Mindesthöhe für gute Optik */
         }
         
         /* NEU: Container für den zweizeiligen Text */
@@ -26,7 +39,8 @@
             flex-direction: column;
             line-height: 1.3;
             justify-content: center;
-            flex-grow: 1; /* Damit der Klickbereich breit ist */
+            flex-grow: 1;
+            z-index: 2; /* Text muss über dem Hintergrund liegen */
         }
 
         /* Zeile 1: Die ID (z.B. C1.1) - Fett und dunkel */
@@ -34,13 +48,15 @@
             font-weight: 800;
             font-size: 0.9rem;
             color: #2c3e50;
+            text-shadow: 1px 1px 1px rgba(255,255,255,0.8); /* Leichter Schatten für Lesbarkeit */
         }
 
         /* Zeile 2: Die Beschreibung - Normal und etwas heller */
         .header-desc {
             font-weight: 400;
             font-size: 0.95rem;
-            color: #666;
+            color: #444; /* Etwas dunkler gemacht für Kontrast auf Hintergrund */
+             text-shadow: 1px 1px 1px rgba(255,255,255,0.8);
             margin-top: 2px;
         }
         
@@ -52,7 +68,7 @@
 </head>
 <body>
 
-<small id="version-display">v0.21 (Design Update)</small>
+<small id="version-display">v0.22 (Kapitel-Hintergründe)</small>
 
 <div class="container">
     <header>
@@ -118,6 +134,26 @@
         "D1.1": "D1.1 Im Alltag"
     };
 
+    // NEU: Liste der Hintergrundbilder (alphabetisch sortiert aus Ihrem 'ls' Befehl)
+    // HINWEIS: Diese Dateien müssen im Unterordner 'backgrounds/' liegen.
+    const backgroundImages = [
+        'Pastell-Beige & Organisches Netzwerk.jpg',
+        'Pastell-Creme Champagner & Diamant-Strukturen.jpg',
+        'Pastell-Eisblau & Polyeder-Schwarm.jpg',
+        'Pastell-Flieder & Organische Wellen.jpg',
+        'Pastell-Grau & Sternförmiges Liniengeflecht.jpg',
+        'Pastell-Hellblau & Geometrisches Netzwerk.jpg',
+        'Pastell-Koralle & Ineinandergreifende Prismen.jpg',
+        'Pastell-Lavendel & Vertikale Strukturen.jpg',
+        'Pastell-Meerschaumgrün & Schwebende Geometrie.jpg',
+        'Pastell-Mintgrün & Organische Linien.jpg',
+        'Pastell-Pfirsich & Geschwungene Ebenen.jpg',
+        'Pastell-Rosé & Polygone.jpg',
+        'Pastell-Zartrosa & Abstraktes Mosaik.jpg',
+        'Pastell-Zitronengelb & Hexagone Netzwerk.jpg',
+        'PastellTuerkis.jpg'
+    ];
+
     try {
         const container = document.getElementById('audioContainer');
         const statusText = document.getElementById('statusText');
@@ -141,9 +177,27 @@
                 a.localeCompare(b, undefined, { numeric: true, sensitivity: 'base' })
             );
 
-            chapters.forEach(chapterKey => {
+            // WICHTIG: Wir fügen hier den 'index' hinzu, um durch die Bilder zu iterieren
+            chapters.forEach((chapterKey, index) => {
                 const chapterDetails = document.createElement('details');
                 const chapterSummary = document.createElement('summary');
+                
+                // NEU: Klasse für CSS und Berechnung des Hintergrundbilds
+                chapterSummary.className = 'chapter-summary';
+                
+                // Wir nutzen den Modulo-Operator (%), damit die Bilder wieder von vorne beginnen,
+                // falls es mehr Kapitel als Bilder gibt.
+                const imageIndex = index % backgroundImages.length;
+                const imageName = backgroundImages[imageIndex];
+                
+                // NEU: Setzen des Hintergrunds.
+                // Trick: Wir legen einen halbtransparenten weißen Verlauf (linear-gradient) ÜBER das Bild.
+                // Das macht den schwarzen Text viel besser lesbar.
+                chapterSummary.style.backgroundImage = `
+                    linear-gradient(to right, rgba(255,255,255,0.9) 0%, rgba(255,255,255,0.8) 70%, rgba(255,255,255,0.4) 100%),
+                    url('backgrounds/${imageName}')
+                `;
+
                 
                 // 1. Checkbox für Kapitel
                 const chapCb = document.createElement('input');
@@ -157,12 +211,11 @@
 
                 const line1 = document.createElement('span');
                 line1.className = 'header-id';
-                line1.textContent = chapterKey; // Z.B. "C1.1"
+                line1.textContent = chapterKey;
 
                 const line2 = document.createElement('span');
                 line2.className = 'header-desc';
                 
-                // Beschreibung holen und die Nummer entfernen, damit sie nicht doppelt erscheint
                 let fullTitle = chapterNames[chapterKey] || "";
                 let description = fullTitle.replace(chapterKey, "").trim(); 
                 line2.textContent = description || "Kapitelübersicht";
@@ -188,38 +241,33 @@
                 tables.forEach(tableKey => {
                     const tableDetails = document.createElement('details');
                     const tableSummary = document.createElement('summary');
+                    // Tabellen-Header bekommen KEIN Hintergrundbild, bleiben Standard
 
-                    // Datenanalyse für zweizeilige Darstellung der Tabelle
                     let idText = "";
                     let descText = "";
                     let isVok = false;
 
                     if (tableKey.includes(',')) {
-                        // Standardfall aus Python-Skript: "C1.1-2a, Beschreibung"
                         const parts = tableKey.split(',');
                         idText = parts[0].trim(); 
                         descText = parts.slice(1).join(',').trim();
                     } else if (tableKey.includes('Vok')) {
-                        // Fallback für Vokabeln ohne Komma
                         isVok = true;
                         idText = tableKey;
                         const parts = tableKey.split('-');
                         descText = parts.length > 1 ? "Vokabeln Teil " + parts[1] : "Vokabeln";
                     } else {
-                        // Fallback
                         idText = tableKey;
                         descText = "Tabelle";
                     }
 
                     if (tableKey.includes('Vok')) isVok = true;
 
-                    // Checkbox für Tabelle
                     const tableCb = document.createElement('input');
                     tableCb.type = 'checkbox';
                     tableCb.className = 'table-cb';
                     tableCb.onclick = (e) => toggleChildren(e, tableDetails);
 
-                    // Zweizeiliger Header für Tabelle
                     const tableTextContainer = document.createElement('div');
                     tableTextContainer.className = 'header-text';
                     if (isVok) tableTextContainer.classList.add('is-vok');
@@ -253,7 +301,6 @@
                         trackCheckbox.type = "checkbox";
                         trackCheckbox.className = "track-cb";
                         trackCheckbox.value = track.path;
-                        // Label kombiniert ID und Index für die Statusanzeige
                         trackCheckbox.dataset.label = idText + " (" + track.index + ")"; 
 
                         const label = document.createElement('span');
@@ -288,7 +335,7 @@
         }
 
         function toggleChildren(e, parentElement) {
-            e.stopPropagation(); // Verhindert das Auf-/Zuklappen beim Klick auf die Checkbox
+            e.stopPropagation(); 
             const isChecked = e.target.checked;
             parentElement.querySelectorAll('input[type="checkbox"]').forEach(cb => cb.checked = isChecked);
         }
